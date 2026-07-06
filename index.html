@@ -7,6 +7,32 @@
     <title>Prêmio Infosfera 2026: Boas Práticas em Gestão da Informação Pública</title>
     <meta name="description" content="Reconhecimento nacional de servidores, equipes e órgãos que transformam a administração pública. Inscrições abertas de 1 abr a 31 jul de 2026. Gratuito e ilimitado." />
 
+    <!-- ================= Meta Pixel (Infosfera - Premio 2026, ID 2428650674300332) ================= -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2428650674300332');
+      fbq('track', 'PageView');
+    </script>
+    <script>
+      // Dispara "Lead" quando o visitante clica em qualquer botão/link que leva à
+      // plataforma de inscrição. É o melhor sinal de intenção de cadastro no site
+      // do Prêmio (o cadastro em si é concluído na plataforma boaspraticas).
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest
+          ? e.target.closest('a[href*="boaspraticas.infosfera.inf.br"]')
+          : null;
+        if (a && window.fbq) { window.fbq('track', 'Lead'); }
+      }, true);
+    </script>
+    <!-- =============== Fim do Meta Pixel =============== -->
+
     <!-- Open Graph / WhatsApp / LinkedIn -->
     <meta property="og:type"        content="website" />
     <meta property="og:url"         content="https://infosfera-rewards.vercel.app/" />
@@ -28,7 +54,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div id="root"></div> 
+    <!-- Meta Pixel (fallback sem JavaScript) -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2428650674300332&ev=PageView&noscript=1" alt="" /></noscript>
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

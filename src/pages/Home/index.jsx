@@ -48,15 +48,15 @@ const realizacaoLogoMap = {
   '3.jpg': { href: 'https://ppga.unb.br/', label: 'PGAP UnB' },
 };
 
-// Apoio — excluidos: Doity (11.jpg), Giga (18.jpg). UFPR adicionada (vem de realizacao/4.jpg)
+// Apoio — excluidos: Doity (11.jpg), Giga (18.jpg), CRA-PR (13.jpg). UFPR adicionada (vem de realizacao/4.jpg)
 const apoioLogoMap = {
   '1.jpg':  { href: 'https://www.mppr.mp.br/', label: 'Ministério Público do Paraná' },
   '10.jpg': { href: 'https://abissal.design/', label: 'Abissal Design Estratégico' },
   '12.jpg': { href: 'https://abades.com.br/', label: 'ABADES' },
-  '13.jpg': { href: 'https://cra-pr.org.br/', label: 'CRA-PR' },
   '14.jpg': { href: 'https://www.curitiba.pr.gov.br/', label: 'Prefeitura de Curitiba' },
   '15.jpg': { href: 'https://www.agenciacuritiba.com.br/', label: 'Agência Curitiba' },
   '16.jpg': { href: 'https://www.curitiba.pr.gov.br/', label: 'Você no Pinhão', large: true },
+  '17.jpg': { href: 'https://www.tre-go.jus.br/', label: 'TRE Goiás' },
   '2.jpg':  { href: 'https://escolasuperior.mppr.mp.br/', label: 'Escola Superior do MPPR' },
   '3.jpg':  { href: 'https://www.gov.br/ibict/pt-br', label: 'IBICT' },
   '4.jpg':  { href: 'https://www.utfpr.edu.br/', label: 'UTFPR' },
@@ -86,7 +86,7 @@ const ufprLogo = ufprEntry ? { src: ufprEntry[1], href: 'https://www.ufpr.br/', 
 
 const apoioLogos = [
   ...Object.entries(apoioRaw)
-    .filter(([path]) => !path.endsWith('/11.jpg') && !path.endsWith('/18.jpg'))
+    .filter(([path]) => !path.endsWith('/11.jpg') && !path.endsWith('/18.jpg') && !path.endsWith('/13.jpg'))
     .map(([path, src]) => {
       const file = path.split('/').pop();
       return { src, ...(apoioLogoMap[file] || { href: '#', label: file }) };
