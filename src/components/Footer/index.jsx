@@ -14,7 +14,7 @@ const socials = [
   {
     icon: <LinkedInIcon />,
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/infosfera2025/',
+    href: 'https://www.linkedin.com/company/infosferabr/',
   },
 ];
 
