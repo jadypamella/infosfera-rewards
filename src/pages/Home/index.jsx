@@ -39,6 +39,7 @@ import styles from './index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
 import CtaVerde from '../../components/CtaVerde';
 import Countdown from '../../components/Countdown';
+import AnuncioFinalistas from '../../components/AnuncioFinalistas';
 import labriskLogo from '../../assets/apoio/19.png';
 
 // Realização — ordem dos arquivos: 1, 2, 3 (UFPR movida para Apoio, LabRisk entra)
@@ -210,6 +211,8 @@ const Home = () => {
 
   return (
     <Box className={styles.homePage}>
+
+      <AnuncioFinalistas />
 
       {/* ── HERO ── */}
       <Box className={styles.heroBanner} style={{ backgroundImage: `url(${bannerImage})` }}>
