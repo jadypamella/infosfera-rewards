@@ -11,7 +11,9 @@ const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
 const navItems = [
   { label: 'Sobre o Prêmio', path: '/' },
-  { label: 'Vencedores', path: '/vencedores' },
+  { label: 'Programação', path: '/programacao' },
+  { label: 'Participantes', path: '/participantes' },
+  { label: 'Vencedores 2025', path: '/vencedores' },
   { label: 'Regulamento', path: '/regulamento' },
   { label: 'Contato', path: '/contato' },
 ];
@@ -62,7 +64,7 @@ const Header = () => {
               className={styles.ctaButton}
               endIcon={<ArrowForwardIcon sx={{ fontSize: '0.9rem !important' }} />}
             >
-              Inscrever prática
+              Inscrever Prática
             </Button>
 
             {/* Hamburger mobile */}
@@ -120,7 +122,7 @@ const Header = () => {
             endIcon={<ArrowForwardIcon />}
             onClick={() => setDrawerOpen(false)}
           >
-            Inscrever prática
+            Inscrever Prática
           </Button>
         </Box>
       </Drawer>

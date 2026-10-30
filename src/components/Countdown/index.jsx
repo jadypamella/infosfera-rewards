@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import styles from './index.module.css';
 
-const DEADLINE = new Date('2026-07-31T23:59:59-03:00');
+const DEADLINE = new Date('2026-11-05T16:00:00-03:00');
 
 const pad = (n) => String(n).padStart(2, '0');
 
@@ -36,7 +36,7 @@ const Countdown = () => {
 
   return (
     <Box className={styles.wrapper}>
-      <Typography className={styles.label}>Inscrições encerram em</Typography>
+      <Typography className={styles.label}>Cerimônia de premiação em</Typography>
       <Box className={styles.units}>
         {units.map(({ value, label }, i) => (
           <Box key={label} className={styles.unitGroup}>

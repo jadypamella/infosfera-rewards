@@ -50,14 +50,16 @@ const realizacaoLogoMap = {
 
 // Apoio — excluidos: Doity (11.jpg), Giga (18.jpg), CRA-PR (13.jpg). UFPR adicionada (vem de realizacao/4.jpg)
 const apoioLogoMap = {
-  '1.jpg':  { href: 'https://www.mppr.mp.br/', label: 'Ministério Público do Paraná' },
   '10.jpg': { href: 'https://abissal.design/', label: 'Abissal Design Estratégico' },
   '12.jpg': { href: 'https://abades.com.br/', label: 'ABADES' },
   '14.jpg': { href: 'https://www.curitiba.pr.gov.br/', label: 'Prefeitura de Curitiba' },
   '15.jpg': { href: 'https://www.agenciacuritiba.com.br/', label: 'Agência Curitiba' },
-  '16.jpg': { href: 'https://www.curitiba.pr.gov.br/', label: 'Você no Pinhão', large: true },
+  '16.jpg': { href: 'https://valedopinhao.agenciacuritiba.com.br/', label: 'Vale do Pinhão', large: true },
   '17.jpg': { href: 'https://www.tre-go.jus.br/', label: 'TRE Goiás' },
-  '2.jpg':  { href: 'https://escolasuperior.mppr.mp.br/', label: 'Escola Superior do MPPR' },
+  '20.jpg': { href: 'https://www.tcego.tc.br/', label: 'TCE Goiás' },
+  '21.jpg': { href: 'https://www.abcpublica.org.br/', label: 'ABC Pública' },
+  '22.jpg': { href: 'https://www.enap.gov.br/', label: 'ENAP', large: true },
+  '23.jpg': { href: 'https://www.tjgo.jus.br/', label: 'Tribunal de Justiça de Goiás', large: true },
   '3.jpg':  { href: 'https://www.gov.br/ibict/pt-br', label: 'IBICT' },
   '4.jpg':  { href: 'https://www.utfpr.edu.br/', label: 'UTFPR' },
   '5.jpg':  { href: 'https://www.cmc.pr.gov.br/', label: 'Câmara Municipal de Curitiba' },
@@ -84,15 +86,45 @@ const realizacaoLogos = [
 const ufprEntry = Object.entries(realizacaoRaw).find(([path]) => path.endsWith('/4.jpg'));
 const ufprLogo = ufprEntry ? { src: ufprEntry[1], href: 'https://www.ufpr.br/', label: 'UFPR' } : null;
 
-const apoioLogos = [
-  ...Object.entries(apoioRaw)
-    .filter(([path]) => !path.endsWith('/11.jpg') && !path.endsWith('/18.jpg') && !path.endsWith('/13.jpg'))
-    .map(([path, src]) => {
-      const file = path.split('/').pop();
-      return { src, ...(apoioLogoMap[file] || { href: '#', label: file }) };
-    }),
-  ...(ufprLogo ? [ufprLogo] : []),
+// Ordem dos apoiadores por hierarquia federativa (definida pela Ana):
+// federal -> estadual -> municipal e entidades associativas/privadas.
+// (Excluidos: Doity 11, CRA-PR 13, Giga 18 — não entram na lista.)
+const apoioOrder = [
+  // 1. Esfera federal
+  '9.jpg',  // CAPES (fundação federal, MEC)
+  '3.jpg',  // IBICT (instituto federal, MCTI)
+  'UFPR',   // UFPR (universidade federal — vem de realizacao/4.jpg)
+  '4.jpg',  // UTFPR (universidade federal)
+  '22.jpg', // ENAP (escola de governo federal, MGI)
+  '17.jpg', // TRE-GO (Judiciário federal)
+  // 2. Esfera estadual
+  '23.jpg', // TJ-GO (Judiciário estadual, apoio formalizado 11/09)
+  '20.jpg', // TCE-GO (controle externo)
+  // (MPPR 1.jpg e Escola Superior do MPPR 2.jpg removidos a pedido do Edson, 22/07)
+  // 3. Municipal (Curitiba) e entidades associativas/privadas
+  '5.jpg',  // Câmara Municipal de Curitiba
+  '6.jpg',  // Escola do Legislativo
+  '14.jpg', // Prefeitura de Curitiba
+  '15.jpg', // Agência Curitiba
+  '16.jpg', // Vale do Pinhão
+  '7.jpg',  // SEBRAE (sistema S)
+  '12.jpg', // ABADES (associação)
+  '21.jpg', // ABC Pública (associação)
+  '8.jpg',  // IBEPES (oscip)
+  '10.jpg', // Abissal (privado)
 ];
+
+const apoioByFile = Object.fromEntries(
+  Object.entries(apoioRaw).map(([path, src]) => [path.split('/').pop(), src]),
+);
+
+const apoioLogos = apoioOrder
+  .map((file) => {
+    if (file === 'UFPR') return ufprLogo;
+    const src = apoioByFile[file];
+    return src ? { src, ...(apoioLogoMap[file] || { href: '#', label: file }) } : null;
+  })
+  .filter(Boolean);
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
@@ -153,9 +185,13 @@ const Home = () => {
     { icon: <PublicOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Escolha Popular', desc: 'Votação pública digital após divulgação dos finalistas. Única categoria acumulável com as demais.' },
   ];
 
+  // Prazo das inscrições da edição 2026. A partir daí, novas práticas
+  // concorrem à edição 2027 (a página vira sozinha na virada da data).
+  const inscricoesAbertas = Date.now() < new Date('2026-07-31T23:59:59-03:00').getTime();
+
   const timeline = [
-    { period: '1 abr – 31 jul', label: 'Inscrições abertas', active: true },
-    { period: '1–15 ago', label: 'Análise de admissibilidade', active: false },
+    { period: '1 abr – 31 jul', label: inscricoesAbertas ? 'Inscrições abertas' : 'Inscrições encerradas', active: inscricoesAbertas },
+    { period: '1–15 ago', label: 'Análise de admissibilidade', active: !inscricoesAbertas },
     { period: '1–30 ago', label: 'Avaliação de mérito', active: false },
     { period: '10 set', label: 'Divulgação dos finalistas', active: false },
     { period: '5–9 out', label: 'Aclamação Pública', active: false },
@@ -181,7 +217,7 @@ const Home = () => {
         <Box className={`${styles.contentContainer} ${styles.heroContentWrapper}`}>
           <Box className={styles.heroContent}>
             <Box className={styles.heroTextBlock}>
-              <Chip label="Inscrições abertas · 1 abr – 31 jul 2026" className={styles.heroBadge} size="small" />
+              <Chip label={inscricoesAbertas ? "Inscrições abertas · 1 abr – 31 jul 2026" : "Cerimônia · 5 de novembro · Goiânia/GO"} className={styles.heroBadge} size="small" />
               <Typography className={styles.heroTitlePart1}>Prêmio Infosfera</Typography>
               <Typography className={styles.heroTitlePart2}>Boas Práticas em Gestão da Informação na Esfera Pública</Typography>
               <Typography className={styles.heroDescription}>
@@ -189,7 +225,7 @@ const Home = () => {
               </Typography>
               <Box className={styles.heroActions}>
                 <Button variant="contained" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.heroCta} endIcon={<ArrowForwardIcon />}>
-                  Inscreva sua prática agora
+                  {inscricoesAbertas ? "Inscreva Sua Prática Agora" : "Inscreva Sua Prática · Edição 2027"}
                 </Button>
               </Box>
               <Countdown />
@@ -313,7 +349,7 @@ const Home = () => {
               className={styles.btnOutlinePrimary}
               endIcon={<ArrowForwardIcon />}
             >
-              Cadastre sua prática e participe!
+              Cadastre Sua Prática e Participe!
             </Button>
           </Box>
         </Box>
@@ -326,7 +362,9 @@ const Home = () => {
             <Typography variant="h2" className={`${styles.sectionTitle} ${styles.sectionTitleLight}`}>Cronograma 2026</Typography>
             <Box className={styles.titleUnderline} />
             <Typography className={`${styles.sectionSubtitle} ${styles.sectionSubtitleLight}`}>
-              Fique atento às datas. As inscrições encerram em <strong>31 de julho de 2026</strong>.
+              {inscricoesAbertas
+                ? <>Fique atento às datas. As inscrições encerram em <strong>31 de julho de 2026</strong>.</>
+                : <>As inscrições da edição 2026 encerraram em <strong>31 de julho</strong>. Práticas enviadas a partir de 1º de agosto concorrem à <strong>edição 2027</strong>.</>}
             </Typography>
           </Box>
           <Box className={styles.timelineWrapper}>
@@ -343,7 +381,7 @@ const Home = () => {
           </Box>
           <Box className={styles.ctaCenter}>
             <Button variant="outlined" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.heroCtaOutline} endIcon={<ArrowForwardIcon />}>
-              Inscreva sua prática
+              Inscreva Sua Prática
             </Button>
           </Box>
         </Box>
@@ -397,7 +435,7 @@ const Home = () => {
                 </Typography>
                 <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'white' }}>5 de novembro de 2026 · Goiânia/GO</Typography>
                 <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'rgba(255,255,255,0.5)', color: 'white', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'white', bgcolor: 'rgba(255,255,255,0.1)' } }}>
-                  Quero participar
+                  Quero Participar
                 </Button>
               </CardContent>
             </Card>

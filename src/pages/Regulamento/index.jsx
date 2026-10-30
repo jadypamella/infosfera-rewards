@@ -109,7 +109,7 @@ const Regulamento = () => {
           <Typography className={styles.heroSubtitle}>Tudo o que você precisa saber para participar e concorrer ao reconhecimento nacional em gestão da informação pública.</Typography>
           <Box className={styles.heroActions}>
             <Button variant="contained" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary} endIcon={<ArrowForwardIcon />}>
-              Inscrever minha prática
+              Inscrever Minha Prática
             </Button>
             <Button
               variant="outlined"
@@ -117,7 +117,7 @@ const Regulamento = () => {
               className={styles.btnOutline}
               onClick={() => document.getElementById('cronograma')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Ver cronograma
+              Ver Cronograma
             </Button>
           </Box>
           <Typography className={styles.heroNote}>Inscrição gratuita. Sem limite de práticas por órgão.</Typography>
@@ -152,7 +152,7 @@ const Regulamento = () => {
                 startIcon={<DescriptionOutlinedIcon />}
                 className={styles.btnPrimary}
               >
-                Ler o regulamento na íntegra
+                Ler o Regulamento na Íntegra
               </Button>
             </Box>
           </Box>
@@ -240,7 +240,7 @@ const Regulamento = () => {
           </Box>
           <Box className={styles.ctaCenter}>
             <Button variant="contained" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary} endIcon={<ArrowForwardIcon />}>
-              Acessar a Plataforma e cadastrar prática
+              Acessar a Plataforma e Cadastrar Prática
             </Button>
           </Box>
         </Box>
@@ -384,7 +384,7 @@ const Regulamento = () => {
           </Box>
           <Box className={styles.ctaCenter}>
             <Button variant="outlined" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.btnOutlineLight} endIcon={<ArrowForwardIcon />}>
-              Garantir minha vaga agora
+              Garantir Minha Vaga Agora
             </Button>
           </Box>
         </Box>
@@ -512,7 +512,7 @@ const Regulamento = () => {
           startIcon={<DescriptionOutlinedIcon />}
           className={styles.btnPrimary}
         >
-          Ler o regulamento na íntegra
+          Ler o Regulamento na Íntegra
         </Button>
       </Box>
 

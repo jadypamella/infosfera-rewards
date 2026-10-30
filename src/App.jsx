@@ -11,6 +11,8 @@ import Vencedores from './pages/Vencedores';
 import Regulamento from './pages/Regulamento';
 import RegulamentoIntegra from './pages/RegulamentoIntegra';
 import Contato from './pages/Contato';
+import Finalistas from './pages/Finalistas';
+import Participantes from './pages/Participantes';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 //import Galeria from './pages/Galeria';
@@ -33,6 +35,9 @@ function App() {
           {/* <Route path="/galeria" element={<Galeria />} /> */}
           <Route path="/regulamento" element={<Regulamento />} />
           <Route path="/regulamento-integra" element={<RegulamentoIntegra />} />
+          <Route path="/programacao" element={<Finalistas />} />
+          <Route path="/finalistas" element={<Finalistas />} />
+          <Route path="/participantes" element={<Participantes />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -25,7 +25,7 @@ const FloatingCTA = () => {
         className={styles.btn}
         aria-label="Inscrever prática no Prêmio Infosfera"
       >
-        Inscrever prática
+        Inscrever Prática
       </Button>
     </Box>
   );

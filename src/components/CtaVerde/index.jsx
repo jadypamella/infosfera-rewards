@@ -25,7 +25,7 @@ const CtaVerde = () => (
           className={styles.btn}
           endIcon={<ArrowForwardIcon />}
         >
-          Inscrever minha prática agora
+          Inscrever Minha Prática Agora
         </Button>
         <Typography className={styles.note}>Inscrição gratuita. Sem limite de práticas por órgão.</Typography>
       </Box>

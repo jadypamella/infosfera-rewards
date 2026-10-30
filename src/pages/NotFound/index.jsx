@@ -22,7 +22,7 @@ const NotFound = () => (
           startIcon={<HomeOutlinedIcon />}
           className={styles.btnPrimary}
         >
-          Voltar ao início
+          Voltar ao Início
         </Button>
         <Button
           href={PLATFORM_URL}
@@ -32,7 +32,7 @@ const NotFound = () => (
           endIcon={<ArrowForwardIcon />}
           className={styles.btnOutline}
         >
-          Inscrever prática
+          Inscrever Prática
         </Button>
       </Box>
     </Box>

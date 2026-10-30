@@ -21,3 +21,6 @@ Thumbs.db
 .idea/
 
 node_modules/
+# Pacotes de deploy e backups locais
+*.zip
+backup-live/
