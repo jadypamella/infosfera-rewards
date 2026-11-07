@@ -5,7 +5,12 @@ const NoticiasMidia = ({ noticias, mostrarEdicao = false }) => (
   <Grid container spacing={3}>
     {noticias.map((n) => (
       <Grid key={n.url} size={{ xs: 12, md: 6 }}>
-        <Card component="a" href={n.url} target="_blank" rel="noopener noreferrer" sx={{ display: 'block', height: '100%', textDecoration: 'none', borderRadius: 3, boxShadow: '0 4px 18px rgba(45,46,130,0.10)', transition: 'transform .2s, box-shadow .2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 10px 28px rgba(45,46,130,0.18)' } }}>
+        <Card component="a" href={n.url} target="_blank" rel="noopener noreferrer" sx={{ display: 'block', height: '100%', textDecoration: 'none', borderRadius: 3, overflow: 'hidden', boxShadow: '0 4px 18px rgba(45,46,130,0.10)', transition: 'transform .2s, box-shadow .2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 10px 28px rgba(45,46,130,0.18)' } }}>
+          {n.imagem && (
+            <Box sx={{ position: 'relative', aspectRatio: '16 / 9', bgcolor: '#e9eaf5' }}>
+              <Box component="img" src={n.imagem} alt="" loading="lazy" sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            </Box>
+          )}
           <CardContent sx={{ p: 3 }}>
             <Typography sx={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: '#0e8a68', mb: 1 }}>
               {mostrarEdicao ? `${n.edicao} · ${n.veiculo}` : n.veiculo}
