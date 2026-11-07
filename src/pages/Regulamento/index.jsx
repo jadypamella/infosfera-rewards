@@ -105,7 +105,7 @@ const Regulamento = () => {
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
           <Chip label="Edição 2026 · Inscrições abertas até 31 jul" className={styles.heroBadge} size="small" />
-          <Typography className={styles.heroTitle}>Regulamento do Prêmio</Typography>
+          <Typography component="h1" className={styles.heroTitle}>Regulamento do Prêmio</Typography>
           <Typography className={styles.heroSubtitle}>Tudo o que você precisa saber para participar e concorrer ao reconhecimento nacional em gestão da informação pública.</Typography>
           <Box className={styles.heroActions}>
             <Button variant="contained" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary} endIcon={<ArrowForwardIcon />}>

@@ -86,7 +86,7 @@ const Finalistas = () => (
       <Box className={styles.heroOverlay} />
       <Box className={styles.heroContent}>
         <Chip label="Edição 2026 · Cerimônia em 5 de novembro" className={styles.heroBadge} size="small" />
-        <Typography className={styles.heroTitle}>Programação e Orientações aos Finalistas</Typography>
+        <Typography component="h1" className={styles.heroTitle}>Programação e Orientações aos Finalistas</Typography>
         <Typography className={styles.heroSubtitle}>Programação do dia 5 de novembro e orientações para os representantes das boas práticas finalistas sobre a Sessão de Boas Práticas e a Cerimônia de Premiação, em Goiânia.</Typography>
         <DownloadButtons />
       </Box>

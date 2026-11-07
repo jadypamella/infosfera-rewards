@@ -86,7 +86,7 @@ const Participantes = () => {
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
           <Chip label={resultadoDivulgado ? 'Edições 2026 e 2025' : 'Edição 2026 · Boas práticas finalistas'} className={styles.heroBadge} size="small" />
-          <Typography className={styles.heroTitle}>Vencedores</Typography>
+          <Typography component="h1" className={styles.heroTitle}>Vencedores</Typography>
           <Typography className={styles.heroSubtitle}>
             As boas práticas de gestão da informação reconhecidas pelo Prêmio Infosfera, separadas por edição.
           </Typography>

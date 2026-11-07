@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
+import { inscricoesAbertas } from './data/participantes2026';
 import Home from './pages/Home';
 import Categorias from './pages/Categorias';
 import Vencedores from './pages/Vencedores';
@@ -45,7 +46,7 @@ function App() {
         </Routes>
       </Box>
       <Footer />
-      <FloatingCTA />
+      {inscricoesAbertas && <FloatingCTA />}
     </Box>
   );
 }

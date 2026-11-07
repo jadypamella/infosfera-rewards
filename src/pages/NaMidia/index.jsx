@@ -12,7 +12,7 @@ const NaMidia = () => (
     <Box className={styles.hero} style={{ backgroundImage: `url(${bannerImage})` }}>
       <Box className={styles.heroOverlay} />
       <Box className={styles.heroContent}>
-        <Typography className={styles.heroTitle}>Infosfera na Mídia</Typography>
+        <Typography component="h1" className={styles.heroTitle}>Infosfera na Mídia</Typography>
         <Typography className={styles.heroSubtitle}>Notícias e publicações sobre o Prêmio Infosfera.</Typography>
       </Box>
     </Box>

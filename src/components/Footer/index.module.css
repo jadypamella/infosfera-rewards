@@ -79,6 +79,8 @@
     color: rgba(255, 255, 255, 0.7) !important;
     transition: color 0.2s ease, transform 0.2s ease !important;
     padding: 0 !important;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .socialItem:hover .iconButton {

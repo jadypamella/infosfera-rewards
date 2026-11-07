@@ -20,7 +20,7 @@ const AnuncioFinalistas = () => {
           <Box className={styles.selo}>
             <EmojiEventsOutlinedIcon sx={{ fontSize: 18 }} /> {resultadoDivulgado ? 'Resultado 2026' : 'Finalistas 2026'}
           </Box>
-          <Typography component="h2" className={styles.titulo}>
+          <Typography component="h1" className={styles.titulo}>
             {resultadoDivulgado ? 'Conheça as práticas premiadas do Prêmio Infosfera 2026' : `Conheça as ${participantes2026.length} boas práticas finalistas`}
           </Typography>
           <Typography className={styles.subtitulo}>

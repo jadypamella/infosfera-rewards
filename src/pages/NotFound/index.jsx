@@ -10,7 +10,7 @@ const NotFound = () => (
   <Box className={styles.page}>
     <Box className={styles.content}>
       <Typography className={styles.code}>404</Typography>
-      <Typography className={styles.title}>Página não encontrada</Typography>
+      <Typography component="h1" className={styles.title}>Página não encontrada</Typography>
       <Typography className={styles.text}>
         O endereço que você acessou não existe. Mas as inscrições para o Prêmio Infosfera 2026 estão abertas!
       </Typography>

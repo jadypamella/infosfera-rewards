@@ -50,6 +50,8 @@ export const participantes2026 = [
 export const listaLiberada = true;
 
 // true depois da cerimônia: mostra as distinções e ordena as premiadas primeiro.
+// Inscrições da edição 2026 encerradas: esconde os botões de inscrição.
+export const inscricoesAbertas = false;
 export const resultadoDivulgado = true;
 
 export const ORDEM_PREMIO = ['Grande Prêmio Infosfera 2026', 'Destaque Regional · Goiás', 'Destaque Municipal', 'Menção Honrosa', ''];
