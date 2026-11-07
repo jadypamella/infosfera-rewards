@@ -85,7 +85,7 @@ const Participantes = () => {
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
           <Chip label={resultadoDivulgado ? 'Edição 2026 · Resultado' : 'Edição 2026 · Boas práticas finalistas'} className={styles.heroBadge} size="small" />
-          <Typography className={styles.heroTitle}>Participantes 2026</Typography>
+          <Typography className={styles.heroTitle}>Finalistas 2026</Typography>
           <Typography className={styles.heroSubtitle}>
             As boas práticas de gestão da informação selecionadas pela Comissão Julgadora entre as 113 inscrições desta edição.
           </Typography>
@@ -95,7 +95,7 @@ const Participantes = () => {
       <Box className={styles.section}>
         <Box className={styles.container}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={styles.sectionTitle}>{resultadoDivulgado ? 'Premiadas e Finalistas 2026' : 'Boas Práticas Finalistas'}</Typography>
+            <Typography variant="h2" className={styles.sectionTitle}>{resultadoDivulgado ? 'Finalistas 2026' : 'Boas Práticas Finalistas'}</Typography>
             <Box className={styles.underline} />
           </Box>
 
@@ -121,7 +121,7 @@ const Participantes = () => {
                 <InfoOutlinedIcon sx={{ color: '#2d2e82' }} />
                 <Typography variant="body2">
                   {resultadoDivulgado
-                    ? 'Resultado anunciado na cerimônia de 5 de novembro de 2026, em Goiânia. As práticas aparecem pela distinção recebida, e todas as dez foram selecionadas como finalistas entre as 113 inscrições.'
+                    ? 'Resultado anunciado na cerimônia de 5 de novembro de 2026, em Goiânia. As práticas aparecem pela distinção recebida, e todas as nove foram selecionadas como finalistas entre as 113 inscrições.'
                     : 'As boas práticas finalistas estão listadas em ordem alfabética, sem indicação de categoria. As distinções serão anunciadas na cerimônia de 5 de novembro, em Goiânia.'}
                 </Typography>
               </Box>
