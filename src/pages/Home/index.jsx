@@ -40,6 +40,8 @@ import bannerImage from '../../assets/banner.jpeg';
 import CtaVerde from '../../components/CtaVerde';
 import Countdown from '../../components/Countdown';
 import AnuncioFinalistas from '../../components/AnuncioFinalistas';
+import NoticiasMidia from '../../components/NoticiasMidia';
+import { noticias } from '../../data/naMidia';
 import labriskLogo from '../../assets/apoio/19.png';
 
 // Realização — ordem dos arquivos: 1, 2, 3 (UFPR movida para Apoio, LabRisk entra)
@@ -273,6 +275,18 @@ const Home = () => {
               </Card>
             </Grid>
           </Grid>
+        </Box>
+      </Box>
+
+      {/* ── INFOSFERA NA MÍDIA ── */}
+      <Box className={`${styles.section} ${styles.sectionLight}`}>
+        <Box className={styles.contentContainer}>
+          <Box className={styles.sectionHeader}>
+            <Typography variant="h2" className={styles.sectionTitle}>Infosfera na Mídia</Typography>
+            <Box className={styles.titleUnderline} />
+            <Typography className={styles.sectionSubtitle}>Notícias e publicações sobre o Prêmio Infosfera.</Typography>
+          </Box>
+          <NoticiasMidia noticias={noticias} mostrarEdicao />
         </Box>
       </Box>
 
