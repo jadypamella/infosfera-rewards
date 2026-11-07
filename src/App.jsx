@@ -1,11 +1,11 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Box } from '@mui/material';
 
 // Importando componentes reutilizáveis
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
-import { inscricoesAbertas } from './data/participantes2026';
+import { inscricoesAbertas } from './data/edicoes';
 import Home from './pages/Home';
 import Categorias from './pages/Categorias';
 import Vencedores from './pages/Vencedores';
@@ -13,7 +13,6 @@ import Regulamento from './pages/Regulamento';
 import RegulamentoIntegra from './pages/RegulamentoIntegra';
 import Contato from './pages/Contato';
 import Finalistas from './pages/Finalistas';
-import Participantes from './pages/Participantes';
 import NaMidia from './pages/NaMidia';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
@@ -39,7 +38,7 @@ function App() {
           <Route path="/regulamento-integra" element={<RegulamentoIntegra />} />
           <Route path="/programacao" element={<Finalistas />} />
           <Route path="/finalistas" element={<Finalistas />} />
-          <Route path="/participantes" element={<Participantes />} />
+          <Route path="/participantes" element={<Navigate to="/vencedores" replace />} />
           <Route path="/na-midia" element={<NaMidia />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />

@@ -41,7 +41,7 @@ const Contato = () => {
       <Box className={styles.section}>
         <Box className={styles.contentContainer}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={styles.sectionTitle}>
+            <Typography variant="h2" component="h1" className={styles.sectionTitle}>
               Entre em Contato
             </Typography>
             <Box className={styles.titleUnderline} />

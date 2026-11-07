@@ -40,6 +40,7 @@ import bannerImage from '../../assets/banner.jpeg';
 import CtaVerde from '../../components/CtaVerde';
 import Countdown from '../../components/Countdown';
 import AnuncioFinalistas from '../../components/AnuncioFinalistas';
+import { inscricoesAbertas } from '../../data/edicoes';
 import NoticiasMidia from '../../components/NoticiasMidia';
 import { noticias } from '../../data/naMidia';
 import labriskLogo from '../../assets/apoio/19.png';
@@ -188,9 +189,6 @@ const Home = () => {
     { icon: <PublicOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Escolha Popular', desc: 'Votação pública digital após divulgação dos finalistas. Única categoria acumulável com as demais.' },
   ];
 
-  // Prazo das inscrições da edição 2026. A partir daí, novas práticas
-  // concorrem à edição 2027 (a página vira sozinha na virada da data).
-  const inscricoesAbertas = Date.now() < new Date('2026-07-31T23:59:59-03:00').getTime();
 
   const timeline = [
     { period: '1 abr – 31 jul', label: inscricoesAbertas ? 'Inscrições abertas' : 'Inscrições encerradas', active: inscricoesAbertas },

@@ -226,7 +226,7 @@ const Finalistas = () => (
           <Typography variant="h2" className={styles.sectionTitle}>5. Dúvidas</Typography>
           <Box className={styles.underline} />
           <Typography className={styles.sectionSubtitle}>
-            Escreva para <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. A lista de finalistas está na página <Link to="/participantes">Participantes</Link>.
+            Escreva para <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. A lista de finalistas está na página <Link to="/vencedores">Vencedores</Link>.
           </Typography>
         </Box>
         <Box className={styles.ctaCenter}>

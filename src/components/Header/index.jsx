@@ -4,7 +4,7 @@ import { Box, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListIt
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { inscricoesAbertas } from '../../data/participantes2026';
+import { inscricoesAbertas } from '../../data/edicoes';
 import styles from './index.module.css';
 import logo from '../../assets/logo.png';
 
@@ -13,7 +13,7 @@ const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 const navItems = [
   { label: 'Sobre o Prêmio', path: '/' },
   { label: 'Programação', path: '/programacao' },
-  { label: 'Vencedores', path: '/participantes' },
+  { label: 'Vencedores', path: '/vencedores' },
   { label: 'Regulamento', path: '/regulamento' },
   { label: 'Contato', path: '/contato' },
 ];
