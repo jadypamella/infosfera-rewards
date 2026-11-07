@@ -13,6 +13,7 @@ import RegulamentoIntegra from './pages/RegulamentoIntegra';
 import Contato from './pages/Contato';
 import Finalistas from './pages/Finalistas';
 import Participantes from './pages/Participantes';
+import NaMidia from './pages/NaMidia';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 //import Galeria from './pages/Galeria';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/programacao" element={<Finalistas />} />
           <Route path="/finalistas" element={<Finalistas />} />
           <Route path="/participantes" element={<Participantes />} />
+          <Route path="/na-midia" element={<NaMidia />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

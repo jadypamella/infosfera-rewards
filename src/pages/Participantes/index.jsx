@@ -9,6 +9,7 @@ import styles from '../Regulamento/index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
 import { participantes2026, listaLiberada, resultadoDivulgado, ORDEM_PREMIO } from '../../data/participantes2026';
 import GaleriaCerimonia from '../../components/GaleriaCerimonia';
+import Edicao2025 from '../../components/Edicao2025';
 
 const COR_PREMIO = {
   'Grande Prêmio Infosfera 2026': 'linear-gradient(90deg, #c99a2e, #e8c25a)',
@@ -39,7 +40,7 @@ const CardParticipante = ({ p }) => (
   >
     {resultadoDivulgado && (
       <Box sx={{ background: COR_PREMIO[p.premio] || '#6b7280', color: '#fff', fontWeight: 800, fontSize: 13, letterSpacing: '0.05em', textTransform: 'uppercase', px: 2.5, py: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-        <EmojiEventsIcon sx={{ fontSize: 18 }} /> {p.premio || 'Finalista'}
+        <EmojiEventsIcon sx={{ fontSize: 18 }} /> {p.premio.includes('2026') ? p.premio : `2026 · ${p.premio || 'Finalista'}`}
       </Box>
     )}
     <Box sx={{ position: 'relative', aspectRatio: '3 / 2', flexShrink: 0, bgcolor: '#f3f5f9', borderBottom: '3px solid #1abc9c', overflow: 'hidden' }}>
@@ -84,10 +85,10 @@ const Participantes = () => {
       <Box className={styles.hero} style={{ backgroundImage: `url(${bannerImage})` }}>
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
-          <Chip label={resultadoDivulgado ? 'Edição 2026 · Resultado' : 'Edição 2026 · Boas práticas finalistas'} className={styles.heroBadge} size="small" />
-          <Typography className={styles.heroTitle}>Finalistas 2026</Typography>
+          <Chip label={resultadoDivulgado ? 'Edições 2026 e 2025' : 'Edição 2026 · Boas práticas finalistas'} className={styles.heroBadge} size="small" />
+          <Typography className={styles.heroTitle}>Finalistas</Typography>
           <Typography className={styles.heroSubtitle}>
-            As boas práticas de gestão da informação selecionadas pela Comissão Julgadora entre as 113 inscrições desta edição.
+            As boas práticas de gestão da informação reconhecidas pelo Prêmio Infosfera, separadas por edição.
           </Typography>
         </Box>
       </Box>
@@ -95,7 +96,7 @@ const Participantes = () => {
       <Box className={styles.section}>
         <Box className={styles.container}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={styles.sectionTitle}>{resultadoDivulgado ? 'Finalistas 2026' : 'Boas Práticas Finalistas'}</Typography>
+            <Typography variant="h2" className={styles.sectionTitle}>{resultadoDivulgado ? 'Edição 2026' : 'Boas Práticas Finalistas'}</Typography>
             <Box className={styles.underline} />
           </Box>
 
@@ -139,6 +140,7 @@ const Participantes = () => {
 
 
       {resultadoDivulgado && <GaleriaCerimonia />}
+      {resultadoDivulgado && <Edicao2025 />}
     </Box>
   );
 };
