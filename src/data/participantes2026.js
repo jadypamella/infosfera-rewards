@@ -56,7 +56,6 @@ export const resultadoDivulgado = true;
 
 export const ORDEM_PREMIO = ['Grande Prêmio Infosfera 2026', 'Destaque Regional · Goiás', 'Destaque Municipal', 'Menção Honrosa', ''];
 
-export const ALBUM_FOTOS_URL = 'https://photos.app.goo.gl/2UetLeMztuVEya5y9';
 
 // Fotos da cerimônia de 05/11/2026 (pasta do Drive da organização).
 export const galeriaCerimonia = [galeria01, galeria02, galeria03, galeria04, galeria05, galeria06, galeria07, galeria08, galeria09, galeria10, galeria11, galeria12, galeria13];
