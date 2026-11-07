@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
-import { Box, Typography, Card, CardContent, Grid, Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Box, Typography, Card, CardContent, Grid } from '@mui/material';
 
 import styles from '../../pages/Regulamento/index.module.css';
 import { categorias2025 } from '../../data/premiadas2025';
@@ -45,11 +43,6 @@ const Edicao2025 = () => (
           </Grid>
         ))}
       </Grid>
-      <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <Button component={Link} to="/vencedores" variant="contained" size="large" className={styles.btnPrimary} endIcon={<ArrowForwardIcon />}>
-          Ver os Vencedores 2025
-        </Button>
-      </Box>
     </Box>
   </Box>
 );

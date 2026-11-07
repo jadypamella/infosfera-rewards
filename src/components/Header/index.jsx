@@ -12,8 +12,7 @@ const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 const navItems = [
   { label: 'Sobre o Prêmio', path: '/' },
   { label: 'Programação', path: '/programacao' },
-  { label: 'Finalistas', path: '/participantes' },
-  { label: 'Vencedores 2025', path: '/vencedores' },
+  { label: 'Vencedores', path: '/participantes' },
   { label: 'Regulamento', path: '/regulamento' },
   { label: 'Contato', path: '/contato' },
 ];
