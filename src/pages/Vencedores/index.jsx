@@ -12,7 +12,6 @@ import { categorias2025 as categorias } from '../../data/premiadas2025';
 import fotoRJ        from '../../assets/premiados/PREFEITURA DO RJ.JPG';
 import fotoPinhais   from '../../assets/premiados/PREFEITURA DE PINHAIS.JPG';
 import fotoPremiados from '../../assets/premiados/PREMIADOS.JPG';
-import fotoTRESP1    from '../../assets/premiados/TRE - SP1.JPG';
 
 const FotoPremio = ({ src, alt }) => (
   <Box sx={{ width: '100%', mb: 3, borderRadius: '16px', overflow: 'hidden', lineHeight: 0 }}>
