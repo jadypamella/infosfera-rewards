@@ -1,11 +1,21 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Box, Typography, Card, CardContent, Grid, Button, Chip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 import styles from '../Regulamento/index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
-import { participantes2026, listaLiberada } from '../../data/participantes2026';
+import { participantes2026, listaLiberada, resultadoDivulgado, ORDEM_PREMIO } from '../../data/participantes2026';
+import GaleriaCerimonia from '../../components/GaleriaCerimonia';
+
+const COR_PREMIO = {
+  'Grande Prêmio Infosfera 2026': 'linear-gradient(90deg, #c99a2e, #e8c25a)',
+  'Destaque Regional · Goiás': '#2d2e82',
+  'Destaque Municipal': '#2d2e82',
+  'Menção Honrosa': '#0e8a68',
+};
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
@@ -27,12 +37,16 @@ const CardParticipante = ({ p }) => (
       '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 10px 28px rgba(45,46,130,0.18)' },
     }}
   >
+    {resultadoDivulgado && (
+      <Box sx={{ background: COR_PREMIO[p.premio] || '#6b7280', color: '#fff', fontWeight: 800, fontSize: 13, letterSpacing: '0.05em', textTransform: 'uppercase', px: 2.5, py: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+        <EmojiEventsIcon sx={{ fontSize: 18 }} /> {p.premio || 'Finalista'}
+      </Box>
+    )}
     <Box sx={{ position: 'relative', aspectRatio: '3 / 2', flexShrink: 0, bgcolor: '#f3f5f9', borderBottom: '3px solid #1abc9c', overflow: 'hidden' }}>
-      <Box component="img" src={p.imagem} alt={p.pratica} loading="lazy" sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+      <Box component="img" src={p.fotoPremio || p.imagem} alt={p.fotoPremio ? `Entrega do prêmio: ${p.pratica}` : p.pratica} loading="lazy" sx={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: p.fotoPremio ? 'cover' : 'contain', objectPosition: 'center 65%' }} />
     </Box>
     <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1.5, p: 3 }}>
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-        {p.premio && <Selo label={p.premio} cor="#0e8a68" />}
         {p.esfera && <Selo label={p.esfera} cor={p.esferaCor} />}
         {p.status && <Selo label={p.status} cor={p.statusCor} />}
       </Box>
@@ -55,7 +69,14 @@ const CardParticipante = ({ p }) => (
 );
 
 const Participantes = () => {
+  const { state } = useLocation();
+  useEffect(() => {
+    if (state?.secao) document.getElementById(state.secao)?.scrollIntoView({ behavior: 'smooth' });
+  }, [state]);
   const mostrar = listaLiberada && participantes2026.length > 0;
+  const lista = resultadoDivulgado
+    ? [...participantes2026].sort((a, b) => ORDEM_PREMIO.indexOf(a.premio || '') - ORDEM_PREMIO.indexOf(b.premio || ''))
+    : participantes2026;
 
   return (
     <Box className={styles.page}>
@@ -63,7 +84,7 @@ const Participantes = () => {
       <Box className={styles.hero} style={{ backgroundImage: `url(${bannerImage})` }}>
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
-          <Chip label="Edição 2026 · Boas práticas finalistas" className={styles.heroBadge} size="small" />
+          <Chip label={resultadoDivulgado ? 'Edição 2026 · Resultado' : 'Edição 2026 · Boas práticas finalistas'} className={styles.heroBadge} size="small" />
           <Typography className={styles.heroTitle}>Participantes 2026</Typography>
           <Typography className={styles.heroSubtitle}>
             As boas práticas de gestão da informação selecionadas pela Comissão Julgadora entre as 113 inscrições desta edição.
@@ -74,7 +95,7 @@ const Participantes = () => {
       <Box className={styles.section}>
         <Box className={styles.container}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={styles.sectionTitle}>Boas Práticas Finalistas</Typography>
+            <Typography variant="h2" className={styles.sectionTitle}>{resultadoDivulgado ? 'Premiadas e Finalistas 2026' : 'Boas Práticas Finalistas'}</Typography>
             <Box className={styles.underline} />
           </Box>
 
@@ -99,11 +120,13 @@ const Participantes = () => {
               <Box className={styles.highlightBox} sx={{ mb: 4 }}>
                 <InfoOutlinedIcon sx={{ color: '#2d2e82' }} />
                 <Typography variant="body2">
-                  As boas práticas finalistas estão listadas em ordem alfabética, sem indicação de categoria. As distinções serão anunciadas na cerimônia de 5 de novembro, em Goiânia.
+                  {resultadoDivulgado
+                    ? 'Resultado anunciado na cerimônia de 5 de novembro de 2026, em Goiânia. As práticas aparecem pela distinção recebida, e todas as dez foram selecionadas como finalistas entre as 113 inscrições.'
+                    : 'As boas práticas finalistas estão listadas em ordem alfabética, sem indicação de categoria. As distinções serão anunciadas na cerimônia de 5 de novembro, em Goiânia.'}
                 </Typography>
               </Box>
               <Grid container spacing={3}>
-                {participantes2026.map((p) => (
+                {lista.map((p) => (
                   <Grid key={`${p.orgao}-${p.pratica}`} size={{ xs: 12, sm: 6, md: 4 }}>
                     <CardParticipante p={p} />
                   </Grid>
@@ -114,6 +137,8 @@ const Participantes = () => {
         </Box>
       </Box>
 
+
+      {resultadoDivulgado && <GaleriaCerimonia />}
     </Box>
   );
 };

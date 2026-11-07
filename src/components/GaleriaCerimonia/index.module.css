@@ -1,0 +1,14 @@
+.secao { background: #f4f6fb; padding: 72px 16px; }
+.inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.titulo { font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; font-size: clamp(26px, 3.5vw, 38px) !important; color: #1d1e5c !important; }
+.linha { width: 48px; height: 4px; border-radius: 2px; margin: 14px auto 18px; background: linear-gradient(90deg, #2d2e82, #1abc9c); }
+.texto { max-width: 680px; margin: 0 auto 32px !important; color: #555 !important; font-size: 16px !important; line-height: 1.6 !important; }
+.grade { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 12px; }
+.foto { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(29, 30, 92, 0.12); display: block; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.foto:hover img { transform: scale(1.06); }
+.destaque { grid-column: span 2; grid-row: span 2; }
+.botao { background: linear-gradient(90deg, #2d2e82, #1abc9c) !important; color: #fff !important; font-weight: 700 !important; text-transform: none !important; border-radius: 999px !important; padding: 12px 28px !important; }
+@media (max-width: 700px) {
+  .grade { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 130px; gap: 8px; }
+}

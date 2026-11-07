@@ -120,3 +120,17 @@
     transform: none;
   }
 }
+
+.botaoSecundario {
+  margin-left: 12px !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  border-radius: 999px !important;
+  padding: 10px 24px !important;
+}
+
+@media (max-width: 900px) {
+  .botaoSecundario { margin: 12px 0 0 !important; }
+}
