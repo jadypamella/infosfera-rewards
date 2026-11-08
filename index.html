@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="theme-color" content="#2d2e82" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#eef5f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e1f6e" media="(prefers-color-scheme: dark)" />
+    <script>
+      // Applies the theme the visitor chose before the first paint, so the page never flashes.
+      try { var t = localStorage.getItem('tema'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--app-head-->
 

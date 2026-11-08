@@ -6,6 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styles from './index.module.css';
 import logo from '../../assets/logo.png';
+import ToggleTema from '../ToggleTema';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
@@ -21,6 +22,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
+  // Prerendered pages live in folders, so the path may end in a slash.
+  const ativo = (path) => (location.pathname.replace(/(.)\/$/, '$1') === path);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -46,7 +49,7 @@ const Header = () => {
                 key={item.label}
                 to={item.path}
                 onClick={scrollToTop}
-                className={`${styles.navLink} ${location.pathname === item.path ? styles.navLinkActive : ''}`}
+                className={`${styles.navLink} ${ativo(item.path) ? styles.navLinkActive : ''}`}
               >
                 {item.label}
               </Link>
@@ -55,7 +58,8 @@ const Header = () => {
 
           {/* CTA desktop */}
           <Box className={styles.headerActions}>
-                          <Button
+            <ToggleTema />
+            <Button
                 variant="contained"
                 href={PLATFORM_URL}
                 target="_blank"
@@ -90,7 +94,7 @@ const Header = () => {
       >
         <Box className={styles.drawerHeader}>
           <span role="img" aria-label="Logo Infosfera" className={styles.drawerLogo} style={{ '--logo': `url(${logo})` }} />
-          <IconButton onClick={() => setDrawerOpen(false)} className={styles.drawerClose}>
+          <IconButton onClick={() => setDrawerOpen(false)} className={styles.drawerClose} aria-label="Fechar menu">
             <CloseIcon />
           </IconButton>
         </Box>
@@ -102,7 +106,7 @@ const Header = () => {
                 component={Link}
                 to={item.path}
                 onClick={() => { setDrawerOpen(false); scrollToTop(); }}
-                className={`${styles.drawerItem} ${location.pathname === item.path ? styles.drawerItemActive : ''}`}
+                className={`${styles.drawerItem} ${ativo(item.path) ? styles.drawerItemActive : ''}`}
               >
                 <ListItemText primary={item.label} />
               </ListItemButton>

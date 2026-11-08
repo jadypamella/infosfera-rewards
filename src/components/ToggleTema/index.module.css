@@ -1,0 +1,12 @@
+.botao {
+  width: 44px;
+  height: 44px;
+  color: var(--luz-tinta) !important;
+  border: 1px solid var(--luz-linha) !important;
+  transition: background-color 0.2s, transform 0.3s;
+}
+
+.botao:hover {
+  background-color: var(--luz-nevoa) !important;
+  transform: rotate(-20deg);
+}

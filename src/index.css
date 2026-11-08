@@ -31,6 +31,14 @@
   --luz-ceu:     #3bb7e8;
   --luz-ouro:    #d9a520;
   --luz-linha:   #d6e4e7;
+  --luz-nevoa-2: #f6fafb;
+  --luz-texto-suave: #5f6779;
+  --luz-sombra:  rgba(35, 36, 79, 0.10);
+  --luz-vidro:   rgba(255, 255, 255, 0.82);
+  --luz-botao:   #23244f;
+  --luz-botao-texto: #ffffff;
+  --luz-logo-fundo: transparent;
+  color-scheme: light;
   --font-display: 'Bricolage Grotesque', 'Montserrat', sans-serif;
   --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
 
@@ -73,6 +81,62 @@
   --radius-full: 9999px;
 }
 
+/* Dark theme in the award's original blue. Follows the system setting unless the
+   visitor picked a theme with the header toggle, which sets data-theme on <html>. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --luz-nevoa:   #1e1f6e;
+  --luz-nevoa-2: #25277a;
+  --luz-papel:   #2d2e82;
+  --luz-tinta:   #f4f5ff;
+  --luz-texto:   #d4d6f5;
+  --luz-texto-suave: #b3b6e8;
+  --luz-esfera:  #2fd3ae;
+  --luz-esfera-texto: #5fe3c3;
+  --luz-ceu:     #6fd0f5;
+  --luz-ouro:    #f2c94c;
+  --luz-linha:   #4446a0;
+  --luz-sombra:  rgba(6, 7, 40, 0.45);
+  --luz-vidro:   rgba(30, 31, 110, 0.86);
+  --luz-botao:   #ffffff;
+  --luz-botao-texto: #1e1f6e;
+  --luz-logo-fundo: #ffffff;
+  --color-text-dark: #f4f5ff;
+  --color-text-body: #d4d6f5;
+  --color-text-muted: #b3b6e8;
+  --color-surface: #1e1f6e;
+  --color-surface-light: #25277a;
+  --color-border: #4446a0;
+  color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --luz-nevoa:   #1e1f6e;
+  --luz-nevoa-2: #25277a;
+  --luz-papel:   #2d2e82;
+  --luz-tinta:   #f4f5ff;
+  --luz-texto:   #d4d6f5;
+  --luz-texto-suave: #b3b6e8;
+  --luz-esfera:  #2fd3ae;
+  --luz-esfera-texto: #5fe3c3;
+  --luz-ceu:     #6fd0f5;
+  --luz-ouro:    #f2c94c;
+  --luz-linha:   #4446a0;
+  --luz-sombra:  rgba(6, 7, 40, 0.45);
+  --luz-vidro:   rgba(30, 31, 110, 0.86);
+  --luz-botao:   #ffffff;
+  --luz-botao-texto: #1e1f6e;
+  --luz-logo-fundo: #ffffff;
+  --color-text-dark: #f4f5ff;
+  --color-text-body: #d4d6f5;
+  --color-text-muted: #b3b6e8;
+  --color-surface: #1e1f6e;
+  --color-surface-light: #25277a;
+  --color-border: #4446a0;
+  color-scheme: dark;
+}
+
+
 /* ══════════════════════════════════════
    RESET & BASE
    ══════════════════════════════════════ */
@@ -88,7 +152,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-text-body);
-  background-color: var(--color-surface);
+  background-color: var(--luz-nevoa);
   line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -256,7 +320,7 @@ img { max-width: 100%; display: block; }
    SCROLLBAR
    ══════════════════════════════════════ */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-track { background: var(--luz-nevoa); }
 ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
 
@@ -279,3 +343,12 @@ img { max-width: 100%; display: block; }
 @keyframes revelar {
   from { opacity: 0; transform: translateY(28px); }
 }
+
+/* MUI surfaces (cards, drawer, menus) and form fields follow the theme tokens. */
+.MuiPaper-root { background-color: var(--luz-papel); color: var(--luz-tinta); }
+.MuiInputBase-root { color: var(--luz-tinta); }
+.MuiInputLabel-root { color: var(--luz-texto-suave); }
+.MuiOutlinedInput-notchedOutline { border-color: var(--luz-linha); }
+
+/* One visible focus ring everywhere. */
+:focus-visible { outline: 3px solid var(--luz-ceu); outline-offset: 2px; }
