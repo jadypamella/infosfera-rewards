@@ -1,5 +1,5 @@
 import { Box, Typography, Card, CardContent, Grid } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { OpenInNew as OpenInNewIcon } from '../../icones';
 
 const NoticiasMidia = ({ noticias, mostrarEdicao = false }) => (
   <Grid container spacing={3}>

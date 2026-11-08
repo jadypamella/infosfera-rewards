@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styles from './index.module.css';
+import { ArrowForward as ArrowForwardIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 

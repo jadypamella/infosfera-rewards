@@ -1,8 +1,7 @@
 import { Box, Typography, Card, CardContent } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 import { NIVEIS } from '../../data/edicoes';
+import { ArrowForward as ArrowForwardIcon, EmojiEvents as EmojiEventsIcon } from '../../icones';
 
 // Badge fills come from the platform data and some are light, so the text colour
 // follows the fill: dark ink on light fills, white on dark ones (WCAG luminance).

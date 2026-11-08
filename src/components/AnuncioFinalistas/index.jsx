@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import PhotoLibraryOutlinedIcon from '@mui/icons-material/PhotoLibraryOutlined';
 
 import { edicaoAtual, praticasOrdenadas } from '../../data/edicoes';
 import Esfera from '../Esfera';
 import styles from './index.module.css';
+import { ArrowForward as ArrowForwardIcon, EmojiEventsOutlined as EmojiEventsOutlinedIcon, PhotoLibraryOutlined as PhotoLibraryOutlinedIcon } from '../../icones';
 
 const AnuncioFinalistas = () => {
   const { ano, praticas, listaLiberada, resultadoDivulgado, galeria, cerimonia, inscricoes } = edicaoAtual;

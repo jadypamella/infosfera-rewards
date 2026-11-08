@@ -62,7 +62,7 @@
   text-align: center;
 }
 .hero .heroBadge {
-  font-family: var(--font-mono) !important;
+  font-family: var(--font-body) !important;
   background: var(--luz-papel) !important;
   color: var(--luz-esfera-texto) !important;
   border: 1px solid var(--luz-linha) !important;
@@ -302,7 +302,7 @@
 }
 .timelineContent { text-align: center; }
 .timelineItem .timelinePeriod {
-  color: var(--luz-texto) !important; font-family: var(--font-mono) !important; font-weight: 600 !important;
+  color: var(--luz-texto) !important; font-family: var(--font-body) !important; font-weight: 600 !important;
   font-size: 0.72rem !important; letter-spacing: 0.1em; text-transform: uppercase;
   margin-bottom: 0.25rem !important;
 }

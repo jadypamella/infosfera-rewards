@@ -120,7 +120,7 @@
     background: var(--luz-papel) !important;
     color: var(--luz-tinta) !important;
     border: 1px solid var(--luz-esfera) !important;
-    font-family: var(--font-mono) !important;
+    font-family: var(--font-body) !important;
     font-weight: 600 !important;
     font-size: 0.72rem !important;
     letter-spacing: 0.1em !important;
@@ -529,7 +529,7 @@
 .timelineContent { text-align: center; }
 
 .timelineContent .timelinePeriod {
-    font-family: var(--font-mono) !important;
+    font-family: var(--font-body) !important;
 }
 .timelinePeriod {
     color: var(--luz-texto) !important;

@@ -1,8 +1,7 @@
 import { Box, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import styles from './index.module.css';
+import { ArrowForward as ArrowForwardIcon, HomeOutlined as HomeOutlinedIcon } from '../../icones';
 
 const NotFound = () => (
   <Box className={styles.page}>

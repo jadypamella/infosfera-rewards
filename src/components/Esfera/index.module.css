@@ -67,7 +67,7 @@
 }
 
 .centro .premio {
-  font-family: var(--font-mono) !important;
+  font-family: var(--font-body) !important;
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;

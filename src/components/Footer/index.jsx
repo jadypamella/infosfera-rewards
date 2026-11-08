@@ -1,9 +1,8 @@
 import { Box, Container, Typography, Link, IconButton, Divider } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 import styles from './index.module.css';
 import logo from '../../assets/logo.png';
+import { LinkedIn as LinkedInIcon, Instagram as InstagramIcon } from '../../icones';
 
 const socials = [
   {

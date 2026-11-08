@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Box, Typography, Grid, Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import styles from './index.module.css';
 import { praticasOrdenadas } from '../../data/edicoes';
 import CardPratica from '../CardPratica';
 import GaleriaCerimonia from '../GaleriaCerimonia';
+import { ArrowForward as ArrowForwardIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 

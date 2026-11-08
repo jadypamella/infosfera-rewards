@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { IconButton } from '@mui/material';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
 import styles from './index.module.css';
+import { DarkModeOutlined as DarkModeOutlinedIcon, LightModeOutlined as LightModeOutlinedIcon } from '../../icones';
 
 const temaDoSistema = () => (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 

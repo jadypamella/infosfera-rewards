@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Box, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styles from './index.module.css';
 import logo from '../../assets/logo.png';
 import ToggleTema from '../ToggleTema';
+import { Menu as MenuIcon, Close as CloseIcon, ArrowForward as ArrowForwardIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 

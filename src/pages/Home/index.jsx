@@ -2,48 +2,22 @@ import { useState, useEffect, useRef } from 'react';
 import { Typography, Box, Grid, Card, CardContent, Stack, Button, Chip } from '@mui/material';
 
 // Outlined icons - style matching boaspraticas.infosfera.inf.br
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import CorporateFareOutlinedIcon from '@mui/icons-material/CorporateFareOutlined';
-import GavelOutlinedIcon from '@mui/icons-material/GavelOutlined';
-import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
-import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
-import LocationCityOutlinedIcon from '@mui/icons-material/LocationCityOutlined';
-import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
 // Criteria icons
-import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
-import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
-import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
 
 // Steps icons
-import MoveToInboxOutlinedIcon from '@mui/icons-material/MoveToInboxOutlined';
-import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 // Thematic icons (outlined)
-import PolicyOutlinedIcon from '@mui/icons-material/PolicyOutlined';
-import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
-import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
 
 import styles from './index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
 import CtaVerde from '../../components/CtaVerde';
 import Countdown from '../../components/Countdown';
 import AnuncioFinalistas from '../../components/AnuncioFinalistas';
-import { inscricoesAbertas } from '../../data/edicoes';
 import NoticiasMidia from '../../components/NoticiasMidia';
 import { noticias } from '../../data/naMidia';
 import labriskLogo from '../../assets/apoio/19.png';
+import { StarOutline as StarOutlineIcon, LightbulbOutlined as LightbulbOutlinedIcon, EmojiEventsOutlined as EmojiEventsOutlinedIcon, CorporateFareOutlined as CorporateFareOutlinedIcon, GavelOutlined as GavelOutlinedIcon, AccountBalanceOutlined as AccountBalanceOutlinedIcon, ArrowForward as ArrowForwardIcon, PlaceOutlined as PlaceOutlinedIcon, WorkspacePremiumOutlined as WorkspacePremiumOutlinedIcon, StarsOutlined as StarsOutlinedIcon, LocationCityOutlined as LocationCityOutlinedIcon, PublicOutlined as PublicOutlinedIcon, CalendarMonthOutlined as CalendarMonthOutlinedIcon, AssignmentOutlined as AssignmentOutlinedIcon, TrendingUpOutlined as TrendingUpOutlinedIcon, AutorenewOutlined as AutorenewOutlinedIcon, MoveToInboxOutlined as MoveToInboxOutlinedIcon, VerifiedOutlined as VerifiedOutlinedIcon, EmojiEvents as EmojiEventsIcon, CheckCircleOutline as CheckCircleOutlineIcon, PolicyOutlined as PolicyOutlinedIcon, BarChartOutlined as BarChartOutlinedIcon, VisibilityOutlined as VisibilityOutlinedIcon, ArchiveOutlined as ArchiveOutlinedIcon, SecurityOutlined as SecurityOutlinedIcon, DevicesOutlined as DevicesOutlinedIcon } from '../../icones';
 
 // Realização — ordem dos arquivos: 1, 2, 3 (UFPR movida para Apoio, LabRisk entra)
 const realizacaoLogoMap = {
@@ -168,7 +142,7 @@ const Home = () => {
     { num: '1', icon: <MoveToInboxOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Plataforma de Boas Práticas', desc: 'Sua porta de entrada. Cadastre sua prática em boaspraticas.infosfera.inf.br. Gratuito e sem limite de submissões por órgão.' },
     { num: '2', icon: <VerifiedOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Regra Fundamental', desc: 'Detalhe resultados e impacto para desbloquear a elegibilidade. A prática precisa atingir o Status Ouro na plataforma.' },
     { num: '3', icon: <CheckCircleOutlineIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Confirme o Interesse', desc: 'Após análise de admissibilidade (1–15 ago), confirme formalmente a participação na fase competitiva do Prêmio.' },
-    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia em novembro de 2026, Goiânia/GO.' },
+    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia anual de premiação, com data e local de 2027 a divulgar.' },
   ];
 
   const tematicas = [
@@ -181,7 +155,7 @@ const Home = () => {
   ];
 
   const awardCategories = [
-    { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública em 2026.', highlight: true },
+    { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública de cada edição.', highlight: true },
     { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Regional (Goiás)', desc: 'Maior pontuação técnica entre instituições sediadas no Estado de Goiás, anfitrião do evento.' },
     { icon: <LocationCityOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Municipal', desc: 'Distinção exclusiva para prefeituras, secretarias municipais e autarquias municipais.' },
     { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional: criatividade, baixo custo ou superação tecnológica.' },
@@ -191,18 +165,15 @@ const Home = () => {
 
 
   // Each step ends on its date; the current step is the first one not yet over, or the last one.
-  const etapas = [
-    { period: '1 abr – 31 jul', label: inscricoesAbertas ? 'Inscrições abertas' : 'Inscrições encerradas', fim: '2026-07-31' },
-    { period: '1–15 ago', label: 'Análise de admissibilidade', fim: '2026-08-15' },
-    { period: '1–30 ago', label: 'Avaliação de mérito', fim: '2026-08-30' },
-    { period: '10 set', label: 'Divulgação dos finalistas', fim: '2026-09-10' },
-    { period: '5–9 out', label: 'Aclamação Pública', fim: '2026-10-09' },
-    { period: '5 nov', label: 'Cerimônia · Goiânia/GO', fim: '2026-11-05' },
+  // Edição 2027: practices already enter through the Platform, the other dates are not out yet.
+  const timeline = [
+    { period: 'Já abertas', label: 'Cadastro de práticas na Plataforma', active: true },
+    { period: 'A divulgar', label: 'Análise de admissibilidade' },
+    { period: 'A divulgar', label: 'Avaliação de mérito' },
+    { period: 'A divulgar', label: 'Divulgação dos finalistas' },
+    { period: 'A divulgar', label: 'Aclamação Pública' },
+    { period: 'A divulgar', label: 'Cerimônia de premiação' },
   ];
-  const hoje = new Date().toISOString().slice(0, 10);
-  const atual = Math.max(0, etapas.findIndex((e) => hoje <= e.fim));
-  const indiceAtual = etapas.every((e) => hoje > e.fim) ? etapas.length - 1 : atual;
-  const timeline = etapas.map((e, i) => ({ ...e, active: i === indiceAtual }));
 
   const cardIds = useRef({
     sobre1: 'card-sobre-1', sobre2: 'card-sobre-2',
@@ -225,15 +196,15 @@ const Home = () => {
         <Box className={`${styles.contentContainer} ${styles.heroContentWrapper}`}>
           <Box className={styles.heroContent}>
             <Box className={styles.heroTextBlock}>
-              <Chip label={inscricoesAbertas ? "Inscrições abertas · 1 abr – 31 jul 2026" : "Cerimônia · 5 de novembro · Goiânia/GO"} className={styles.heroBadge} size="small" />
+              <Chip label="Edição 2027 · Cadastro aberto" className={styles.heroBadge} size="small" />
               <Typography className={styles.heroTitlePart1}>Prêmio Infosfera</Typography>
               <Typography className={styles.heroTitlePart2}>Boas Práticas em Gestão da Informação na Esfera Pública</Typography>
               <Typography className={styles.heroDescription}>
-                Reconhecimento nacional de servidores, equipes e órgãos que transformam a administração pública por meio do desenvolvimento e aplicação de boas práticas em gestão da informação. Cerimônia em <strong>novembro de 2026 · Goiânia/GO</strong>.
+                Reconhecimento nacional de servidores, equipes e órgãos que transformam a administração pública por meio do desenvolvimento e aplicação de boas práticas em gestão da informação. A <strong>edição 2027</strong> já recebe práticas na Plataforma Infosfera.
               </Typography>
               <Box className={styles.heroActions}>
                 <Button variant="contained" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.heroCta} endIcon={<ArrowForwardIcon />}>
-                  {inscricoesAbertas ? "Inscreva Sua Prática Agora" : "Inscreva Sua Prática · Edição 2027"}
+                  Cadastre Sua Prática · Edição 2027
                 </Button>
               </Box>
               <Countdown />
@@ -379,12 +350,10 @@ const Home = () => {
       <Box className={`${styles.section} ${styles.sectionDark}`}>
         <Box className={styles.contentContainer}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={`${styles.sectionTitle} ${styles.sectionTitleLight}`}>Cronograma 2026</Typography>
+            <Typography variant="h2" className={`${styles.sectionTitle} ${styles.sectionTitleLight}`}>Cronograma 2027</Typography>
             <Box className={styles.titleUnderline} />
             <Typography className={`${styles.sectionSubtitle} ${styles.sectionSubtitleLight}`}>
-              {inscricoesAbertas
-                ? <>Fique atento às datas. As inscrições encerram em <strong>31 de julho de 2026</strong>.</>
-                : <>As inscrições da edição 2026 encerraram em <strong>31 de julho</strong>. Práticas enviadas a partir de 1º de agosto concorrem à <strong>edição 2027</strong>.</>}
+              As práticas cadastradas na Plataforma Infosfera já concorrem à <strong>edição 2027</strong>. As datas de cada etapa serão divulgadas em breve.
             </Typography>
           </Box>
           <Box className={styles.timelineWrapper}>
@@ -401,7 +370,7 @@ const Home = () => {
           </Box>
           <Box className={styles.ctaCenter}>
             <Button variant="outlined" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.heroCtaOutline} endIcon={<ArrowForwardIcon />}>
-              Inscreva Sua Prática
+              Cadastre Sua Prática
             </Button>
           </Box>
         </Box>
@@ -453,7 +422,7 @@ const Home = () => {
                 <Typography sx={{ color: 'var(--luz-tinta)', mb: 1 }}>
                   Premiação durante o <strong style={{ color: 'var(--luz-tinta)' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
                 </Typography>
-                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>5 de novembro de 2026 · Goiânia/GO</Typography>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>Edição 2027 · Data e local a divulgar</Typography>
                 <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'var(--luz-tinta)', color: 'var(--luz-tinta)', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'var(--luz-tinta)', bgcolor: 'color-mix(in srgb, var(--luz-tinta) 6%, transparent)' } }}>
                   Quero Participar
                 </Button>

@@ -1,7 +1,6 @@
 import { Box, Typography, Button } from '@mui/material';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styles from './index.module.css';
+import { EmojiEventsOutlined as EmojiEventsOutlinedIcon, ArrowForward as ArrowForwardIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
@@ -14,7 +13,7 @@ const CtaVerde = () => (
           Pronto para participar?
         </Typography>
         <Typography className={styles.text}>
-          As inscrições estão abertas de <strong>1 de abril a 31 de julho de 2026</strong>. Cadastre sua prática na Plataforma Infosfera, alcance o Status Ouro e concorra ao reconhecimento nacional.
+          A <strong>edição 2027</strong> já recebe práticas e o cronograma será divulgado em breve. Cadastre sua prática na Plataforma Infosfera, alcance o Status Ouro e concorra ao reconhecimento nacional.
         </Typography>
         <Button
           variant="contained"
@@ -25,7 +24,7 @@ const CtaVerde = () => (
           className={styles.btn}
           endIcon={<ArrowForwardIcon />}
         >
-          Inscrever Minha Prática Agora
+          Cadastrar Minha Prática
         </Button>
         <Typography className={styles.note}>Inscrição gratuita. Sem limite de práticas por órgão.</Typography>
       </Box>

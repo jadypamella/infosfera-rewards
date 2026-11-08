@@ -5,10 +5,6 @@ import edicao2026 from './2026';
 export const edicoes = [edicao2026, edicao2025].sort((a, b) => b.ano - a.ano);
 export const edicaoAtual = edicoes[0];
 
-// Registration deadline of the current edition, used by the Home timeline. The platform keeps
-// accepting practices after it, for the next edition, so the "Cadastre sua Prática" buttons stay.
-const PRAZO_INSCRICOES = new Date('2026-07-31T23:59:59-03:00');
-export const inscricoesAbertas = Date.now() < PRAZO_INSCRICOES.getTime();
 
 // Award levels, in display order, with the colour of their badge.
 export const NIVEIS = {

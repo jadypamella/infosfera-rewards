@@ -40,7 +40,6 @@
   --luz-logo-fundo: transparent;
   color-scheme: light;
   --font-display: 'Bricolage Grotesque', 'Montserrat', sans-serif;
-  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
 
   /* Fontes */
   --font-heading:  'Montserrat', Arial, sans-serif;
@@ -352,3 +351,6 @@ img { max-width: 100%; display: block; }
 
 /* One visible focus ring everywhere. */
 :focus-visible { outline: 3px solid var(--luz-ceu); outline-offset: 2px; }
+
+/* Buttons and chips read in the body face too, never the MUI or browser default. */
+.MuiButtonBase-root, .MuiChip-root, button, input, textarea, select { font-family: var(--font-body) !important; }

@@ -1,34 +1,11 @@
 import { useState } from 'react';
 import { Box, Typography, Card, CardContent, Grid, Button, Chip, Accordion, AccordionSummary, AccordionDetails, Stack } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import GavelOutlinedIcon from '@mui/icons-material/GavelOutlined';
-import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
-import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
-import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import PolicyOutlinedIcon from '@mui/icons-material/PolicyOutlined';
-import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
-import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
-import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
-import LocationCityOutlinedIcon from '@mui/icons-material/LocationCityOutlined';
-import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
-import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
-import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
-import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import CtaVerde from '../../components/CtaVerde';
 import { Link } from 'react-router-dom';
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 
 import styles from './index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
+import { ArrowForward as ArrowForwardIcon, ExpandMore as ExpandMoreIcon, CheckCircleOutline as CheckCircleOutlineIcon, EmojiEventsOutlined as EmojiEventsOutlinedIcon, GavelOutlined as GavelOutlinedIcon, AssignmentOutlined as AssignmentOutlinedIcon, VerifiedOutlined as VerifiedOutlinedIcon, GroupsOutlined as GroupsOutlinedIcon, CalendarMonthOutlined as CalendarMonthOutlinedIcon, PolicyOutlined as PolicyOutlinedIcon, BarChartOutlined as BarChartOutlinedIcon, VisibilityOutlined as VisibilityOutlinedIcon, ArchiveOutlined as ArchiveOutlinedIcon, SecurityOutlined as SecurityOutlinedIcon, DevicesOutlined as DevicesOutlinedIcon, PlaceOutlined as PlaceOutlinedIcon, LocationCityOutlined as LocationCityOutlinedIcon, WorkspacePremiumOutlined as WorkspacePremiumOutlinedIcon, StarsOutlined as StarsOutlinedIcon, PublicOutlined as PublicOutlinedIcon, TrendingUpOutlined as TrendingUpOutlinedIcon, AutorenewOutlined as AutorenewOutlinedIcon, InfoOutlined as InfoOutlinedIcon, DescriptionOutlined as DescriptionOutlinedIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
@@ -70,14 +47,14 @@ const categorias = [
   { icon: <PublicOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Escolha Popular', desc: 'Votação pública digital após a divulgação dos finalistas técnicos. A única categoria acumulável com as demais previstas neste regulamento.' },
 ];
 
+// Edição 2027: only the registration step is open, the dates come with the new regulation.
 const cronograma = [
-  { periodo: '1 abr – 31 jul', atividade: 'Período de submissão e cadastramento na Plataforma Infosfera.', ativo: true },
-  { periodo: '1–15 ago', atividade: 'Análise de Admissibilidade e Validação de Interesse.', ativo: false },
-  { periodo: '1–30 ago', atividade: 'Avaliação de Mérito pela Comissão Julgadora.', ativo: false },
-  { periodo: '10 set', atividade: 'Divulgação dos Resultados Oficiais e comunicação aos finalistas.', ativo: false },
-  { periodo: '25 set', atividade: 'Data limite para confirmação de participação presencial.', ativo: false },
-  { periodo: '5–9 out', atividade: 'Fase de Aclamação Pública em ambiente digital.', ativo: false },
-  { periodo: '5 nov', atividade: 'Sessão de Boas Práticas e Cerimônia de Premiação em Goiânia/GO.', ativo: false },
+  { periodo: 'Já aberto', atividade: 'Cadastro de práticas na Plataforma Infosfera.', ativo: true },
+  { periodo: 'A divulgar', atividade: 'Análise de Admissibilidade e Validação de Interesse.' },
+  { periodo: 'A divulgar', atividade: 'Avaliação de Mérito pela Comissão Julgadora.' },
+  { periodo: 'A divulgar', atividade: 'Divulgação dos Resultados Oficiais e comunicação aos finalistas.' },
+  { periodo: 'A divulgar', atividade: 'Fase de Aclamação Pública em ambiente digital.' },
+  { periodo: 'A divulgar', atividade: 'Sessão de Boas Práticas e Cerimônia de Premiação.' },
 ];
 
 const faqs = [
@@ -104,7 +81,7 @@ const Regulamento = () => {
       <Box className={styles.hero} style={{ backgroundImage: `url(${bannerImage})` }}>
         <Box className={styles.heroOverlay} />
         <Box className={styles.heroContent}>
-          <Chip label="Edição 2026" className={styles.heroBadge} size="small" />
+          <Chip label="Edição 2027" className={styles.heroBadge} size="small" />
           <Typography component="h1" className={styles.heroTitle}>Regulamento do Prêmio</Typography>
           <Typography className={styles.heroSubtitle}>Tudo o que você precisa saber para participar e concorrer ao reconhecimento nacional em gestão da informação pública.</Typography>
           <Box className={styles.heroActions}>
@@ -133,10 +110,10 @@ const Regulamento = () => {
           </Box>
           <Box className={styles.presentationBlock}>
             <Typography className={styles.presentationText}>
-              O <strong>Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública</strong> é uma iniciativa do Infojus.UFPR e do LabRisk/UnB, com apoio de parceiros institucionais. O regulamento desta edição foi submetido para aprovação do Comitê Executivo em março de 2026 e rege integralmente o processo seletivo.
+              O <strong>Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública</strong> é uma iniciativa do Infojus.UFPR e do LabRisk/UnB, com apoio de parceiros institucionais. O regulamento da edição 2027 será publicado junto com o cronograma. Até lá, esta página apresenta as regras gerais da edição anterior.
             </Typography>
             <Typography className={styles.presentationText}>
-              A cerimônia de premiação ocorre em <strong>novembro de 2026</strong>, em Goiânia/GO, durante o Encontro de Administração da Justiça (EnAJUS).
+              A cerimônia de premiação acontece todo ano durante o Encontro de Administração da Justiça (EnAJUS). A data e o local da <strong>edição 2027</strong> serão divulgados junto com o cronograma.
             </Typography>
             <Box className={styles.highlightBox}>
               <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)', fontSize: 20, flexShrink: 0, mt: '2px' }} />
@@ -165,7 +142,7 @@ const Regulamento = () => {
           <Box className={styles.sectionHeader}>
             <Typography variant="h2" className={styles.sectionTitle}>Objetivos do Prêmio</Typography>
             <Box className={styles.underline} />
-            <Typography className={styles.sectionSubtitle}>O Prêmio Infosfera 2026 foi criado para disseminar e reconhecer solenemente servidores, equipes e entidades que aplicam boas práticas de gestão da informação.</Typography>
+            <Typography className={styles.sectionSubtitle}>O Prêmio Infosfera foi criado para disseminar e reconhecer solenemente servidores, equipes e entidades que aplicam boas práticas de gestão da informação.</Typography>
           </Box>
           <Grid container spacing={3} columns={{ xs: 1, md: 2 }}>
             {objetivos.map((obj, i) => (
@@ -364,9 +341,9 @@ const Regulamento = () => {
       <Box id="cronograma" className={`${styles.section} ${styles.sectionDark}`}>
         <Box className={styles.container}>
           <Box className={styles.sectionHeader}>
-            <Typography variant="h2" className={`${styles.sectionTitle} ${styles.sectionTitleLight}`}>Cronograma 2026</Typography>
+            <Typography variant="h2" className={`${styles.sectionTitle} ${styles.sectionTitleLight}`}>Cronograma 2027</Typography>
             <Box className={styles.underline} />
-            <Typography className={`${styles.sectionSubtitle} ${styles.sectionSubtitleLight}`}>Fique atento às datas. As inscrições encerram em <strong>31 de julho de 2026</strong>.</Typography>
+            <Typography className={`${styles.sectionSubtitle} ${styles.sectionSubtitleLight}`}>As práticas cadastradas na Plataforma já concorrem à <strong>edição 2027</strong>. As datas de cada etapa serão divulgadas em breve.</Typography>
           </Box>
           <Box className={styles.timelineWrapper}>
             {cronograma.map((item, i) => (
@@ -384,7 +361,7 @@ const Regulamento = () => {
           </Box>
           <Box className={styles.ctaCenter}>
             <Button variant="outlined" size="large" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" className={styles.btnOutlineLight} endIcon={<ArrowForwardIcon />}>
-              Garantir Minha Vaga Agora
+              Cadastrar Minha Prática
             </Button>
           </Box>
         </Box>
@@ -399,9 +376,9 @@ const Regulamento = () => {
           </Box>
           <Grid container spacing={3} columns={{ xs: 1, md: 3 }}>
             {[
-              { t: 'Divulgação dos Finalistas', d: 'A lista oficial de finalistas é divulgada nos canais da Plataforma Infosfera até 10 de setembro de 2026. A comunicação serve como convocação formal para a cerimônia.', icon: <VerifiedOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+              { t: 'Divulgação dos Finalistas', d: 'A lista oficial de finalistas é divulgada nos canais da Plataforma Infosfera na data prevista no cronograma. A comunicação serve como convocação formal para a cerimônia.', icon: <VerifiedOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
               { t: 'Obrigações dos Finalistas', d: 'Presença institucional na cerimônia; apresentação técnica na Sessão de Boas Práticas; e participação na cerimônia solene de premiação. O não cumprimento implica desclassificação.', icon: <GroupsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
-              { t: 'Cerimônia de Premiação', d: '5 de novembro de 2026, em Goiânia/GO, durante o EnAJUS. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+              { t: 'Cerimônia de Premiação', d: 'Durante o EnAJUS, com data e local da edição 2027 a divulgar. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
             ].map((item, i) => (
               <Grid size={{ xs: 1, md: 1 }} key={i}>
                 <Card className={styles.resultCard}>
@@ -478,7 +455,7 @@ const Regulamento = () => {
           <Box className={styles.sectionHeader}>
             <Typography variant="h2" className={styles.sectionTitle}>Perguntas Frequentes</Typography>
             <Box className={styles.underline} />
-            <Typography className={styles.sectionSubtitle}>Dúvidas comuns sobre o regulamento do Prêmio Infosfera 2026.</Typography>
+            <Typography className={styles.sectionSubtitle}>Dúvidas comuns sobre o regulamento do Prêmio Infosfera.</Typography>
           </Box>
           <Box className={styles.faqList}>
             {faqs.map((faq, i) => (

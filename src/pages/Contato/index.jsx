@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Typography, Box, Card, CardContent, TextField, Button } from '@mui/material';
 import CtaVerde from '../../components/CtaVerde';
-import EmailIcon from '@mui/icons-material/Email';
-import SendIcon from '@mui/icons-material/Send';
 
 import styles from './index.module.css';
+import { Email as EmailIcon, Send as SendIcon } from '../../icones';
 
 const Contato = () => {
   const [formData, setFormData] = useState({

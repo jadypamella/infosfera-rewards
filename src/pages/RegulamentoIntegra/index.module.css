@@ -23,7 +23,7 @@
 .header .chip {
     background: var(--luz-papel) !important;
     color: var(--luz-esfera-texto) !important;
-    font-family: var(--font-mono) !important;
+    font-family: var(--font-body) !important;
     letter-spacing: 0.1em !important;
     text-transform: uppercase;
     font-weight: 600 !important;

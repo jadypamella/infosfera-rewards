@@ -1,18 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Box, Typography, Button, Chip } from '@mui/material';
-import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
-import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
-import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
-import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
-import RecordVoiceOverOutlinedIcon from '@mui/icons-material/RecordVoiceOverOutlined';
-import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
-import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 import styles from '../Regulamento/index.module.css';
 import bannerImage from '../../assets/banner.jpeg';
+import { DownloadOutlined as DownloadOutlinedIcon, EventOutlined as EventOutlinedIcon, PlaceOutlined as PlaceOutlinedIcon, BadgeOutlined as BadgeOutlinedIcon, RecordVoiceOverOutlined as RecordVoiceOverOutlinedIcon, EmojiEventsOutlined as EmojiEventsOutlinedIcon, ListAltOutlined as ListAltOutlinedIcon, CheckCircleOutline as CheckCircleOutlineIcon, InfoOutlined as InfoOutlinedIcon, MailOutline as MailOutlineIcon } from '../../icones';
 
 const PDF_URL = 'docs/premio-infosfera-2026-orientacoes-finalistas.pdf';
 const TEMPLATE_URL = 'docs/premio-infosfera-2026-template-apresentacao.pptx';
