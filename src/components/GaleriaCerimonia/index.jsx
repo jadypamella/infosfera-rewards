@@ -3,8 +3,8 @@ import { Box, Typography } from '@mui/material';
 import styles from './index.module.css';
 
 const GaleriaCerimonia = ({ edicao }) => {
-  const { ano, cerimonia, galeria } = edicao;
-  const legenda = [`Prêmio Infosfera ${ano}`, cerimonia?.data, cerimonia?.local && `em ${cerimonia.local}`].filter(Boolean).join(', ');
+  const { ano, galeria } = edicao;
+  const legenda = `Prêmio Infosfera ${ano}`;
 
   return (
     <Box component="section" id={`fotos-${ano}`} className={styles.secao}>

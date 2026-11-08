@@ -9,13 +9,10 @@ import { ArrowForward as ArrowForwardIcon } from '../../icones';
 
 const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
-const onde = (cerimonia) => [cerimonia?.data, cerimonia?.local].filter(Boolean).join(' · ');
-
 const fatos = (edicao) => {
-  const { praticas, cerimonia, inscricoes, resultadoDivulgado } = edicao;
+  const { praticas, inscricoes, resultadoDivulgado } = edicao;
   const premiadas = praticas.filter((p) => p.premio).length;
   return [
-    cerimonia && `Cerimônia · ${onde(cerimonia)}`,
     inscricoes && `${inscricoes} inscrições`,
     resultadoDivulgado ? `${premiadas} premiadas` : `${praticas.length} finalistas`,
   ].filter(Boolean);
@@ -44,7 +41,7 @@ const Destaque = ({ p, ano }) => (
 );
 
 const SecaoEdicao = ({ edicao }) => {
-  const { ano, listaLiberada, resultadoDivulgado, praticas, galeria, cerimonia } = edicao;
+  const { ano, listaLiberada, resultadoDivulgado, praticas, galeria } = edicao;
   const mostrar = listaLiberada && praticas.length > 0;
   const lista = praticasOrdenadas(edicao);
   const grande = resultadoDivulgado ? lista.find((p) => p.nivel === 'grande') : null;
@@ -65,7 +62,7 @@ const SecaoEdicao = ({ edicao }) => {
             <Box className={styles.aviso}>
               <Typography>
                 A relação das boas práticas finalistas será divulgada aqui e na{' '}
-                <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">Plataforma Infosfera</a>. As distinções serão entregues na cerimônia{cerimonia ? ` de ${onde(cerimonia)}` : ''}.
+                <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">Plataforma Infosfera</a>. As distinções serão entregues na cerimônia.
               </Typography>
               <Button component={Link} to="/programacao" variant="contained" endIcon={<ArrowForwardIcon />} className={styles.botao}>
                 Ver a Programação

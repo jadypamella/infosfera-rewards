@@ -35,7 +35,6 @@ import galeria13 from '../../assets/cerimonia/galeria-13.jpg';
 const edicao2026 = {
   ano: 2026,
   inscricoes: 113,
-  cerimonia: { data: '5 de novembro de 2026', local: 'Goiânia' },
   // false até o fim do defeso eleitoral.
   listaLiberada: true,
   // true depois da cerimônia: mostra as distinções e ordena as premiadas primeiro.

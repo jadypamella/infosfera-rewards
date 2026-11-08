@@ -40,7 +40,7 @@ const criterios = [
 
 const categorias = [
   { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 40, color: '#fff' }} />, titulo: 'Grande Prêmio Infosfera', desc: 'Distinção máxima concedida à prática com maior pontuação global absoluta no ranking geral, independentemente do eixo temático ou esfera federativa.', highlight: true },
-  { icon: <PlaceOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Destaque Regional (Goiás)', desc: 'Distinção à prática de maior pontuação técnica entre as instituições sediadas no Estado de Goiás, anfitrião do evento.' },
+  { icon: <PlaceOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Destaque Regional', desc: 'Distinção à prática de maior pontuação técnica entre as instituições sediadas no estado que recebe a cerimônia.' },
   { icon: <LocationCityOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Destaque Municipal', desc: 'Distinção exclusiva para iniciativas de Prefeituras, Secretarias Municipais ou autarquias municipais.' },
   { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional em criatividade, baixo custo de implementação ou superação de desafios tecnológicos complexos.' },
   { icon: <StarsOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional que não tenham ingressado pelo fluxo regular de inscrição. Escolha discricionária da Comissão.' },
@@ -64,7 +64,7 @@ const faqs = [
   { p: 'Práticas em fase de piloto podem participar?', r: 'Sim. São aceitos diferentes níveis de maturidade, de pilotos a iniciativas plenamente estabelecidas, desde que a prática apresente resultados práticos e mensuráveis e possua cadastro com Status Ouro na Plataforma de Boas Práticas.' },
   { p: 'Uma prática pode ganhar em mais de uma categoria?', r: 'Não, salvo a categoria Escolha Popular. Vigora o princípio da não cumulatividade: uma prática não pode ser premiada em mais de uma categoria regular, prevalecendo a de maior hierarquia.' },
   { p: 'Uma prática vencedora na edição anterior pode participar?', r: 'Práticas premiadas nas categorias principais na edição imediatamente anterior precisam aguardar um intervalo de uma edição. Quem recebeu Menção Honrosa ou foi mapeado como Referência pode concorrer normalmente.' },
-  { p: 'O que acontece se a prática for finalista, mas a instituição não comparecer à cerimônia?', r: 'A premiação será cancelada para aquela prática. A presença institucional na cerimônia em Goiânia é condição obrigatória para receber o troféu e o certificado. O Comitê pode transferir a honraria para a prática seguinte no ranking.' },
+  { p: 'O que acontece se a prática for finalista, mas a instituição não comparecer à cerimônia?', r: 'A premiação será cancelada para aquela prática. A presença institucional na cerimônia é condição obrigatória para receber o troféu e o certificado. O Comitê pode transferir a honraria para a prática seguinte no ranking.' },
   { p: 'Como funciona a Escolha Popular?', r: 'Após a divulgação dos finalistas técnicos, abre-se votação pública digital. A Comissão Julgadora homologa o resultado e pode invalidar votações com uso de bots, impulsionamento pago ou condutas antiéticas.' },
   { p: 'Cabem recursos das decisões da Comissão Julgadora?', r: 'Não. As decisões da Comissão têm natureza estritamente técnica e soberana. Não cabe recurso administrativo quanto ao mérito da avaliação, pontuação ou classificação final.' },
   { p: 'Quem não pode participar?', r: 'Membros do Comitê Executivo, da Comissão Julgadora e seus parentes até segundo grau são impedidos de submeter práticas ao Prêmio.' },
@@ -113,7 +113,7 @@ const Regulamento = () => {
               O <strong>Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública</strong> é uma iniciativa do Infojus.UFPR e do LabRisk/UnB, com apoio de parceiros institucionais. O regulamento da edição 2027 será publicado junto com o cronograma. Até lá, esta página apresenta as regras gerais da edição anterior.
             </Typography>
             <Typography className={styles.presentationText}>
-              A cerimônia de premiação acontece todo ano durante o Encontro de Administração da Justiça (EnAJUS). A data e o local da <strong>edição 2027</strong> serão divulgados junto com o cronograma.
+              A cerimônia de premiação acontece todo ano. As informações da <strong>edição 2027</strong> serão divulgadas junto com o cronograma.
             </Typography>
             <Box className={styles.highlightBox}>
               <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)', fontSize: 20, flexShrink: 0, mt: '2px' }} />
@@ -203,8 +203,8 @@ const Regulamento = () => {
             {[
               { n: '1', t: 'Acesse a Plataforma', d: 'Entre em boaspraticas.infosfera.inf.br e crie ou acesse sua conta institucional. Todas as práticas cadastradas na plataforma estão automaticamente inscritas no Prêmio.' },
               { n: '2', t: 'Alcance o Status Ouro', d: 'Preencha todos os campos do cadastro e anexe evidências que comprovem resultados e impacto real da prática. O Status Ouro é condição obrigatória de admissibilidade.' },
-              { n: '3', t: 'Confirme o Interesse', d: 'Entre 1 e 15 de agosto, a equipe de curadoria verifica a admissibilidade. As práticas elegíveis recebem comunicação oficial para confirmar participação na fase competitiva.' },
-              { n: '4', t: 'Concorra e seja reconhecido', d: 'A Comissão Julgadora avalia as práticas finalistas. Em novembro, a cerimônia de premiação acontece presencialmente em Goiânia/GO, durante o EnAJUS.' },
+              { n: '3', t: 'Confirme o Interesse', d: 'A equipe de curadoria verifica a admissibilidade. As práticas elegíveis recebem comunicação oficial para confirmar participação na fase competitiva.' },
+              { n: '4', t: 'Concorra e seja reconhecido', d: 'A Comissão Julgadora avalia as práticas finalistas. A cerimônia de premiação acontece presencialmente, com troféu e certificado para cada distinção.' },
             ].map((step, i) => (
               <Box key={i} className={styles.stepItem}>
                 <Box className={styles.stepBadge}>{step.n}</Box>
@@ -378,7 +378,7 @@ const Regulamento = () => {
             {[
               { t: 'Divulgação dos Finalistas', d: 'A lista oficial de finalistas é divulgada nos canais da Plataforma Infosfera na data prevista no cronograma. A comunicação serve como convocação formal para a cerimônia.', icon: <VerifiedOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
               { t: 'Obrigações dos Finalistas', d: 'Presença institucional na cerimônia; apresentação técnica na Sessão de Boas Práticas; e participação na cerimônia solene de premiação. O não cumprimento implica desclassificação.', icon: <GroupsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
-              { t: 'Cerimônia de Premiação', d: 'Durante o EnAJUS, com data e local da edição 2027 a divulgar. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+              { t: 'Cerimônia de Premiação', d: 'Cerimônia solene. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
             ].map((item, i) => (
               <Grid size={{ xs: 1, md: 1 }} key={i}>
                 <Card className={styles.resultCard}>

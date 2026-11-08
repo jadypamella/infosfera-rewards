@@ -141,8 +141,8 @@ const Home = () => {
   const howToSteps = [
     { num: '1', icon: <MoveToInboxOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Plataforma de Boas Práticas', desc: 'Sua porta de entrada. Cadastre sua prática em boaspraticas.infosfera.inf.br. Gratuito e sem limite de submissões por órgão.' },
     { num: '2', icon: <VerifiedOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Regra Fundamental', desc: 'Detalhe resultados e impacto para desbloquear a elegibilidade. A prática precisa atingir o Status Ouro na plataforma.' },
-    { num: '3', icon: <CheckCircleOutlineIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Confirme o Interesse', desc: 'Após análise de admissibilidade (1–15 ago), confirme formalmente a participação na fase competitiva do Prêmio.' },
-    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia anual de premiação, com data e local de 2027 a divulgar.' },
+    { num: '3', icon: <CheckCircleOutlineIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Confirme o Interesse', desc: 'Após a análise de admissibilidade, confirme formalmente a participação na fase competitiva do Prêmio.' },
+    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia anual de premiação.' },
   ];
 
   const tematicas = [
@@ -156,7 +156,7 @@ const Home = () => {
 
   const awardCategories = [
     { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública de cada edição.', highlight: true },
-    { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Regional (Goiás)', desc: 'Maior pontuação técnica entre instituições sediadas no Estado de Goiás, anfitrião do evento.' },
+    { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Regional', desc: 'Maior pontuação técnica entre instituições sediadas no estado que recebe a cerimônia.' },
     { icon: <LocationCityOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Municipal', desc: 'Distinção exclusiva para prefeituras, secretarias municipais e autarquias municipais.' },
     { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional: criatividade, baixo custo ou superação tecnológica.' },
     { icon: <StarsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional fora do fluxo regular.' },
@@ -420,9 +420,9 @@ const Home = () => {
                 <EmojiEventsOutlinedIcon sx={{ fontSize: 64, mb: 1.5, color: 'var(--luz-tinta)' }} />
                 <Typography variant="h5" component="h3" sx={{ fontWeight: 700, mb: 0.5, color: 'var(--luz-tinta)' }}>A Cerimônia</Typography>
                 <Typography sx={{ color: 'var(--luz-tinta)', mb: 1 }}>
-                  Premiação durante o <strong style={{ color: 'var(--luz-tinta)' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
+                  Entrega solene de troféus e certificados às práticas premiadas.
                 </Typography>
-                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>Edição 2027 · Data e local a divulgar</Typography>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>Edição 2027</Typography>
                 <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'var(--luz-tinta)', color: 'var(--luz-tinta)', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'var(--luz-tinta)', bgcolor: 'color-mix(in srgb, var(--luz-tinta) 6%, transparent)' } }}>
                   Quero Participar
                 </Button>

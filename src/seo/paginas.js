@@ -22,7 +22,7 @@ export const PAGINAS = [
   {
     path: '/programacao/',
     titulo: `Programação da Cerimônia do Prêmio Infosfera ${edicaoAtual.ano}`,
-    descricao: `Programação de ${edicaoAtual.cerimonia.data} em ${edicaoAtual.cerimonia.local} e orientações aos finalistas sobre a Sessão de Boas Práticas e a Cerimônia de Premiação.`,
+    descricao: 'Programação e orientações aos finalistas do Prêmio Infosfera sobre a Sessão de Boas Práticas e a Cerimônia de Premiação.',
   },
   {
     path: '/regulamento/',
@@ -132,7 +132,7 @@ export const llmsTxt = () => {
     const lista = e.resultadoDivulgado ? premiadas(e) : e.praticas;
     if (!e.listaLiberada || lista.length === 0) return;
     linhas.push('', `## Edição ${e.ano}`, '');
-    if (e.cerimonia) linhas.push(`Cerimônia em ${e.cerimonia.data}, ${e.cerimonia.local}.${e.inscricoes ? ` ${e.inscricoes} práticas inscritas.` : ''}`, '');
+    if (e.inscricoes) linhas.push(`${e.inscricoes} práticas inscritas.`, '');
     lista.forEach((p) => linhas.push(`- ${p.premio ? `${p.premio}: ` : ''}${p.link ? `[${p.titulo}](${p.link})` : p.titulo}, ${p.entidade}`));
   });
   return `${linhas.join('\n')}\n`;

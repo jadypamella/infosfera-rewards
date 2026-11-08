@@ -7,13 +7,12 @@ import styles from './index.module.css';
 import { ArrowForward as ArrowForwardIcon, EmojiEventsOutlined as EmojiEventsOutlinedIcon, PhotoLibraryOutlined as PhotoLibraryOutlinedIcon } from '../../icones';
 
 const AnuncioFinalistas = () => {
-  const { ano, praticas, listaLiberada, resultadoDivulgado, galeria, cerimonia, inscricoes } = edicaoAtual;
+  const { ano, praticas, listaLiberada, resultadoDivulgado, galeria, inscricoes } = edicaoAtual;
   if (!listaLiberada || praticas.length === 0) return null;
 
   const grande = praticas.find((p) => p.nivel === 'grande');
   const temFotos = resultadoDivulgado && galeria.length > 0;
   const pecas = temFotos ? galeria.slice(0, 10) : praticas.map((p) => p.capa).filter(Boolean);
-  const naCerimonia = [cerimonia?.data, cerimonia?.local && `em ${cerimonia.local}`].filter(Boolean).join(', ');
 
   return (
     <Box component="section" className={styles.anuncio}>
@@ -27,8 +26,8 @@ const AnuncioFinalistas = () => {
           </Typography>
           <Typography className={styles.subtitulo}>
             {resultadoDivulgado && grande
-              ? `O Grande Prêmio Infosfera ${ano} foi para "${grande.titulo.split(':')[0]}". Veja todas as distinções entregues na cerimônia de ${naCerimonia}${temFotos ? ' e as fotos do evento' : ''}.`
-              : `Selecionadas pela Comissão Julgadora${inscricoes ? ` entre as ${inscricoes} inscrições desta edição` : ''}. As premiadas serão anunciadas na cerimônia de ${naCerimonia}.`}
+              ? `O Grande Prêmio Infosfera ${ano} foi para "${grande.titulo.split(':')[0]}". Veja todas as distinções entregues na cerimônia${temFotos ? ' e as fotos do evento' : ''}.`
+              : `Selecionadas pela Comissão Julgadora${inscricoes ? ` entre as ${inscricoes} inscrições desta edição` : ''}. As premiadas serão anunciadas na cerimônia.`}
           </Typography>
           <Button component={Link} to="/vencedores" variant="contained" size="large" endIcon={<ArrowForwardIcon />} className={styles.botao}>
             {resultadoDivulgado ? 'Ver as Premiadas' : 'Ver os Finalistas'}
