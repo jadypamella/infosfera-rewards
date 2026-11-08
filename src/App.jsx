@@ -14,6 +14,7 @@ import RegulamentoIntegra from './pages/RegulamentoIntegra';
 import Contato from './pages/Contato';
 import Finalistas from './pages/Finalistas';
 import NaMidia from './pages/NaMidia';
+import Pratica from './pages/Pratica';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 //import Galeria from './pages/Galeria';
@@ -33,6 +34,7 @@ function App() {
           
           <Route path="/categorias" element={<Categorias />}/>
           <Route path="/vencedores" element={<Vencedores />} />
+          <Route path="/vencedores/:ano/:slug" element={<Pratica />} />
           {/* <Route path="/galeria" element={<Galeria />} /> */}
           <Route path="/regulamento" element={<Regulamento />} />
           <Route path="/regulamento-integra" element={<RegulamentoIntegra />} />

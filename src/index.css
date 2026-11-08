@@ -21,9 +21,12 @@
   --color-border:        #e5e7eb;
   --color-surface:       #ffffff;
   --color-surface-light: #f7f8fc;
+  --color-page:          #f1f2f4;
+  --color-esfera:        #9a6b4e;
+  --shadow-card: 0 2px 10px rgba(0,0,0,0.06);
 
   /* Fontes */
-  --font-heading:  'Montserrat', Arial, sans-serif;
+  --font-heading:  'Roboto', Arial, sans-serif;
   --font-body:     'Open Sans', Arial, sans-serif;
 
   /* Escala tipográfica */

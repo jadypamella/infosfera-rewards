@@ -1,39 +1,37 @@
+import { Link } from 'react-router-dom';
 import { Box, Typography, Card, CardContent } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
-import { NIVEIS } from '../../data/edicoes';
+import { NIVEIS, caminhoDaPratica } from '../../data/edicoes';
 
-const Selo = ({ label, cor }) => (
+export const Selo = ({ label, cor }) => (
   <Box component="span" sx={{ bgcolor: cor || '#2d2e82', color: '#fff', fontSize: 12, fontWeight: 600, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
     {label}
   </Box>
 );
 
-const comLink = (link) => (link
-  ? { component: 'a', href: link, target: '_blank', rel: 'noopener noreferrer' }
-  : {});
+export const SeloPremio = ({ p, ano }) => (
+  <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, background: NIVEIS[p.nivel || 'finalista'].cor, color: '#fff', fontSize: 12, fontWeight: 700, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
+    <EmojiEventsIcon sx={{ fontSize: 15 }} /> {ano} · {p.premio || 'Finalista'}
+  </Box>
+);
 
 const CardPratica = ({ p, ano, mostrarPremio }) => {
-  const nivel = NIVEIS[p.nivel || 'finalista'];
   const imagem = p.fotoPremio || p.capa;
 
   return (
     <Card
-      {...comLink(p.link)}
+      component={Link}
+      to={caminhoDaPratica(ano, p)}
       sx={{
         height: '100%', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit',
-        borderRadius: 3, overflow: 'hidden', boxShadow: '0 4px 18px rgba(45,46,130,0.10)', transition: 'transform .2s, box-shadow .2s',
-        ...(p.link && { '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 10px 28px rgba(45,46,130,0.18)' } }),
+        borderRadius: 4, overflow: 'hidden', boxShadow: 'var(--shadow-card)', transition: 'transform .2s, box-shadow .2s',
+        '&:hover': { transform: 'translateY(-3px)', boxShadow: '0 8px 24px rgba(0,0,0,0.10)' },
       }}
     >
-      {mostrarPremio && (
-        <Box sx={{ background: nivel.cor, color: '#fff', fontWeight: 800, fontSize: 13, letterSpacing: '0.05em', textTransform: 'uppercase', px: 2.5, py: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
-          <EmojiEventsIcon sx={{ fontSize: 18 }} /> {ano} · {p.premio || 'Finalista'}
-        </Box>
-      )}
       {imagem && (
-        <Box sx={{ position: 'relative', aspectRatio: '3 / 2', flexShrink: 0, bgcolor: '#f3f5f9', borderBottom: '3px solid #1abc9c', overflow: 'hidden' }}>
+        <Box sx={{ position: 'relative', aspectRatio: '3 / 2', flexShrink: 0, bgcolor: '#f3f5f9', overflow: 'hidden' }}>
           <Box
             component="img"
             src={imagem}
@@ -43,34 +41,21 @@ const CardPratica = ({ p, ano, mostrarPremio }) => {
           />
         </Box>
       )}
-      <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1.5, p: 3 }}>
-        {(p.esfera || p.status) && (
-          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-            {p.esfera && <Selo label={p.esfera} cor={p.esferaCor} />}
-            {p.status && <Selo label={p.status} cor={p.statusCor} />}
-          </Box>
-        )}
-        <Typography component="h3" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, fontSize: 17, lineHeight: 1.35, color: '#2d2e82' }}>
+      <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1.25, p: 3 }}>
+        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+          {mostrarPremio && <SeloPremio p={p} ano={ano} />}
+          {p.esfera && <Selo label={p.esfera} cor={p.esferaCor} />}
+          {p.status && <Selo label={p.status} cor={p.statusCor} />}
+        </Box>
+        <Typography component="h3" sx={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 17, lineHeight: 1.35, color: '#333' }}>
           {p.titulo}
         </Typography>
         <Typography sx={{ fontSize: 14, color: '#555', lineHeight: 1.5 }}>
           <strong style={{ color: '#333' }}>Entidade responsável:</strong> {p.entidade}
         </Typography>
-        {p.equipe && (
-          <Typography sx={{ fontSize: 13, color: '#555', lineHeight: 1.5 }}>
-            <strong style={{ color: '#333' }}>Equipe:</strong> {p.equipe}
-          </Typography>
-        )}
-        {p.categorias?.length > 0 && (
-          <Typography sx={{ fontSize: 13, color: '#2d2e82', lineHeight: 1.5 }}>
-            {p.categorias.join(' · ')}
-          </Typography>
-        )}
-        {p.link && (
-          <Box sx={{ mt: 'auto', pt: 1, display: 'flex', alignItems: 'center', gap: 0.5, color: '#0e8a68', fontWeight: 700, fontSize: 14 }}>
-            Conheça a prática <ArrowForwardIcon sx={{ fontSize: 18 }} />
-          </Box>
-        )}
+        <Box sx={{ mt: 'auto', pt: 1, display: 'flex', alignItems: 'center', gap: 0.5, color: '#2d2e82', fontWeight: 700, fontSize: 14 }}>
+          Ver a ficha da prática <ArrowForwardIcon sx={{ fontSize: 18 }} />
+        </Box>
       </CardContent>
     </Card>
   );

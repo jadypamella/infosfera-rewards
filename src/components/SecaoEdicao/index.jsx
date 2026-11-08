@@ -29,7 +29,7 @@ const SecaoEdicao = ({ edicao, alternada }) => {
 
   return (
     <>
-      <Box component="section" id={`edicao-${ano}`} className={styles.section} sx={alternada ? { bgcolor: '#f4f5fb' } : undefined}>
+      <Box component="section" id={`edicao-${ano}`} className={styles.section} sx={alternada ? { borderTop: '1px solid #e5e7eb' } : undefined}>
         <Box className={styles.container}>
           <Box className={styles.sectionHeader}>
             <Typography variant="h2" className={styles.sectionTitle}>Edição {ano}</Typography>

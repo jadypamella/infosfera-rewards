@@ -17,7 +17,19 @@ export const NIVEIS = {
   finalista: { ordem: 3, cor: '#6b7280' },
 };
 
-const ordemDe = (p) => NIVEIS[p.nivel || 'finalista'].ordem;
+// URL-safe name of a practice, for its page at /vencedores/<ano>/<slug>.
+const slugify = (texto) => texto.split(':')[0].normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80);
+
+export const caminhoDaPratica = (ano, p) => `/vencedores/${ano}/${slugify(p.titulo)}`;
+
+export const buscarPratica = (ano, slug) => {
+  const edicao = edicoes.find((e) => e.ano === ano);
+  const pratica = edicao?.praticas.find((p) => slugify(p.titulo) === slug);
+  return pratica ? { edicao, pratica } : null;
+};
+
+const ordemDe =(p) => NIVEIS[p.nivel || 'finalista'].ordem;
 
 export const praticasOrdenadas = (edicao) =>
   edicao.resultadoDivulgado ? [...edicao.praticas].sort((a, b) => ordemDe(a) - ordemDe(b)) : edicao.praticas;
