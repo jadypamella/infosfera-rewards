@@ -10,7 +10,8 @@ const PLATFORM_URL = 'https://boaspraticas.infosfera.inf.br/';
 
 const navItems = [
   { label: 'Sobre o Prêmio', path: '/' },
-  { label: 'Programação', path: '/programacao' },
+  // Event programme page: switched off until the 2027 agenda is out. To bring it back, fill src/pages/Finalistas with the 2027 data and uncomment (see src/App.jsx).
+  // { label: 'Programação', path: '/programacao' },
   { label: 'Vencedores', path: '/vencedores' },
   { label: 'Regulamento', path: '/regulamento' },
   { label: 'Contato', path: '/contato' },

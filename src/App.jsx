@@ -10,7 +10,8 @@ import Vencedores from './pages/Vencedores';
 import Regulamento from './pages/Regulamento';
 import RegulamentoIntegra from './pages/RegulamentoIntegra';
 import Contato from './pages/Contato';
-import Finalistas from './pages/Finalistas';
+// Event programme page: switched off until the 2027 agenda is out. To bring it back, fill src/pages/Finalistas with the 2027 data and uncomment this line, the two routes below, the menu item (Header), the page in src/seo/paginas.js and the redirect in public/.htaccess.
+// import Finalistas from './pages/Finalistas';
 import NaMidia from './pages/NaMidia';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
@@ -36,8 +37,8 @@ function App() {
           {/* <Route path="/galeria" element={<Galeria />} /> */}
           <Route path="/regulamento" element={<Regulamento />} />
           <Route path="/regulamento-integra" element={<RegulamentoIntegra />} />
-          <Route path="/programacao" element={<Finalistas />} />
-          <Route path="/finalistas" element={<Finalistas />} />
+          {/* <Route path="/programacao" element={<Finalistas />} /> */}
+          {/* <Route path="/finalistas" element={<Finalistas />} /> */}
           <Route path="/participantes" element={<Navigate to="/vencedores" replace />} />
           <Route path="/na-midia" element={<NaMidia />} />
           <Route path="/contato" element={<Contato />} />

@@ -19,11 +19,12 @@ export const PAGINAS = [
     titulo: `Vencedores do Prêmio Infosfera ${anos}`,
     descricao: 'Grande Prêmio, Destaques e Menções Honrosas de cada edição do Prêmio Infosfera, com o órgão responsável e o link de cada boa prática.',
   },
-  {
-    path: '/programacao/',
-    titulo: `Programação da Cerimônia do Prêmio Infosfera ${edicaoAtual.ano}`,
-    descricao: 'Programação e orientações aos finalistas do Prêmio Infosfera sobre a Sessão de Boas Práticas e a Cerimônia de Premiação.',
-  },
+  // Event programme page: switched off until the 2027 agenda is out. To bring it back, fill src/pages/Finalistas with the 2027 data and uncomment (see src/App.jsx).
+  // {
+  //   path: '/programacao/',
+  //   titulo: `Programação da Cerimônia do Prêmio Infosfera ${edicaoAtual.ano}`,
+  //   descricao: 'Programação e orientações aos finalistas do Prêmio Infosfera sobre a Sessão de Boas Práticas e a Cerimônia de Premiação.',
+  // },
   {
     path: '/regulamento/',
     titulo: 'Regulamento do Prêmio Infosfera',
@@ -47,7 +48,8 @@ export const PAGINAS = [
 ];
 
 // Routes that render the same content as another page point their canonical there.
-export const ALIASES = { '/finalistas': '/programacao/' };
+// Back to { '/finalistas': '/programacao/' } when the 2027 programme page returns.
+export const ALIASES = {};
 
 export const PAGINA_404 = {
   path: '/404',

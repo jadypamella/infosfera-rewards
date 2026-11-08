@@ -21,6 +21,9 @@ ErrorDocument 404 /404.html
 <IfModule mod_alias.c>
   Redirect 301 /participantes /vencedores/
   Redirect 301 /categorias /regulamento/
+  # Temporary while the 2027 Programação page is switched off (see src/App.jsx).
+  Redirect 302 /programacao /
+  Redirect 302 /finalistas /
 </IfModule>
 
 # Built files carry a content hash in their name, so they can be cached for a year.

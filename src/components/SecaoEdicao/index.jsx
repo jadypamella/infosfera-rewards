@@ -64,8 +64,8 @@ const SecaoEdicao = ({ edicao }) => {
                 A relação das boas práticas finalistas será divulgada aqui e na{' '}
                 <a href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">Plataforma Infosfera</a>. As distinções serão entregues na cerimônia.
               </Typography>
-              <Button component={Link} to="/programacao" variant="contained" endIcon={<ArrowForwardIcon />} className={styles.botao}>
-                Ver a Programação
+              <Button component={Link} to="/regulamento" variant="contained" endIcon={<ArrowForwardIcon />} className={styles.botao}>
+                Ver o Regulamento
               </Button>
             </Box>
           ) : (
