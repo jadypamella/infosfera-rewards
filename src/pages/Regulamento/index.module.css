@@ -22,7 +22,7 @@
   color: #333 !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
-  font-size: 1.5rem !important;
+  font-size: 22px !important;
   letter-spacing: -0.02em !important;
   line-height: 1.15 !important;
 }
@@ -71,7 +71,7 @@
 }
 .heroTitle {
   font-family: var(--font-heading) !important;
-  font-size: 2rem !important;
+  font-size: 26px !important;
   font-weight: 700 !important;
   color: #333 !important;
   line-height: 1.1 !important;
@@ -142,7 +142,7 @@
 .highlightBox {
   display: flex; gap: 0.75rem; align-items: flex-start;
   background: #fff; border-left: 4px solid var(--color-accent);
-  border-radius: 0 12px 12px 0; box-shadow: var(--shadow-card);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0; box-shadow: var(--shadow-card);
   padding: 1rem 1.5rem; margin-top: 1.5rem;
   color: #2d2e82 !important;
 }

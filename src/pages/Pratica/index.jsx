@@ -8,7 +8,7 @@ import { buscarPratica } from '../../data/edicoes';
 import { Selo, SeloPremio } from '../../components/CardPratica';
 import NotFound from '../NotFound';
 
-const caixa = { bgcolor: '#fff', borderRadius: 4, boxShadow: 'var(--shadow-card)', overflow: 'hidden' };
+const caixa = { bgcolor: '#fff', borderRadius: 'var(--radius-card)', boxShadow: 'var(--shadow-card)', overflow: 'hidden' };
 
 const Linha = ({ rotulo, children }) => (
   <Typography sx={{ fontSize: 14, color: '#555', lineHeight: 1.6 }}>

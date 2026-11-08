@@ -6,13 +6,13 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { NIVEIS, caminhoDaPratica } from '../../data/edicoes';
 
 export const Selo = ({ label, cor }) => (
-  <Box component="span" sx={{ bgcolor: cor || '#2d2e82', color: '#fff', fontSize: 12, fontWeight: 600, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
+  <Box component="span" sx={{ bgcolor: cor || '#2d2e82', color: '#fff', fontSize: 13, fontWeight: 500, px: 1.75, py: 0.4, borderRadius: '30px', lineHeight: 1.4 }}>
     {label}
   </Box>
 );
 
 export const SeloPremio = ({ p, ano }) => (
-  <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, background: NIVEIS[p.nivel || 'finalista'].cor, color: '#fff', fontSize: 12, fontWeight: 700, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
+  <Box component="span" sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, background: NIVEIS[p.nivel || 'finalista'].cor, color: '#fff', fontSize: 13, fontWeight: 600, px: 1.75, py: 0.4, borderRadius: '30px', lineHeight: 1.4 }}>
     <EmojiEventsIcon sx={{ fontSize: 15 }} /> {ano} · {p.premio || 'Finalista'}
   </Box>
 );
@@ -26,7 +26,7 @@ const CardPratica = ({ p, ano, mostrarPremio }) => {
       to={caminhoDaPratica(ano, p)}
       sx={{
         height: '100%', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit',
-        borderRadius: 4, overflow: 'hidden', boxShadow: 'var(--shadow-card)', transition: 'transform .2s, box-shadow .2s',
+        borderRadius: 'var(--radius-card)', overflow: 'hidden', boxShadow: 'var(--shadow-card)', transition: 'transform .2s, box-shadow .2s',
         '&:hover': { transform: 'translateY(-3px)', boxShadow: '0 8px 24px rgba(0,0,0,0.10)' },
       }}
     >
