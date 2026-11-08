@@ -24,3 +24,4 @@ node_modules/
 # Pacotes de deploy e backups locais
 *.zip
 backup-live/
+dist-ssr

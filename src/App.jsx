@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
 import Home from './pages/Home';
-import Categorias from './pages/Categorias';
 import Vencedores from './pages/Vencedores';
 import Regulamento from './pages/Regulamento';
 import RegulamentoIntegra from './pages/RegulamentoIntegra';
@@ -15,6 +14,7 @@ import Finalistas from './pages/Finalistas';
 import NaMidia from './pages/NaMidia';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
+import Seo from './seo/Seo';
 //import Galeria from './pages/Galeria';
 
 
@@ -23,6 +23,7 @@ function App() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <ScrollToTop />
+      <Seo />
       <Header />
       <Box component="main" sx={{ flexGrow: 1 }}>
         <Routes>
@@ -30,7 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           
           
-          <Route path="/categorias" element={<Categorias />}/>
+          <Route path="/categorias" element={<Navigate to="/regulamento" replace />} />
           <Route path="/vencedores" element={<Vencedores />} />
           {/* <Route path="/galeria" element={<Galeria />} /> */}
           <Route path="/regulamento" element={<Regulamento />} />
