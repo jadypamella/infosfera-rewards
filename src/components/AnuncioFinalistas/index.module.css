@@ -1,8 +1,8 @@
 .anuncio {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(120deg, #1d1e5c 0%, #2d2e82 55%, #146f78 100%);
-  color: #fff;
+  background: var(--luz-nevoa);
+  color: var(--luz-texto);
   padding: 124px 16px 64px;
 }
 
@@ -13,7 +13,7 @@
   width: 520px;
   height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(26, 188, 156, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(59, 183, 232, 0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -33,43 +33,46 @@
   gap: 6px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(26, 188, 156, 0.18);
-  border: 1px solid rgba(26, 188, 156, 0.6);
-  color: #7ff0d6;
+  background: var(--luz-papel);
+  border: 1px solid var(--luz-linha);
+  color: var(--luz-esfera);
+  font-family: var(--font-mono);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.titulo {
-  font-family: 'Montserrat', sans-serif !important;
+.texto .titulo {
+  font-family: var(--font-display) !important;
   font-weight: 800 !important;
-  font-size: clamp(28px, 4vw, 42px) !important;
-  line-height: 1.15 !important;
-  color: #fff !important;
+  font-size: clamp(34px, 5vw, 60px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  color: var(--luz-tinta) !important;
   margin: 18px 0 14px !important;
 }
 
 .subtitulo {
   font-size: 17px !important;
   line-height: 1.6 !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--luz-texto) !important;
   margin-bottom: 28px !important;
   max-width: 520px;
 }
 
 .botao {
-  background: linear-gradient(90deg, #1abc9c, #0e8a68) !important;
+  background: var(--luz-tinta) !important;
   color: #fff !important;
   font-weight: 700 !important;
   text-transform: none !important;
   border-radius: 999px !important;
   padding: 12px 28px !important;
-  box-shadow: 0 8px 24px rgba(14, 138, 104, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(35, 36, 79, 0.25) !important;
 }
 
 .mosaico {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
@@ -82,7 +85,7 @@
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 24px rgba(35, 36, 79, 0.16);
   transition: transform 0.25s;
 }
 
@@ -123,8 +126,8 @@
 
 .botaoSecundario {
   margin-left: 12px !important;
-  color: #fff !important;
-  border: 2px solid rgba(255, 255, 255, 0.7) !important;
+  color: var(--luz-tinta) !important;
+  border: 2px solid var(--luz-tinta) !important;
   font-weight: 700 !important;
   text-transform: none !important;
   border-radius: 999px !important;
@@ -134,3 +137,15 @@
 @media (max-width: 900px) {
   .botaoSecundario { margin: 12px 0 0 !important; }
 }
+
+/* The sphere sits behind the photo mosaic as the page's signature. */
+.esferaFundo {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 140%;
+  transform: translate(-50%, -50%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.palco { position: relative; }
+.palco .mosaico { z-index: 1; }

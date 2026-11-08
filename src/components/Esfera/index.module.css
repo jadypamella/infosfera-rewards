@@ -1,0 +1,35 @@
+.esfera {
+  --esfera-a: var(--luz-esfera);
+  --esfera-b: var(--luz-ceu);
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.anel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: girar 90s linear infinite;
+}
+
+.esfera .ano {
+  position: relative;
+  font-family: var(--font-display) !important;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 11vw, 7.5rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--luz-tinta);
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anel { animation: none; }
+}

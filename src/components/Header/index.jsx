@@ -37,7 +37,7 @@ const Header = () => {
         <Box className={styles.toolbar}>
           {/* Logo */}
           <Link to="/" className={styles.logoLink}>
-            <img src={logo} alt="Logo Infosfera" className={styles.logo} />
+            <span role="img" aria-label="Logo Infosfera" className={styles.logo} style={{ '--logo': `url(${logo})` }} />
           </Link>
 
           {/* Nav desktop */}
@@ -92,7 +92,7 @@ const Header = () => {
         PaperProps={{ className: styles.drawer }}
       >
         <Box className={styles.drawerHeader}>
-          <img src={logo} alt="Logo Infosfera" className={styles.drawerLogo} />
+          <span role="img" aria-label="Logo Infosfera" className={styles.drawerLogo} style={{ '--logo': `url(${logo})` }} />
           <IconButton onClick={() => setDrawerOpen(false)} className={styles.drawerClose}>
             <CloseIcon />
           </IconButton>

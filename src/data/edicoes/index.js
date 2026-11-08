@@ -12,7 +12,7 @@ export const inscricoesAbertas = Date.now() < PRAZO_INSCRICOES.getTime();
 // Award levels, in display order, with the colour of their badge.
 export const NIVEIS = {
   grande: { ordem: 0, cor: 'linear-gradient(90deg, #c99a2e, #e8c25a)' },
-  destaque: { ordem: 1, cor: '#2d2e82' },
+  destaque: { ordem: 1, cor: '#1b7fae' },
   mencao: { ordem: 2, cor: '#0e8a68' },
   finalista: { ordem: 3, cor: '#6b7280' },
 };

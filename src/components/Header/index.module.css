@@ -3,23 +3,23 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(13, 14, 63, 0.92);
+    background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--luz-linha);
     transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .headerScrolled {
-    background: rgba(13, 14, 63, 0.99);
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 24px rgba(35, 36, 79, 0.08);
     border-bottom-color: rgba(26, 188, 156, 0.2);
 }
 
 /* Linha colorida na base do header */
 .headerAccentLine {
     height: 2px;
-    background: linear-gradient(90deg, #2d2e82 0%, #1abc9c 50%, #2d2e82 100%);
+    background: linear-gradient(90deg, var(--luz-esfera) 0%, var(--luz-ceu) 50%, var(--luz-esfera) 100%);
     background-size: 200% 100%;
     animation: shimmer 4s linear infinite;
 }
@@ -56,8 +56,12 @@
 }
 
 .logo {
+    display: block;
     height: 44px;
-    width: auto;
+    aspect-ratio: 2734 / 1000;
+    background: var(--luz-tinta);
+    -webkit-mask: var(--logo) center / contain no-repeat;
+    mask: var(--logo) center / contain no-repeat;
     transition: opacity 0.2s ease;
 }
 
@@ -86,7 +90,7 @@
 
 .navLink {
     position: relative;
-    color: rgba(255, 255, 255, 0.82);
+    color: var(--luz-texto);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
@@ -119,8 +123,8 @@
 }
 
 .navLink:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.07);
+    color: var(--luz-tinta);
+    background: var(--luz-nevoa);
 }
 
 .navLink:hover::after {
@@ -128,7 +132,7 @@
 }
 
 .navLinkActive {
-    color: #ffffff !important;
+    color: var(--luz-tinta) !important;
     font-weight: 600;
 }
 
@@ -174,7 +178,7 @@
 /* ── Hamburger ── */
 .hamburger {
     display: none !important;
-    color: white !important;
+    color: var(--luz-tinta) !important;
     min-width: 48px !important;
     min-height: 48px !important;
     padding: 0.5rem !important;
@@ -191,8 +195,8 @@
 /* ── Drawer mobile ── */
 .drawer {
     width: 280px !important;
-    background: #0d0e3f !important;
-    color: white !important;
+    background: var(--luz-papel) !important;
+    color: var(--luz-tinta) !important;
     z-index: 1400 !important;
 }
 
@@ -201,16 +205,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.25rem 1.25rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--luz-linha);
 }
 
 .drawerLogo {
+    display: block;
     height: 40px;
-    width: auto;
+    aspect-ratio: 2734 / 1000;
+    background: var(--luz-tinta);
+    -webkit-mask: var(--logo) center / contain no-repeat;
+    mask: var(--logo) center / contain no-repeat;
 }
 
 .drawerClose {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: var(--luz-texto) !important;
     min-width: 48px !important;
     min-height: 48px !important;
     touch-action: manipulation;
@@ -224,7 +232,7 @@
 
 .drawerItem {
     padding: 0.75rem 1.5rem !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: var(--luz-texto) !important;
     font-size: 1rem !important;
     letter-spacing: 0.04em;
     border-left: 3px solid transparent;
@@ -232,13 +240,13 @@
 }
 
 .drawerItem:hover {
-    color: white !important;
-    background: rgba(255, 255, 255, 0.07) !important;
+    color: var(--luz-tinta) !important;
+    background: var(--luz-nevoa) !important;
     border-left-color: #1abc9c !important;
 }
 
 .drawerItemActive {
-    color: white !important;
+    color: var(--luz-tinta) !important;
     background: rgba(26, 188, 156, 0.12) !important;
     border-left-color: #1abc9c !important;
     font-weight: 600 !important;
@@ -246,7 +254,7 @@
 
 .drawerCta {
     padding: 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--luz-linha);
 }
 
 .drawerCta .ctaButton {

@@ -1,7 +1,7 @@
-.secao { background: #f4f6fb; padding: 72px 16px; }
+.secao { background: var(--luz-papel); padding: 72px 16px; }
 .inner { max-width: 1200px; margin: 0 auto; text-align: center; }
-.titulo { font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; font-size: clamp(26px, 3.5vw, 38px) !important; color: #1d1e5c !important; }
-.linha { width: 48px; height: 4px; border-radius: 2px; margin: 14px auto 18px; background: linear-gradient(90deg, #2d2e82, #1abc9c); }
+.inner .titulo { font-family: var(--font-display) !important; font-weight: 800 !important; font-size: clamp(30px, 4vw, 46px) !important; letter-spacing: -0.03em !important; color: var(--luz-tinta) !important; }
+.linha { width: 48px; height: 4px; border-radius: 2px; margin: 14px auto 18px; background: linear-gradient(90deg, var(--luz-esfera), var(--luz-ceu)); }
 .texto { max-width: 680px; margin: 0 auto 32px !important; color: #555 !important; font-size: 16px !important; line-height: 1.6 !important; }
 .grade { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 12px; }
 .foto { position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(29, 30, 92, 0.12); display: block; }

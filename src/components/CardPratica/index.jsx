@@ -23,7 +23,7 @@ const CardPratica = ({ p, ano, mostrarPremio }) => {
       {...comLink(p.link)}
       sx={{
         height: '100%', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit',
-        borderRadius: 3, overflow: 'hidden', boxShadow: '0 4px 18px rgba(45,46,130,0.10)', transition: 'transform .2s, box-shadow .2s',
+        borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(35,36,79,0.08)', transition: 'transform .2s, box-shadow .2s',
         ...(p.link && { '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 10px 28px rgba(45,46,130,0.18)' } }),
       }}
     >

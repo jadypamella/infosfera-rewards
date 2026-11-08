@@ -22,6 +22,17 @@
   --color-surface:       #ffffff;
   --color-surface-light: #f7f8fc;
 
+  --luz-nevoa:   #eef5f6;
+  --luz-papel:   #ffffff;
+  --luz-tinta:   #23244f;
+  --luz-texto:   #4a5368;
+  --luz-esfera:  #12a88a;
+  --luz-ceu:     #3bb7e8;
+  --luz-ouro:    #d9a520;
+  --luz-linha:   #d6e4e7;
+  --font-display: 'Bricolage Grotesque', 'Montserrat', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+
   /* Fontes */
   --font-heading:  'Montserrat', Arial, sans-serif;
   --font-body:     'Open Sans', Arial, sans-serif;

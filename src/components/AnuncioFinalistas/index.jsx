@@ -5,6 +5,7 @@ import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import PhotoLibraryOutlinedIcon from '@mui/icons-material/PhotoLibraryOutlined';
 
 import { edicaoAtual } from '../../data/edicoes';
+import Esfera from '../Esfera';
 import styles from './index.module.css';
 
 const AnuncioFinalistas = () => {
@@ -41,12 +42,15 @@ const AnuncioFinalistas = () => {
           )}
         </Box>
 
-        <Box component={Link} to="/vencedores" className={styles.mosaico} aria-label={resultadoDivulgado ? 'Ver as premiadas' : 'Ver os finalistas'}>
-          {pecas.map((src, i) => (
-            <Box key={src} className={styles.peca}>
-              <img src={src} alt={temFotos ? `Cerimônia do Prêmio Infosfera ${ano}, foto ${i + 1}` : praticas[i].titulo} loading="lazy" />
-            </Box>
-          ))}
+        <Box className={styles.palco}>
+          <Esfera className={styles.esferaFundo} />
+          <Box component={Link} to="/vencedores" className={styles.mosaico} aria-label={resultadoDivulgado ? 'Ver as premiadas' : 'Ver os finalistas'}>
+            {pecas.map((src, i) => (
+              <Box key={src} className={styles.peca}>
+                <img src={src} alt={temFotos ? `Cerimônia do Prêmio Infosfera ${ano}, foto ${i + 1}` : praticas[i].titulo} loading="lazy" />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
