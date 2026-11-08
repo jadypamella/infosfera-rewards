@@ -3,12 +3,12 @@
 // and color) so components can size and colour them the same way.
 import { Box } from '@mui/material';
 import {
-  ArchiveBoxIcon, ArrowDownTrayIcon, ArrowPathIcon, ArrowRightIcon, ArrowTopRightOnSquareIcon,
+  ArchiveBoxIcon, ArrowPathIcon, ArrowRightIcon, ArrowTopRightOnSquareIcon,
   ArrowTrendingUpIcon, Bars3Icon, BuildingLibraryIcon, BuildingOffice2Icon, BuildingOfficeIcon,
-  CalendarDaysIcon, CalendarIcon, ChartBarIcon, CheckBadgeIcon, CheckCircleIcon, ChevronDownIcon,
+  CalendarDaysIcon, ChartBarIcon, CheckBadgeIcon, CheckCircleIcon, ChevronDownIcon,
   ClipboardDocumentListIcon, ComputerDesktopIcon, DocumentMagnifyingGlassIcon, DocumentTextIcon,
-  EnvelopeIcon, EyeIcon, GlobeAmericasIcon, HomeIcon, IdentificationIcon, InboxArrowDownIcon,
-  InformationCircleIcon, LightBulbIcon, ListBulletIcon, LockClosedIcon, MapPinIcon, MegaphoneIcon,
+  EnvelopeIcon, EyeIcon, GlobeAmericasIcon, HomeIcon, InboxArrowDownIcon,
+  InformationCircleIcon, LightBulbIcon, LockClosedIcon, MapPinIcon,
   MoonIcon, PaperAirplaneIcon, PhotoIcon, ScaleIcon, ShieldCheckIcon, SparklesIcon, StarIcon,
   SunIcon, TrophyIcon, UserGroupIcon, XMarkIcon,
 } from '@heroicons/react/24/outline';
@@ -66,26 +66,20 @@ export const AssignmentOutlined = icone(ClipboardDocumentListIcon);
 export const ArchiveOutlined = icone(ArchiveBoxIcon);
 export const StarOutline = icone(StarIcon);
 export const Send = icone(PaperAirplaneIcon);
-export const RecordVoiceOverOutlined = icone(MegaphoneIcon);
 export const PhotoLibraryOutlined = icone(PhotoIcon);
 export const OpenInNew = icone(ArrowTopRightOnSquareIcon);
 export const MoveToInboxOutlined = icone(InboxArrowDownIcon);
 export const Menu = icone(Bars3Icon);
-export const MailOutline = icone(EnvelopeIcon);
 export const Email = icone(EnvelopeIcon);
-export const ListAltOutlined = icone(ListBulletIcon);
 export const LightbulbOutlined = icone(LightBulbIcon);
 export const LightModeOutlined = icone(SunIcon);
 export const DarkModeOutlined = icone(MoonIcon);
 export const HomeOutlined = icone(HomeIcon);
 export const GroupsOutlined = icone(UserGroupIcon);
 export const ExpandMore = icone(ChevronDownIcon);
-export const EventOutlined = icone(CalendarIcon);
-export const DownloadOutlined = icone(ArrowDownTrayIcon);
 export const DescriptionOutlined = icone(DocumentTextIcon);
 export const CorporateFareOutlined = icone(BuildingOfficeIcon);
 export const Close = icone(XMarkIcon);
-export const BadgeOutlined = icone(IdentificationIcon);
 export const AccountBalanceOutlined = icone(BuildingLibraryIcon);
 export const LinkedIn = icone(MarcaLinkedin);
 export const Instagram = icone(MarcaInstagram);
