@@ -1,0 +1,5 @@
+# Search engines and AI answer engines are welcome to read and cite every page.
+User-agent: *
+Allow: /
+
+Sitemap: https://premio.infosfera.inf.br/sitemap.xml

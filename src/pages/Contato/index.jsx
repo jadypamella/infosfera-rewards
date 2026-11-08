@@ -57,7 +57,7 @@ const Contato = () => {
                 <Box className={styles.iconWrapper}>
                   <EmailIcon sx={{ fontSize: 60 }} />
                 </Box>
-                <Typography variant="h5" className={styles.infoTitle}>
+                <Typography variant="h5" component="h2" className={styles.infoTitle}>
                   Fale Conosco
                 </Typography>
                 <Typography className={styles.infoText}>

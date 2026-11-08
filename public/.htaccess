@@ -12,3 +12,28 @@
 <FilesMatch "^\.">
   Require all denied
 </FilesMatch>
+
+# Every page is a prerendered folder with its own index.html. An unknown address gets
+# a real 404 status, so search engines never index an empty page as a duplicate home.
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_alias.c>
+  Redirect 301 /participantes /vencedores/
+  Redirect 301 /categorias /regulamento/
+</IfModule>
+
+# Built files carry a content hash in their name, so they can be cached for a year.
+# Pages are revalidated on every visit so a new deploy shows at once.
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} =~ m#^/assets/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>

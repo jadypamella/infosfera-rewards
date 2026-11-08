@@ -3,11 +3,13 @@ import react from '@vitejs/plugin-react'
 import legacy from '@vitejs/plugin-legacy'
 
 // https://vite.dev/config/
-export default defineConfig({
+// Absolute base: every page is prerendered into its own folder (/vencedores/index.html),
+// so asset paths must not depend on the page's depth.
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
     react(),
-    legacy({ targets: ['defaults', 'not IE 11'] }),
+    !isSsrBuild && legacy({ targets: ['defaults', 'not IE 11'] }),
   ],
-  base: './',
+  base: '/',
   server: { allowedHosts: true },
-})
+}))

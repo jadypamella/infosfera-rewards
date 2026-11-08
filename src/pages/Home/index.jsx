@@ -307,7 +307,7 @@ const Home = () => {
                   <Card ref={(el) => (cardRefs.current[2 + index] = el)} data-id={id} className={`${styles.categoryCard} ${visibleCards.has(id) ? styles.visible : ''}`}>
                     <CardContent sx={{ p: '2rem !important' }}>
                       <Box className={styles.categoryIconWrapper}><Icon sx={{ fontSize: 32, color: '#2d2e82' }} /></Box>
-                      <Typography variant="h6" className={styles.categoryTitle}>{item.title}</Typography>
+                      <Typography variant="h6" component="h3" className={styles.categoryTitle}>{item.title}</Typography>
                       <Typography sx={{ color: '#555', fontSize: '0.9rem', lineHeight: 1.65 }}>{item.desc}</Typography>
                     </CardContent>
                   </Card>
@@ -444,7 +444,7 @@ const Home = () => {
             >
               <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', p: '2.5rem !important' }}>
                 <EmojiEventsOutlinedIcon sx={{ fontSize: 64, mb: 1.5, color: 'white' }} />
-                <Typography variant="h5" sx={{ fontWeight: 700, mb: 0.5, color: 'white' }}>A Cerimônia</Typography>
+                <Typography variant="h5" component="h3" sx={{ fontWeight: 700, mb: 0.5, color: 'white' }}>A Cerimônia</Typography>
                 <Typography sx={{ color: 'rgba(255,255,255,0.75)', mb: 1 }}>
                   Premiação durante o <strong style={{ color: 'white' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
                 </Typography>
