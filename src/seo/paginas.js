@@ -4,7 +4,7 @@ import { edicoes, edicaoAtual, praticasOrdenadas } from '../data/edicoes';
 
 export const SITE_URL = 'https://premio.infosfera.inf.br';
 export const PLATAFORMA_URL = 'https://boaspraticas.infosfera.inf.br/';
-export const IMAGEM_SOCIAL = `${SITE_URL}/og-image.jpg`;
+export const IMAGEM_SOCIAL = `${SITE_URL}/og-image-2027.jpg`;
 
 const anos = edicoes.map((e) => e.ano).sort().join(' e ');
 

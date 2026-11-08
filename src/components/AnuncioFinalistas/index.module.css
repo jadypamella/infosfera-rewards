@@ -149,3 +149,16 @@
 }
 .palco { position: relative; }
 .palco .mosaico { z-index: 1; }
+.texto { position: relative; z-index: 2; }
+
+/* On one column the sphere gets its own square below the buttons, so its rays never cross the text. */
+@media (max-width: 900px) {
+  .palco {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .esferaFundo { width: 100%; }
+  .palco .mosaico { width: 100%; }
+}
