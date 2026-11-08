@@ -159,34 +159,34 @@ const Home = () => {
   ];
 
   const checkItems = [
-    { num: '1', icon: <AssignmentOutlinedIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Relevância e Qualidade Técnica', text: 'Pertinência da solução frente aos problemas identificados, robustez metodológica, e alinhamento com os eixos temáticos, grau de inovação, conformidade técnica e normativa.', weight: '3,5' },
-    { num: '2', icon: <TrendingUpOutlinedIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Impacto e Resultados', text: 'Eficácia da prática e benefícios gerados. Valor público com indicadores de desempenho, ganhos de eficiência e melhoria na qualidade dos processos ou serviços prestados.', weight: '4,0' },
-    { num: '3', icon: <AutorenewOutlinedIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Replicabilidade e Sustentabilidade', text: 'Capacidade da prática de ser transferida ou adaptada para outros contextos e condições de continuidade no tempo.', weight: '3,0' },
+    { num: '1', icon: <AssignmentOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Relevância e Qualidade Técnica', text: 'Pertinência da solução frente aos problemas identificados, robustez metodológica, e alinhamento com os eixos temáticos, grau de inovação, conformidade técnica e normativa.', weight: '3,5' },
+    { num: '2', icon: <TrendingUpOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Impacto e Resultados', text: 'Eficácia da prática e benefícios gerados. Valor público com indicadores de desempenho, ganhos de eficiência e melhoria na qualidade dos processos ou serviços prestados.', weight: '4,0' },
+    { num: '3', icon: <AutorenewOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Replicabilidade e Sustentabilidade', text: 'Capacidade da prática de ser transferida ou adaptada para outros contextos e condições de continuidade no tempo.', weight: '3,0' },
   ];
 
   const howToSteps = [
-    { num: '1', icon: <MoveToInboxOutlinedIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Plataforma de Boas Práticas', desc: 'Sua porta de entrada. Cadastre sua prática em boaspraticas.infosfera.inf.br. Gratuito e sem limite de submissões por órgão.' },
-    { num: '2', icon: <VerifiedOutlinedIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Regra Fundamental', desc: 'Detalhe resultados e impacto para desbloquear a elegibilidade. A prática precisa atingir o Status Ouro na plataforma.' },
-    { num: '3', icon: <CheckCircleOutlineIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Confirme o Interesse', desc: 'Após análise de admissibilidade (1–15 ago), confirme formalmente a participação na fase competitiva do Prêmio.' },
-    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: '#2d2e82' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia em novembro de 2026, Goiânia/GO.' },
+    { num: '1', icon: <MoveToInboxOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Plataforma de Boas Práticas', desc: 'Sua porta de entrada. Cadastre sua prática em boaspraticas.infosfera.inf.br. Gratuito e sem limite de submissões por órgão.' },
+    { num: '2', icon: <VerifiedOutlinedIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Regra Fundamental', desc: 'Detalhe resultados e impacto para desbloquear a elegibilidade. A prática precisa atingir o Status Ouro na plataforma.' },
+    { num: '3', icon: <CheckCircleOutlineIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Confirme o Interesse', desc: 'Após análise de admissibilidade (1–15 ago), confirme formalmente a participação na fase competitiva do Prêmio.' },
+    { num: '4', icon: <EmojiEventsIcon sx={{ fontSize: 72, color: 'var(--luz-tinta)' }} />, title: 'Reconhecimento', desc: 'Prêmio Infosfera de Boas Práticas em Gestão da Informação na Esfera Pública. Cerimônia em novembro de 2026, Goiânia/GO.' },
   ];
 
   const tematicas = [
-    { title: 'Governança Digital e Eficiência', icon: <PolicyOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: transformação digital, interoperabilidade, inovação em serviços públicos.' },
-    { title: 'Gestão Estratégica da Informação', icon: <BarChartOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: inteligência de dados, IA no setor público, gestão do conhecimento.' },
-    { title: 'Transparência e Integridade', icon: <VisibilityOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: transparência digital, inclusão digital, compliance governamental.' },
-    { title: 'Preservação Digital e Memória Institucional', icon: <ArchiveOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: memória institucional, curadoria de acervos, gestão de documentos digitais.' },
-    { title: 'Segurança e Resiliência', icon: <SecurityOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: segurança cibernética, confidencialidade, integridade de dados.' },
-    { title: 'Outros Temas Correlatos', icon: <DevicesOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, desc: 'Exemplos: inovação em processos, cidades inteligentes, sustentabilidade digital.' },
+    { title: 'Governança Digital e Eficiência', icon: <PolicyOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: transformação digital, interoperabilidade, inovação em serviços públicos.' },
+    { title: 'Gestão Estratégica da Informação', icon: <BarChartOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: inteligência de dados, IA no setor público, gestão do conhecimento.' },
+    { title: 'Transparência e Integridade', icon: <VisibilityOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: transparência digital, inclusão digital, compliance governamental.' },
+    { title: 'Preservação Digital e Memória Institucional', icon: <ArchiveOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: memória institucional, curadoria de acervos, gestão de documentos digitais.' },
+    { title: 'Segurança e Resiliência', icon: <SecurityOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: segurança cibernética, confidencialidade, integridade de dados.' },
+    { title: 'Outros Temas Correlatos', icon: <DevicesOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, desc: 'Exemplos: inovação em processos, cidades inteligentes, sustentabilidade digital.' },
   ];
 
   const awardCategories = [
     { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública em 2026.', highlight: true },
-    { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Destaque Regional (Goiás)', desc: 'Maior pontuação técnica entre instituições sediadas no Estado de Goiás, anfitrião do evento.' },
-    { icon: <LocationCityOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Destaque Municipal', desc: 'Distinção exclusiva para prefeituras, secretarias municipais e autarquias municipais.' },
-    { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional: criatividade, baixo custo ou superação tecnológica.' },
-    { icon: <StarsOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional fora do fluxo regular.' },
-    { icon: <PublicOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Escolha Popular', desc: 'Votação pública digital após divulgação dos finalistas. Única categoria acumulável com as demais.' },
+    { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Regional (Goiás)', desc: 'Maior pontuação técnica entre instituições sediadas no Estado de Goiás, anfitrião do evento.' },
+    { icon: <LocationCityOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Destaque Municipal', desc: 'Distinção exclusiva para prefeituras, secretarias municipais e autarquias municipais.' },
+    { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional: criatividade, baixo custo ou superação tecnológica.' },
+    { icon: <StarsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional fora do fluxo regular.' },
+    { icon: <PublicOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Escolha Popular', desc: 'Votação pública digital após divulgação dos finalistas. Única categoria acumulável com as demais.' },
   ];
 
 
@@ -256,11 +256,11 @@ const Home = () => {
                 <Box className={styles.cardAccentBar} />
                 <CardContent sx={{ p: '2rem !important' }}>
                   <Box className={styles.cardHeader}>
-                    <Box className={styles.cardIconWrapper}><StarOutlineIcon sx={{ fontSize: 28, color: '#2d2e82' }} /></Box>
+                    <Box className={styles.cardIconWrapper}><StarOutlineIcon sx={{ fontSize: 28, color: 'var(--luz-tinta)' }} /></Box>
                     <Typography variant="h3" className={styles.cardTitle}>O Reconhecimento</Typography>
                   </Box>
                   <Typography sx={{ fontWeight: 600, mb: 1 }}>O Prêmio Infosfera celebra inovação comprovada na gestão pública.</Typography>
-                  <Typography sx={{ color: '#555', lineHeight: 1.7 }}>Uma iniciativa do Núcleo de Pesquisa em Informação, Direito e Sociedade (Infojus/UFPR) e do Laboratório de Riscos, Privacidade, Segurança da Informação e Crises (LabRisk/UnB) para identificar e premiar solenemente práticas que transformam a administração pública brasileira, de pilotos a soluções plenamente estabelecidas.</Typography>
+                  <Typography sx={{ color: 'var(--luz-texto)', lineHeight: 1.7 }}>Uma iniciativa do Núcleo de Pesquisa em Informação, Direito e Sociedade (Infojus/UFPR) e do Laboratório de Riscos, Privacidade, Segurança da Informação e Crises (LabRisk/UnB) para identificar e premiar solenemente práticas que transformam a administração pública brasileira, de pilotos a soluções plenamente estabelecidas.</Typography>
                 </CardContent>
               </Card>
             </Grid>
@@ -269,11 +269,11 @@ const Home = () => {
                 <Box className={`${styles.cardAccentBar} ${styles.accentSecondary}`} />
                 <CardContent sx={{ p: '2rem !important' }}>
                   <Box className={styles.cardHeader}>
-                    <Box className={styles.cardIconWrapper}><LightbulbOutlinedIcon sx={{ fontSize: 28, color: '#1abc9c' }} /></Box>
+                    <Box className={styles.cardIconWrapper}><LightbulbOutlinedIcon sx={{ fontSize: 28, color: 'var(--luz-esfera)' }} /></Box>
                     <Typography variant="h3" className={styles.cardTitle}>A Missão</Typography>
                   </Box>
                   <Typography sx={{ fontWeight: 600, mb: 1 }}>Combater o isolamento de boas ideias e criar um repositório nacional de referências.</Typography>
-                  <Typography sx={{ color: '#555', lineHeight: 1.7 }}>Fomentamos a replicabilidade de práticas de sucesso, servindo como instrumento de reconhecimento e memória institucional técnica para todo o setor público.</Typography>
+                  <Typography sx={{ color: 'var(--luz-texto)', lineHeight: 1.7 }}>Fomentamos a replicabilidade de práticas de sucesso, servindo como instrumento de reconhecimento e memória institucional técnica para todo o setor público.</Typography>
                 </CardContent>
               </Card>
             </Grid>
@@ -311,9 +311,9 @@ const Home = () => {
                 <Box key={index} sx={{ flex: 1 }}>
                   <Card ref={(el) => (cardRefs.current[2 + index] = el)} data-id={id} className={`${styles.categoryCard} ${visibleCards.has(id) ? styles.visible : ''}`}>
                     <CardContent sx={{ p: '2rem !important' }}>
-                      <Box className={styles.categoryIconWrapper}><Icon sx={{ fontSize: 32, color: '#2d2e82' }} /></Box>
+                      <Box className={styles.categoryIconWrapper}><Icon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /></Box>
                       <Typography variant="h6" component="h3" className={styles.categoryTitle}>{item.title}</Typography>
-                      <Typography sx={{ color: '#555', fontSize: '0.9rem', lineHeight: 1.65 }}>{item.desc}</Typography>
+                      <Typography sx={{ color: 'var(--luz-texto)', fontSize: '0.9rem', lineHeight: 1.65 }}>{item.desc}</Typography>
                     </CardContent>
                   </Card>
                 </Box>
@@ -454,7 +454,7 @@ const Home = () => {
                   Premiação durante o <strong style={{ color: 'var(--luz-tinta)' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
                 </Typography>
                 <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>5 de novembro de 2026 · Goiânia/GO</Typography>
-                <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'var(--luz-tinta)', color: 'var(--luz-tinta)', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'var(--luz-tinta)', bgcolor: 'rgba(255,255,255,0.35)' } }}>
+                <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'var(--luz-tinta)', color: 'var(--luz-tinta)', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'var(--luz-tinta)', bgcolor: 'color-mix(in srgb, var(--luz-tinta) 6%, transparent)' } }}>
                   Quero Participar
                 </Button>
               </CardContent>

@@ -16,22 +16,22 @@
 }
 
 .btn {
-  background: var(--luz-tinta) !important;
-  color: var(--luz-papel) !important;
+  background: var(--luz-botao) !important;
+  color: var(--luz-botao-texto) !important;
   font-weight: 700 !important;
   font-size: 0.9rem !important;
   text-transform: none !important;
   border-radius: 999px !important;
   padding: 0.7rem 1.5rem !important;
-  box-shadow: 0 6px 20px rgba(35, 36, 79, 0.3), 0 0 0 3px rgba(18, 168, 138, 0.25) !important;
+  box-shadow: 0 6px 20px var(--luz-sombra), 0 0 0 3px color-mix(in srgb, var(--luz-esfera) 25%, transparent) !important;
   transition: all 0.2s ease !important;
   white-space: nowrap;
 }
 
 .btn:hover {
-  background: #16173a !important;
+  background: color-mix(in srgb, var(--luz-botao) 85%, #000) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 28px rgba(35, 36, 79, 0.35), 0 0 0 3px rgba(18, 168, 138, 0.4) !important;
+  box-shadow: 0 8px 28px var(--luz-sombra), 0 0 0 3px color-mix(in srgb, var(--luz-esfera) 40%, transparent) !important;
 }
 
 @media (max-width: 480px) {

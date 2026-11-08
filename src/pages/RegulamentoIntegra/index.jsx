@@ -57,7 +57,7 @@ const RegulamentoIntegra = () => {
 
         <Sec title="Inscrições">
           <Art>
-            Art. 7º. A inscrição dar-se-á exclusivamente via Plataforma Infosfera de Boas Práticas (<a href="https://boaspraticas.infosfera.inf.br/" target="_blank" rel="noopener noreferrer" style={{color:'#2d2e82'}}>https://boaspraticas.infosfera.inf.br/</a>) até a data limite prevista no cronograma oficial do Prêmio (Anexo 2).
+            Art. 7º. A inscrição dar-se-á exclusivamente via Plataforma Infosfera de Boas Práticas (<a href="https://boaspraticas.infosfera.inf.br/" target="_blank" rel="noopener noreferrer" style={{color:'var(--luz-tinta)'}}>https://boaspraticas.infosfera.inf.br/</a>) até a data limite prevista no cronograma oficial do Prêmio (Anexo 2).
             <Par>§ 1º. Todas as práticas cadastradas na Plataforma estarão automaticamente inscritas no Prêmio Infosfera 2026.</Par>
             <Par>§ 2º. Não serão aceitas inscrições fora do prazo ou realizadas por qualquer outro meio que não seja a Plataforma Infosfera de Boas Práticas.</Par>
           </Art>
@@ -140,27 +140,27 @@ const RegulamentoIntegra = () => {
             Art. 20. A avaliação será baseada nos seguintes critérios e pesos:
             <Box component="table" sx={{width:'100%',borderCollapse:'collapse',mt:2,fontSize:'0.9rem',display:'block',overflowX:'auto'}}>
               <Box component="thead">
-                <Box component="tr" sx={{background:'#f0f1ff'}}>
+                <Box component="tr" sx={{background:'var(--luz-nevoa-2)'}}>
                   {['Critério','Descrição','Peso'].map(h => (
-                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid #2d2e82',fontWeight:700,color:'#2d2e82',whiteSpace:'nowrap'}}>{h}</Box>
+                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid var(--luz-tinta)',fontWeight:700,color:'var(--luz-tinta)',whiteSpace:'nowrap'}}>{h}</Box>
                   ))}
                 </Box>
               </Box>
               <Box component="tbody">
-                <Box component="tr" sx={{'&:hover':{background:'#f7f8fc'},borderBottom:'1px solid #e5e7eb'}}>
+                <Box component="tr" sx={{'&:hover':{background:'var(--luz-nevoa)'},borderBottom:'1px solid var(--luz-linha)'}}>
                   <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top',minWidth:'200px'}}>Relevância e Qualidade Técnica</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'#555',verticalAlign:'top'}}>Avalia a pertinência da solução frente aos problemas identificados e a robustez metodológica da prática. Analisa-se o alinhamento da iniciativa com os eixos temáticos do Prêmio, a coerência entre os objetivos propostos e os meios utilizados, o grau de inovação em relação aos processos tradicionais da gestão pública e a conformidade técnica da solução com padrões éticos e normativos.</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'#2d2e82',verticalAlign:'top'}}>3,5</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto)',verticalAlign:'top'}}>Avalia a pertinência da solução frente aos problemas identificados e a robustez metodológica da prática. Analisa-se o alinhamento da iniciativa com os eixos temáticos do Prêmio, a coerência entre os objetivos propostos e os meios utilizados, o grau de inovação em relação aos processos tradicionais da gestão pública e a conformidade técnica da solução com padrões éticos e normativos.</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'var(--luz-tinta)',verticalAlign:'top'}}>3,5</Box>
                 </Box>
-                <Box component="tr" sx={{'&:hover':{background:'#f7f8fc'},borderBottom:'1px solid #e5e7eb'}}>
+                <Box component="tr" sx={{'&:hover':{background:'var(--luz-nevoa)'},borderBottom:'1px solid var(--luz-linha)'}}>
                   <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top'}}>Impacto e Resultados</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'#555',verticalAlign:'top'}}>Avalia a eficácia da prática e os benefícios gerados para a administração e para o cidadão. Analisa-se, com base em comprovação documental do impacto gerado, a entrega de valor público por meio de indicadores ou evidências de desempenho, ganhos de eficiência (redução de tempo, custos ou burocracia), melhoria na qualidade dos serviços prestados, entre outros.</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'#2d2e82',verticalAlign:'top'}}>4,0</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto)',verticalAlign:'top'}}>Avalia a eficácia da prática e os benefícios gerados para a administração e para o cidadão. Analisa-se, com base em comprovação documental do impacto gerado, a entrega de valor público por meio de indicadores ou evidências de desempenho, ganhos de eficiência (redução de tempo, custos ou burocracia), melhoria na qualidade dos serviços prestados, entre outros.</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'var(--luz-tinta)',verticalAlign:'top'}}>4,0</Box>
                 </Box>
-                <Box component="tr" sx={{'&:hover':{background:'#f7f8fc'}}}>
+                <Box component="tr" sx={{'&:hover':{background:'var(--luz-nevoa)'}}}>
                   <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top'}}>Replicabilidade e Sustentabilidade</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'#555',verticalAlign:'top'}}>Avalia o potencial de escala e a continuidade da iniciativa no tempo. Analisa-se a capacidade de a prática ser transferida ou adaptada para outros órgãos ou contextos federativos, bem como a sua viabilidade financeira, técnica e institucional a longo prazo, observando se a iniciativa possui governança estabelecida que garanta sua manutenção além do ciclo de seus idealizadores.</Box>
-                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'#2d2e82',verticalAlign:'top'}}>3,0</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto)',verticalAlign:'top'}}>Avalia o potencial de escala e a continuidade da iniciativa no tempo. Analisa-se a capacidade de a prática ser transferida ou adaptada para outros órgãos ou contextos federativos, bem como a sua viabilidade financeira, técnica e institucional a longo prazo, observando se a iniciativa possui governança estabelecida que garanta sua manutenção além do ciclo de seus idealizadores.</Box>
+                  <Box component="td" sx={{padding:'0.75rem 1rem',textAlign:'center',fontWeight:700,color:'var(--luz-tinta)',verticalAlign:'top'}}>3,0</Box>
                 </Box>
               </Box>
             </Box>
@@ -239,9 +239,9 @@ const RegulamentoIntegra = () => {
           <Box sx={{overflowX:'auto',mt:1}}>
             <Box component="table" sx={{width:'100%',borderCollapse:'collapse',fontSize:'0.9rem'}}>
               <Box component="thead">
-                <Box component="tr" sx={{background:'#f0f1ff'}}>
+                <Box component="tr" sx={{background:'var(--luz-nevoa-2)'}}>
                   {['Categoria','Descrição do Escopo','Temas Relacionados (Exemplos)'].map(h => (
-                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid #2d2e82',fontWeight:700,color:'#2d2e82'}}>{h}</Box>
+                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid var(--luz-tinta)',fontWeight:700,color:'var(--luz-tinta)'}}>{h}</Box>
                   ))}
                 </Box>
               </Box>
@@ -254,10 +254,10 @@ const RegulamentoIntegra = () => {
                   ['E. Privacidade, Segurança e Resiliência Informacional','Proteção do ecossistema público contra ameaças e incidentes. Foco na integridade, confidencialidade e disponibilidade dos dados, além de estratégias de mitigação de riscos, incluindo aspectos de privacidade e proteção de dados.','Segurança Cibernética; Confidencialidade e Integridade; Gestão de Documentos Digitais; Segurança, Privacidade e Proteção de dados'],
                   ['F. Outros Temas Correlatos','Projetos que apresentem aderência aos objetivos do Prêmio Infosfera 2026, mas que não estejam explicitamente listados nas categorias anteriores.','Inovação em Processos; Transparência Ativa; Tecnologias Emergentes; Cidades Inteligentes; Sustentabilidade Digital; e outras propostas de gestão da informação na esfera pública.'],
                 ].map(([cat, desc, ex]) => (
-                  <Box key={cat} component="tr" sx={{'&:hover':{background:'#f7f8fc'},borderBottom:'1px solid #e5e7eb'}}>
+                  <Box key={cat} component="tr" sx={{'&:hover':{background:'var(--luz-nevoa)'},borderBottom:'1px solid var(--luz-linha)'}}>
                     <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top',minWidth:'180px'}}>{cat}</Box>
-                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'#555',verticalAlign:'top'}}>{desc}</Box>
-                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'#666',verticalAlign:'top',fontSize:'0.85rem'}}>{ex}</Box>
+                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto)',verticalAlign:'top'}}>{desc}</Box>
+                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto-suave)',verticalAlign:'top',fontSize:'0.85rem'}}>{ex}</Box>
                   </Box>
                 ))}
               </Box>
@@ -269,9 +269,9 @@ const RegulamentoIntegra = () => {
           <Box sx={{overflowX:'auto',mt:1}}>
             <Box component="table" sx={{width:'100%',borderCollapse:'collapse',fontSize:'0.9rem'}}>
               <Box component="thead">
-                <Box component="tr" sx={{background:'#f0f1ff'}}>
+                <Box component="tr" sx={{background:'var(--luz-nevoa-2)'}}>
                   {['Marco Temporal','Atividade Principal'].map(h => (
-                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid #2d2e82',fontWeight:700,color:'#2d2e82'}}>{h}</Box>
+                    <Box key={h} component="th" sx={{padding:'0.75rem 1rem',textAlign:'left',borderBottom:'2px solid var(--luz-tinta)',fontWeight:700,color:'var(--luz-tinta)'}}>{h}</Box>
                   ))}
                 </Box>
               </Box>
@@ -285,9 +285,9 @@ const RegulamentoIntegra = () => {
                   ['05 a 09 de Outubro','Fase de Aclamação Pública em ambiente digital.'],
                   ['05 de Novembro','Sessão de Apresentação de Boas Práticas e Cerimônia de Premiação em Goiânia/GO.'],
                 ].map(([marco, atividade]) => (
-                  <Box key={marco} component="tr" sx={{'&:hover':{background:'#f7f8fc'},borderBottom:'1px solid #e5e7eb'}}>
-                    <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top',minWidth:'180px',color:'#2d2e82'}}>{marco}</Box>
-                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'#555',verticalAlign:'top'}}>{atividade}</Box>
+                  <Box key={marco} component="tr" sx={{'&:hover':{background:'var(--luz-nevoa)'},borderBottom:'1px solid var(--luz-linha)'}}>
+                    <Box component="td" sx={{padding:'0.75rem 1rem',fontWeight:600,verticalAlign:'top',minWidth:'180px',color:'var(--luz-tinta)'}}>{marco}</Box>
+                    <Box component="td" sx={{padding:'0.75rem 1rem',color:'var(--luz-texto)',verticalAlign:'top'}}>{atividade}</Box>
                   </Box>
                 ))}
               </Box>

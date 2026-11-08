@@ -19,11 +19,11 @@
   display: flex;
   align-items: stretch;
   gap: 0.5rem;
-  background: var(--luz-tinta);
+  background: var(--luz-botao);
   border-radius: 14px;
   padding: 0.85rem 1.25rem;
   border-bottom: 3px solid var(--luz-esfera);
-  box-shadow: 0 6px 20px rgba(35, 36, 79, 0.18);
+  box-shadow: 0 6px 20px var(--luz-sombra);
 }
 
 .unitGroup {
@@ -43,14 +43,14 @@
   font-family: var(--font-display) !important;
   font-size: 1.75rem !important;
   font-weight: 800 !important;
-  color: var(--luz-papel) !important;
+  color: var(--luz-botao-texto) !important;
   line-height: 1 !important;
   letter-spacing: -0.03em !important;
 }
 
 .unitBox .unitLabel {
   font-family: var(--font-mono) !important;
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: color-mix(in srgb, var(--luz-botao-texto) 75%, transparent) !important;
   font-size: 0.6rem !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;

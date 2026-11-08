@@ -13,7 +13,7 @@
   width: 520px;
   height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 183, 232, 0.22), transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--luz-ceu) 22%, transparent), transparent 70%);
   pointer-events: none;
 }
 
@@ -62,13 +62,13 @@
 }
 
 .botao {
-  background: var(--luz-tinta) !important;
-  color: #fff !important;
+  background: var(--luz-botao) !important;
+  color: var(--luz-botao-texto) !important;
   font-weight: 700 !important;
   text-transform: none !important;
   border-radius: 999px !important;
   padding: 12px 28px !important;
-  box-shadow: 0 8px 24px rgba(35, 36, 79, 0.25) !important;
+  box-shadow: 0 8px 24px var(--luz-sombra) !important;
 }
 
 .mosaico {
@@ -84,8 +84,8 @@
   aspect-ratio: 1;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 24px rgba(35, 36, 79, 0.16);
+  background: var(--luz-papel);
+  box-shadow: 0 10px 24px var(--luz-sombra);
   transition: transform 0.25s;
 }
 

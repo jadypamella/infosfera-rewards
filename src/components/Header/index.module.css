@@ -3,7 +3,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.82);
+    background: var(--luz-vidro);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--luz-linha);
@@ -11,9 +11,9 @@
 }
 
 .headerScrolled {
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 4px 24px rgba(35, 36, 79, 0.08);
-    border-bottom-color: rgba(26, 188, 156, 0.2);
+    background: color-mix(in srgb, var(--luz-vidro) 70%, var(--luz-papel));
+    box-shadow: 0 4px 24px var(--luz-sombra);
+    border-bottom-color: color-mix(in srgb, var(--luz-esfera) 20%, transparent);
 }
 
 /* Linha colorida na base do header */
@@ -117,7 +117,7 @@
     transform: translateX(-50%) scaleX(0);
     width: calc(100% - 1.7rem);
     height: 2px;
-    background: #1abc9c;
+    background: var(--luz-esfera);
     border-radius: 1px;
     transition: transform 0.25s ease;
 }
@@ -138,7 +138,7 @@
 
 .navLinkActive::after {
     transform: translateX(-50%) scaleX(1) !important;
-    background: #1abc9c;
+    background: var(--luz-esfera);
 }
 
 /* ── Header actions ── */
@@ -150,22 +150,24 @@
 
 /* ── CTA button ── */
 .ctaButton {
-    background: var(--luz-tinta) !important;
-    color: white !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     font-weight: 700 !important;
     font-size: 0.8rem !important;
     letter-spacing: 0.04em !important;
     text-transform: none !important;
     padding: 0.5rem 1.25rem !important;
     border-radius: 24px !important;
-    box-shadow: 0 6px 18px rgba(35, 36, 79, 0.22) !important;
+    box-shadow: 0 6px 18px var(--luz-sombra) !important;
     transition: all 0.25s ease !important;
     white-space: nowrap;
 }
 
 .ctaButton:hover {
     background: linear-gradient(135deg, #1e1f6e 0%, #16a085 100%) !important;
-    box-shadow: 0 4px 20px rgba(45, 46, 130, 0.5) !important;
+    /* Fixed brand gradient, so its text stays white in both themes */
+    color: #fff !important;
+    box-shadow: 0 4px 20px var(--luz-sombra) !important;
     transform: translateY(-1px) !important;
 }
 
@@ -242,13 +244,13 @@
 .drawerItem:hover {
     color: var(--luz-tinta) !important;
     background: var(--luz-nevoa) !important;
-    border-left-color: #1abc9c !important;
+    border-left-color: var(--luz-esfera) !important;
 }
 
 .drawerItemActive {
     color: var(--luz-tinta) !important;
-    background: rgba(26, 188, 156, 0.12) !important;
-    border-left-color: #1abc9c !important;
+    background: color-mix(in srgb, var(--luz-esfera) 12%, transparent) !important;
+    border-left-color: var(--luz-esfera) !important;
     font-weight: 600 !important;
 }
 

@@ -345,10 +345,10 @@ img { max-width: 100%; display: block; }
 }
 
 /* MUI surfaces (cards, drawer, menus) and form fields follow the theme tokens. */
-.MuiPaper-root { background-color: var(--luz-papel); color: var(--luz-tinta); }
-.MuiInputBase-root { color: var(--luz-tinta); }
-.MuiInputLabel-root { color: var(--luz-texto-suave); }
-.MuiOutlinedInput-notchedOutline { border-color: var(--luz-linha); }
+:root .MuiPaper-root { background-color: var(--luz-papel); color: var(--luz-tinta); }
+:root .MuiInputBase-root { color: var(--luz-tinta); }
+:root .MuiInputLabel-root:not(.Mui-focused) { color: var(--luz-texto-suave); }
+:root .MuiOutlinedInput-notchedOutline { border-color: var(--luz-texto-suave); }
 
 /* One visible focus ring everywhere. */
 :focus-visible { outline: 3px solid var(--luz-ceu); outline-offset: 2px; }

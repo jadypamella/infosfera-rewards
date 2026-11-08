@@ -48,8 +48,8 @@
 }
 
 .btnPrimary {
-    background: var(--luz-tinta) !important;
-    color: var(--luz-papel) !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     font-weight: 700 !important;
     text-transform: none !important;
     border-radius: 999px !important;
@@ -57,7 +57,7 @@
 }
 
 .btnPrimary:hover {
-    background: #16173a !important;
+    background: color-mix(in srgb, var(--luz-botao) 85%, #000) !important;
 }
 
 .btnOutline {

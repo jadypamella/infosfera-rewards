@@ -3,7 +3,7 @@
    ══════════════════════════════════════ */
 
 .homePage {
-    background-color: #ffffff;
+    background-color: var(--luz-papel);
 }
 
 /* ── Container ── */
@@ -91,9 +91,9 @@
     inset: 0;
     background: linear-gradient(
         105deg,
-        rgba(238, 245, 246, 0.94) 0%,
-        rgba(238, 245, 246, 0.88) 45%,
-        rgba(238, 245, 246, 0.75) 100%
+        color-mix(in srgb, var(--luz-nevoa) 94%, transparent) 0%,
+        color-mix(in srgb, var(--luz-nevoa) 88%, transparent) 45%,
+        color-mix(in srgb, var(--luz-nevoa) 75%, transparent) 100%
     );
 }
 
@@ -166,22 +166,23 @@
 }
 
 .heroCta {
-    background: var(--luz-tinta) !important;
-    color: white !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     font-weight: 700 !important;
     font-size: 0.9rem !important;
     letter-spacing: 0.04em !important;
     text-transform: none !important;
     padding: 0.85rem 2rem !important;
     border-radius: 999px !important;
-    box-shadow: 0 4px 18px rgba(35, 36, 79, 0.18) !important;
+    box-shadow: 0 4px 18px var(--luz-sombra) !important;
     transition: all 0.25s ease !important;
-    border: 1px solid var(--luz-tinta) !important;
+    border: 1px solid var(--luz-botao) !important;
 }
 .heroCta:hover {
-    background: #34356b !important;
+    background: var(--luz-botao) !important;
+    opacity: 0.9;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 24px rgba(35, 36, 79, 0.24) !important;
+    box-shadow: 0 8px 24px var(--luz-sombra) !important;
 }
 
 .heroCtaOutline {
@@ -197,7 +198,7 @@
     transition: all 0.25s ease !important;
 }
 .heroCtaOutline:hover {
-    background: rgba(35, 36, 79, 0.06) !important;
+    background: color-mix(in srgb, var(--luz-tinta) 6%, transparent) !important;
     border-color: var(--luz-tinta) !important;
     transform: translateY(-2px) !important;
 }
@@ -253,7 +254,7 @@
 .infoCard {
     height: 100%;
     border-radius: 12px !important;
-    background: #ffffff !important;
+    background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha) !important;
     box-shadow: none !important;
     position: relative;
@@ -267,7 +268,7 @@
     transform: translateY(0);
 }
 .infoCard:hover {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.1) !important;
+    box-shadow: 0 8px 32px var(--luz-sombra) !important;
     transform: translateY(-4px);
 }
 
@@ -297,7 +298,7 @@
     flex-shrink: 0;
 }
 .iconPrimary { border-color: var(--luz-linha); background: var(--luz-nevoa); }
-.iconSecondary { border-color: #b2ead9; background: #f0faf6; }
+.iconSecondary { border-color: color-mix(in srgb, var(--luz-esfera) 35%, transparent); background: color-mix(in srgb, var(--luz-esfera) 7%, transparent); }
 
 .cardTitle {
     color: var(--luz-tinta) !important;
@@ -310,7 +311,7 @@
 .categoryCard {
     height: 100%;
     border-radius: 12px !important;
-    background: #ffffff !important;
+    background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha) !important;
     box-shadow: none !important;
     text-align: center;
@@ -324,7 +325,7 @@
     transform: translateY(0);
 }
 .categoryCard:hover {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.1) !important;
+    box-shadow: 0 8px 32px var(--luz-sombra) !important;
     transform: translateY(-6px);
 }
 .categoryIconWrapper {
@@ -389,14 +390,14 @@
     height: 100%;
     border-radius: 12px !important;
     background: linear-gradient(135deg, var(--luz-esfera) 0%, var(--luz-ceu) 100%) !important;
-    color: white !important;
+    color: var(--luz-botao-texto) !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     border: none !important;
-    box-shadow: 0 8px 32px rgba(14, 138, 104, 0.25) !important;
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--luz-esfera) 25%, transparent) !important;
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.5s ease, transform 0.5s ease !important;
@@ -421,7 +422,7 @@
     height: 100%;
     border-radius: 12px !important;
     padding: 2rem 1.5rem !important;
-    background: #ffffff !important;
+    background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha) !important;
     box-shadow: none !important;
     text-align: center;
@@ -436,7 +437,7 @@
     transform: translateY(0);
 }
 .stepCard:hover {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.1) !important;
+    box-shadow: 0 8px 32px var(--luz-sombra) !important;
     transform: translateY(-4px);
 }
 .stepNumber {
@@ -453,12 +454,12 @@
 .stepIconWrapper {
     width: 56px;
     height: 56px;
-    background: var(--luz-tinta);
+    background: var(--luz-botao);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--luz-botao-texto);
     margin: 0 auto 1.25rem;
 }
 .stepTitle {
@@ -521,8 +522,8 @@
 .timelineActive .timelineDot {
     background: var(--luz-esfera);
     border-color: var(--luz-esfera);
-    color: white;
-    box-shadow: 0 0 0 6px rgba(18, 168, 138, 0.15);
+    color: var(--luz-botao-texto);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--luz-esfera) 15%, transparent);
 }
 
 .timelineContent { text-align: center; }
@@ -668,7 +669,7 @@
     height: 100%;
     border-radius: 12px !important;
     padding: 2rem 1.5rem !important;
-    background: #ffffff !important;
+    background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha) !important;
     box-shadow: none !important;
     text-align: center;
@@ -681,7 +682,7 @@
     transform: translateY(0);
 }
 .awardCard:hover {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.1) !important;
+    box-shadow: 0 8px 32px var(--luz-sombra) !important;
     transform: translateY(-4px);
 }
 .awardCardHighlight {
@@ -701,7 +702,7 @@
 }
 .awardIconHighlight {
     background: var(--luz-ouro);
-    color: #ffffff;
+    color: var(--luz-botao-texto);
 }
 .awardTitle {
     color: var(--luz-tinta) !important;
@@ -732,7 +733,7 @@
     align-items: center;
     text-align: center;
     border-radius: 12px !important;
-    background: white !important;
+    background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha) !important;
     box-shadow: none !important;
     opacity: 0;
@@ -744,7 +745,7 @@
     transform: translateY(0);
 }
 .tematicaCard:hover {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.1) !important;
+    box-shadow: 0 8px 32px var(--luz-sombra) !important;
     transform: translateY(-4px);
 }
 .themeCardTitle {
@@ -811,9 +812,9 @@
     z-index: 2;
     width: 58px;
     height: 58px;
-    background: #ffffff;
+    background: var(--luz-papel);
     border-radius: 50%;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 2px 12px var(--luz-sombra);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -833,14 +834,14 @@
     height: 180px;
     border-radius: 50%;
     border: 3.5px solid var(--luz-tinta);
-    background: #ffffff;
+    background: var(--luz-papel);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .circleStep:hover .circleStepRing {
-    box-shadow: 0 8px 32px rgba(35, 36, 79, 0.18);
+    box-shadow: 0 8px 32px var(--luz-sombra);
     transform: translateY(-4px);
 }
 
@@ -897,10 +898,10 @@
     letter-spacing: 0.01em !important;
 }
 .btnOutlinePrimary:hover {
-    background: var(--luz-tinta) !important;
-    color: white !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 4px 16px rgba(35, 36, 79, 0.2) !important;
+    box-shadow: 0 4px 16px var(--luz-sombra) !important;
 }
 
 /* ── tematica icon wrapper (no fill bg) ── */
@@ -934,7 +935,7 @@
     align-items: center;
 }
 .logoWrapper {
-    background: white;
+    background: var(--luz-papel);
     border-radius: 12px;
     border: 1px solid var(--luz-linha);
     min-height: 110px;
@@ -947,9 +948,13 @@
 }
 .logoWrapper:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(35, 36, 79, 0.08);
+    box-shadow: 0 8px 24px var(--luz-sombra);
 }
 .logoImage {
+    /* Plate keeps dark-on-transparent logos visible in dark theme */
+    background: var(--luz-logo-fundo);
+    padding: 6px;
+    border-radius: 8px;
     max-width: 100%;
     max-height: 72px;
     width: auto;
@@ -1031,7 +1036,7 @@
 
 /* ── Testimonials ── */
 .testimonialCard {
-    background: #ffffff;
+    background: var(--luz-papel);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     padding: 2rem;

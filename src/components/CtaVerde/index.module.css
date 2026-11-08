@@ -46,22 +46,23 @@
 
 .btn {
     margin-top: 2rem !important;
-    background: var(--luz-tinta) !important;
-    color: var(--luz-papel) !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     font-weight: 700 !important;
     font-size: 0.95rem !important;
     text-transform: none !important;
     border-radius: 999px !important;
     padding: 0.8rem 2rem !important;
-    box-shadow: 0 6px 20px rgba(35, 36, 79, 0.25) !important;
+    box-shadow: 0 6px 20px var(--luz-sombra) !important;
     transition: all 0.2s ease !important;
     min-height: 48px;
 }
 
 .btn:hover {
-    background: #16173a !important;
+    background: var(--luz-botao) !important;
+    opacity: 0.9;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 28px rgba(35, 36, 79, 0.3) !important;
+    box-shadow: 0 8px 28px var(--luz-sombra) !important;
 }
 
 .block .note {

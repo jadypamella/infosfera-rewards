@@ -33,7 +33,7 @@
 
 .acesa {
   stroke-width: 4;
-  filter: drop-shadow(0 0 4px rgba(217, 165, 32, 0.35));
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--luz-ouro) 35%, transparent));
   transition: stroke-width 0.2s;
 }
 

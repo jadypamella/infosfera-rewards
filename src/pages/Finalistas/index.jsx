@@ -62,7 +62,7 @@ const DownloadButtons = ({ onLight = false }) => (
     <Button variant="contained" size="large" href={PDF_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary} startIcon={<DownloadOutlinedIcon />}>
       Baixar Orientações
     </Button>
-    <Button variant="outlined" size="large" href={TEMPLATE_URL} download className={styles.btnOutline} sx={onLight ? { color: 'var(--luz-tinta) !important', border: '2px solid var(--luz-tinta) !important', '&:hover': { background: 'rgba(45,46,130,0.08) !important' } } : undefined} startIcon={<DownloadOutlinedIcon />}>
+    <Button variant="outlined" size="large" href={TEMPLATE_URL} download className={styles.btnOutline} sx={onLight ? { color: 'var(--luz-tinta) !important', border: '2px solid var(--luz-tinta) !important', '&:hover': { background: 'color-mix(in srgb, var(--luz-tinta) 8%, transparent) !important' } } : undefined} startIcon={<DownloadOutlinedIcon />}>
       Baixar Template
     </Button>
   </Box>
@@ -72,7 +72,7 @@ const CheckList = ({ items }) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
     {items.map((item) => (
       <Box key={item} sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
-        <CheckCircleOutlineIcon sx={{ color: '#1abc9c', mt: '2px' }} />
+        <CheckCircleOutlineIcon sx={{ color: 'var(--luz-esfera)', mt: '2px' }} />
         <Typography className={styles.presentationText} sx={{ m: 0 }}>{item}</Typography>
       </Box>
     ))}

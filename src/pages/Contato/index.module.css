@@ -52,7 +52,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--luz-nevoa);
-    box-shadow: inset 0 0 0 100vmax rgba(238, 245, 246, 0.6);
+    box-shadow: inset 0 0 0 100vmax color-mix(in srgb, var(--luz-nevoa) 60%, transparent);
     width: 100%;
     margin-top: -2rem;
 }
@@ -84,7 +84,7 @@
     background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha);
     border-left: 4px solid var(--luz-esfera);
-    box-shadow: 0 8px 30px rgba(35, 36, 79, 0.08) !important;
+    box-shadow: 0 8px 30px var(--luz-sombra) !important;
     color: var(--luz-texto) !important;
     height: 100%;
     position: sticky;
@@ -151,7 +151,7 @@
 }
 
 .emailLink:hover {
-    color: #0d7a64 !important;
+    color: var(--luz-esfera-texto) !important;
     text-decoration: underline;
 }
 
@@ -167,7 +167,7 @@
     border-radius: 20px !important;
     background: var(--luz-papel) !important;
     border: 1px solid var(--luz-linha);
-    box-shadow: 0 4px 20px rgba(35, 36, 79, 0.06) !important;
+    box-shadow: 0 4px 20px var(--luz-sombra) !important;
     position: relative;
     overflow: hidden;
 }
@@ -214,18 +214,18 @@
 .submitButton {
     margin-top: 1rem !important;
     padding: 1rem 2rem !important;
-    background: var(--luz-tinta) !important;
-    color: var(--luz-papel) !important;
+    background: var(--luz-botao) !important;
+    color: var(--luz-botao-texto) !important;
     border-radius: 999px !important;
     font-weight: 600 !important;
     font-size: 1.1rem !important;
     text-transform: none !important;
-    box-shadow: 0 4px 15px rgba(35, 36, 79, 0.25) !important;
+    box-shadow: 0 4px 15px var(--luz-sombra) !important;
     transition: all 0.3s ease !important;
 }
 
 .submitButton:hover {
-    background: #16173a !important;
+    background: color-mix(in srgb, var(--luz-botao) 85%, #000) !important;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(35, 36, 79, 0.3) !important;
+    box-shadow: 0 8px 25px var(--luz-sombra) !important;
 }

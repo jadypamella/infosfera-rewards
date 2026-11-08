@@ -40,34 +40,34 @@ const objetivos = [
 ];
 
 const elegibilidade = [
-  { titulo: 'Instituições Esferas e Poderes Públicos', desc: 'Órgãos e entidades dos Poderes Executivo, Legislativo e Judiciário em todos os níveis: Federal, Estadual, Distrital e Municipal.', icon: <AssignmentOutlinedIcon sx={{ fontSize: 28, color: '#2d2e82' }} /> },
-  { titulo: 'Estrutura Administrativa e Controle', desc: 'Administração Direta e Indireta, incluindo autarquias, fundações, empresas públicas, consórcios e sistemas de controle como Tribunais de Contas.', icon: <PolicyOutlinedIcon sx={{ fontSize: 28, color: '#2d2e82' }} /> },
-  { titulo: 'Funções Essenciais à Justiça', desc: 'Instituições fundamentais como o Ministério Público, Advocacia Pública e Defensoria Pública de todo o país.', icon: <GavelOutlinedIcon sx={{ fontSize: 28, color: '#2d2e82' }} /> },
-  { titulo: 'Consórcios e Entidades', desc: 'Consórcios públicos, entidades da administração indireta, fundações e empresas públicas vinculadas.', icon: <GroupsOutlinedIcon sx={{ fontSize: 28, color: '#2d2e82' }} /> },
+  { titulo: 'Instituições Esferas e Poderes Públicos', desc: 'Órgãos e entidades dos Poderes Executivo, Legislativo e Judiciário em todos os níveis: Federal, Estadual, Distrital e Municipal.', icon: <AssignmentOutlinedIcon sx={{ fontSize: 28, color: 'var(--luz-tinta)' }} /> },
+  { titulo: 'Estrutura Administrativa e Controle', desc: 'Administração Direta e Indireta, incluindo autarquias, fundações, empresas públicas, consórcios e sistemas de controle como Tribunais de Contas.', icon: <PolicyOutlinedIcon sx={{ fontSize: 28, color: 'var(--luz-tinta)' }} /> },
+  { titulo: 'Funções Essenciais à Justiça', desc: 'Instituições fundamentais como o Ministério Público, Advocacia Pública e Defensoria Pública de todo o país.', icon: <GavelOutlinedIcon sx={{ fontSize: 28, color: 'var(--luz-tinta)' }} /> },
+  { titulo: 'Consórcios e Entidades', desc: 'Consórcios públicos, entidades da administração indireta, fundações e empresas públicas vinculadas.', icon: <GroupsOutlinedIcon sx={{ fontSize: 28, color: 'var(--luz-tinta)' }} /> },
 ];
 
 const temas = [
-  { letra: 'A', titulo: 'Governança Digital e Eficiência', desc: 'Transformação digital, interoperabilidade, modernização da máquina pública e inovação em serviços públicos.', exemplos: 'Governança Eletrônica; Interoperabilidade; Compliance Digital.', icon: <PolicyOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-  { letra: 'B', titulo: 'Gestão Estratégica da Informação', desc: 'Estruturação de dados, uso de IA e políticas públicas baseadas em evidências.', exemplos: 'Inteligência de Dados Públicos; Gestão do Conhecimento; IA e Ética no Setor Público.', icon: <BarChartOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-  { letra: 'C', titulo: 'Transparência e Integridade', desc: 'Publicidade das ações governamentais, acesso democrático à informação e controle social.', exemplos: 'Transparência Digital; Inclusão Digital; Acessibilidade.', icon: <VisibilityOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-  { letra: 'D', titulo: 'Preservação Digital e Memória Institucional', desc: 'Salvaguarda do patrimônio informacional público digital e acesso de longo prazo a registros históricos.', exemplos: 'Preservação da Memória Institucional; Curadoria Digital; Gestão de Documentos Arquivísticos.', icon: <ArchiveOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-  { letra: 'E', titulo: 'Segurança e Resiliência', desc: 'Proteção do ecossistema público contra ameaças, integridade e confidencialidade dos dados.', exemplos: 'Segurança Cibernética; Confidencialidade; Gestão de Riscos.', icon: <SecurityOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-  { letra: 'F', titulo: 'Outros Temas Correlatos', desc: 'Projetos aderentes aos objetivos do Prêmio que não estejam nas categorias anteriores.', exemplos: 'Cidades Inteligentes; Sustentabilidade Digital; Tecnologias Emergentes.', icon: <DevicesOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
+  { letra: 'A', titulo: 'Governança Digital e Eficiência', desc: 'Transformação digital, interoperabilidade, modernização da máquina pública e inovação em serviços públicos.', exemplos: 'Governança Eletrônica; Interoperabilidade; Compliance Digital.', icon: <PolicyOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+  { letra: 'B', titulo: 'Gestão Estratégica da Informação', desc: 'Estruturação de dados, uso de IA e políticas públicas baseadas em evidências.', exemplos: 'Inteligência de Dados Públicos; Gestão do Conhecimento; IA e Ética no Setor Público.', icon: <BarChartOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+  { letra: 'C', titulo: 'Transparência e Integridade', desc: 'Publicidade das ações governamentais, acesso democrático à informação e controle social.', exemplos: 'Transparência Digital; Inclusão Digital; Acessibilidade.', icon: <VisibilityOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+  { letra: 'D', titulo: 'Preservação Digital e Memória Institucional', desc: 'Salvaguarda do patrimônio informacional público digital e acesso de longo prazo a registros históricos.', exemplos: 'Preservação da Memória Institucional; Curadoria Digital; Gestão de Documentos Arquivísticos.', icon: <ArchiveOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+  { letra: 'E', titulo: 'Segurança e Resiliência', desc: 'Proteção do ecossistema público contra ameaças, integridade e confidencialidade dos dados.', exemplos: 'Segurança Cibernética; Confidencialidade; Gestão de Riscos.', icon: <SecurityOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+  { letra: 'F', titulo: 'Outros Temas Correlatos', desc: 'Projetos aderentes aos objetivos do Prêmio que não estejam nas categorias anteriores.', exemplos: 'Cidades Inteligentes; Sustentabilidade Digital; Tecnologias Emergentes.', icon: <DevicesOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
 ];
 
 const criterios = [
-  { num: '1', titulo: 'Relevância e Qualidade Técnica', peso: '3,5', icon: <AssignmentOutlinedIcon sx={{ fontSize: 64, color: '#2d2e82' }} />, desc: 'Pertinência da solução frente aos problemas identificados e robustez metodológica. Avalia alinhamento com os eixos temáticos, coerência entre objetivos e meios, grau de inovação em relação aos processos tradicionais e conformidade técnica com padrões éticos e normativos.' },
-  { num: '2', titulo: 'Impacto e Resultados', peso: '4,0', icon: <TrendingUpOutlinedIcon sx={{ fontSize: 64, color: '#2d2e82' }} />, desc: 'Eficácia da prática e benefícios gerados para a administração e para o cidadão. Com base em comprovação documental, avalia indicadores de desempenho, ganhos de eficiência (redução de tempo, custos ou burocracia) e melhoria na qualidade dos serviços prestados.' },
-  { num: '3', titulo: 'Replicabilidade e Sustentabilidade', peso: '3,0', icon: <AutorenewOutlinedIcon sx={{ fontSize: 64, color: '#2d2e82' }} />, desc: 'Capacidade da prática de ser transferida ou adaptada para outros órgãos ou contextos federativos. Avalia viabilidade financeira, técnica e institucional a longo prazo, e se a iniciativa possui governança que garanta continuidade além do ciclo de seus idealizadores.' },
+  { num: '1', titulo: 'Relevância e Qualidade Técnica', peso: '3,5', icon: <AssignmentOutlinedIcon sx={{ fontSize: 64, color: 'var(--luz-tinta)' }} />, desc: 'Pertinência da solução frente aos problemas identificados e robustez metodológica. Avalia alinhamento com os eixos temáticos, coerência entre objetivos e meios, grau de inovação em relação aos processos tradicionais e conformidade técnica com padrões éticos e normativos.' },
+  { num: '2', titulo: 'Impacto e Resultados', peso: '4,0', icon: <TrendingUpOutlinedIcon sx={{ fontSize: 64, color: 'var(--luz-tinta)' }} />, desc: 'Eficácia da prática e benefícios gerados para a administração e para o cidadão. Com base em comprovação documental, avalia indicadores de desempenho, ganhos de eficiência (redução de tempo, custos ou burocracia) e melhoria na qualidade dos serviços prestados.' },
+  { num: '3', titulo: 'Replicabilidade e Sustentabilidade', peso: '3,0', icon: <AutorenewOutlinedIcon sx={{ fontSize: 64, color: 'var(--luz-tinta)' }} />, desc: 'Capacidade da prática de ser transferida ou adaptada para outros órgãos ou contextos federativos. Avalia viabilidade financeira, técnica e institucional a longo prazo, e se a iniciativa possui governança que garanta continuidade além do ciclo de seus idealizadores.' },
 ];
 
 const categorias = [
   { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 40, color: '#fff' }} />, titulo: 'Grande Prêmio Infosfera', desc: 'Distinção máxima concedida à prática com maior pontuação global absoluta no ranking geral, independentemente do eixo temático ou esfera federativa.', highlight: true },
-  { icon: <PlaceOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, titulo: 'Destaque Regional (Goiás)', desc: 'Distinção à prática de maior pontuação técnica entre as instituições sediadas no Estado de Goiás, anfitrião do evento.' },
-  { icon: <LocationCityOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, titulo: 'Destaque Municipal', desc: 'Distinção exclusiva para iniciativas de Prefeituras, Secretarias Municipais ou autarquias municipais.' },
-  { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, titulo: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional em criatividade, baixo custo de implementação ou superação de desafios tecnológicos complexos.' },
-  { icon: <StarsOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, titulo: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional que não tenham ingressado pelo fluxo regular de inscrição. Escolha discricionária da Comissão.' },
-  { icon: <PublicOutlinedIcon sx={{ fontSize: 40, color: '#2d2e82' }} />, titulo: 'Escolha Popular', desc: 'Votação pública digital após a divulgação dos finalistas técnicos. A única categoria acumulável com as demais previstas neste regulamento.' },
+  { icon: <PlaceOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Destaque Regional (Goiás)', desc: 'Distinção à prática de maior pontuação técnica entre as instituições sediadas no Estado de Goiás, anfitrião do evento.' },
+  { icon: <LocationCityOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Destaque Municipal', desc: 'Distinção exclusiva para iniciativas de Prefeituras, Secretarias Municipais ou autarquias municipais.' },
+  { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional em criatividade, baixo custo de implementação ou superação de desafios tecnológicos complexos.' },
+  { icon: <StarsOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Referência em Boa Prática', desc: 'Categoria especial para iniciativas de notório impacto nacional que não tenham ingressado pelo fluxo regular de inscrição. Escolha discricionária da Comissão.' },
+  { icon: <PublicOutlinedIcon sx={{ fontSize: 40, color: 'var(--luz-tinta)' }} />, titulo: 'Escolha Popular', desc: 'Votação pública digital após a divulgação dos finalistas técnicos. A única categoria acumulável com as demais previstas neste regulamento.' },
 ];
 
 const cronograma = [
@@ -139,7 +139,7 @@ const Regulamento = () => {
               A cerimônia de premiação ocorre em <strong>novembro de 2026</strong>, em Goiânia/GO, durante o Encontro de Administração da Justiça (EnAJUS).
             </Typography>
             <Box className={styles.highlightBox}>
-              <InfoOutlinedIcon sx={{ color: '#2d2e82', fontSize: 20, flexShrink: 0, mt: '2px' }} />
+              <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)', fontSize: 20, flexShrink: 0, mt: '2px' }} />
               <Typography variant="body2">
                 A inscrição é feita exclusivamente pela <strong>Plataforma Infosfera de Boas Práticas</strong>. Não são aceitas submissões por outro meio ou fora do prazo.
               </Typography>
@@ -206,7 +206,7 @@ const Regulamento = () => {
             ))}
           </Grid>
           <Box className={styles.alertBox}>
-            <CheckCircleOutlineIcon sx={{ color: '#2d2e82', fontSize: 20, flexShrink: 0 }} />
+            <CheckCircleOutlineIcon sx={{ color: 'var(--luz-tinta)', fontSize: 20, flexShrink: 0 }} />
             <Typography variant="body2">
               <strong>Impedimento:</strong> membros do Comitê Executivo, da Comissão Julgadora e seus parentes até segundo grau não podem submeter práticas ao Prêmio.
             </Typography>
@@ -328,7 +328,7 @@ const Regulamento = () => {
             ))}
           </Box>
           <Box className={styles.alertBox} sx={{ mt: 4 }}>
-            <InfoOutlinedIcon sx={{ color: '#2d2e82', fontSize: 20, flexShrink: 0 }} />
+            <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)', fontSize: 20, flexShrink: 0 }} />
             <Typography variant="body2">
               Em caso de empate, prevalece a prática com maior nota no critério de maior peso. Se o empate persistir, o Comitê Executivo decide com base no histórico e no tempo de implementação da prática.
             </Typography>
@@ -399,9 +399,9 @@ const Regulamento = () => {
           </Box>
           <Grid container spacing={3} columns={{ xs: 1, md: 3 }}>
             {[
-              { t: 'Divulgação dos Finalistas', d: 'A lista oficial de finalistas é divulgada nos canais da Plataforma Infosfera até 10 de setembro de 2026. A comunicação serve como convocação formal para a cerimônia.', icon: <VerifiedOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-              { t: 'Obrigações dos Finalistas', d: 'Presença institucional na cerimônia; apresentação técnica na Sessão de Boas Práticas; e participação na cerimônia solene de premiação. O não cumprimento implica desclassificação.', icon: <GroupsOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
-              { t: 'Cerimônia de Premiação', d: '5 de novembro de 2026, em Goiânia/GO, durante o EnAJUS. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: '#2d2e82' }} /> },
+              { t: 'Divulgação dos Finalistas', d: 'A lista oficial de finalistas é divulgada nos canais da Plataforma Infosfera até 10 de setembro de 2026. A comunicação serve como convocação formal para a cerimônia.', icon: <VerifiedOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+              { t: 'Obrigações dos Finalistas', d: 'Presença institucional na cerimônia; apresentação técnica na Sessão de Boas Práticas; e participação na cerimônia solene de premiação. O não cumprimento implica desclassificação.', icon: <GroupsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
+              { t: 'Cerimônia de Premiação', d: '5 de novembro de 2026, em Goiânia/GO, durante o EnAJUS. Os finalistas apresentam suas práticas e recebem troféu e certificado correspondente à categoria vencedora.', icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 32, color: 'var(--luz-tinta)' }} /> },
             ].map((item, i) => (
               <Grid size={{ xs: 1, md: 1 }} key={i}>
                 <Card className={styles.resultCard}>
@@ -490,7 +490,7 @@ const Regulamento = () => {
                 disableGutters
                 elevation={0}
               >
-                <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ color: '#2d2e82' }} />} className={styles.faqQuestion}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ color: 'var(--luz-tinta)' }} />} className={styles.faqQuestion}>
                   <Typography className={styles.faqQuestionText}>{faq.p}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className={styles.faqAnswer}>
@@ -504,7 +504,7 @@ const Regulamento = () => {
 
       
       {/* Botão regulamento na íntegra — fim da página */}
-      <Box sx={{ background: '#f7f8fc', py: 4, textAlign: 'center', borderTop: '1px solid #e5e7eb' }}>
+      <Box sx={{ background: 'var(--luz-nevoa-2)', py: 4, textAlign: 'center', borderTop: '1px solid var(--luz-linha)' }}>
         <Button
           component={Link}
           to="/regulamento-integra"

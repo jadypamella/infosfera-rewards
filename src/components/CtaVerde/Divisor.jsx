@@ -10,7 +10,7 @@ const Divisor = () => (
       width: '80px',
       height: '3px',
       borderRadius: '0 0 3px 3px',
-      background: 'linear-gradient(90deg, #2d2e82, #1abc9c)',
+      background: 'linear-gradient(90deg, var(--luz-tinta), var(--luz-esfera))',
     }} />
   </Box>
 );
