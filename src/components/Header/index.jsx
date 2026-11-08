@@ -4,7 +4,6 @@ import { Box, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListIt
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { inscricoesAbertas } from '../../data/edicoes';
 import styles from './index.module.css';
 import logo from '../../assets/logo.png';
 
@@ -56,8 +55,7 @@ const Header = () => {
 
           {/* CTA desktop */}
           <Box className={styles.headerActions}>
-            {inscricoesAbertas && (
-              <Button
+                          <Button
                 variant="contained"
                 href={PLATFORM_URL}
                 target="_blank"
@@ -65,9 +63,8 @@ const Header = () => {
                 className={styles.ctaButton}
                 endIcon={<ArrowForwardIcon sx={{ fontSize: '0.9rem !important' }} />}
               >
-                Inscrever Prática
+                Cadastre sua Prática
               </Button>
-            )}
 
             {/* Hamburger mobile */}
             <IconButton
@@ -113,8 +110,7 @@ const Header = () => {
           ))}
         </List>
 
-        {inscricoesAbertas && (
-        <Box className={styles.drawerCta}>
+                <Box className={styles.drawerCta}>
           <Button
             variant="contained"
             fullWidth
@@ -125,10 +121,9 @@ const Header = () => {
             endIcon={<ArrowForwardIcon />}
             onClick={() => setDrawerOpen(false)}
           >
-            Inscrever Prática
+            Cadastre sua Prática
           </Button>
         </Box>
-        )}
       </Drawer>
     </>
   );

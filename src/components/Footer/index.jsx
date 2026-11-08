@@ -24,7 +24,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Box className={styles.footerTop}>
           <Box className={styles.footerBrand}>
-            <img src={logo} alt="Logo Infosfera" className={styles.footerLogo} />
+            <span role="img" aria-label="Logo Infosfera" className={styles.footerLogo} style={{ '--logo': `url(${logo})` }} />
             <Typography className={styles.footerTagline}>
               Gestão da Informação na Esfera Pública
             </Typography>

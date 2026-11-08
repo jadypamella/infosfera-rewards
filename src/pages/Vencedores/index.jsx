@@ -3,10 +3,12 @@ import { useLocation } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
 import styles from './index.module.css';
-import { edicoes } from '../../data/edicoes';
+import { edicoes, praticasOrdenadas } from '../../data/edicoes';
 import SecaoEdicao from '../../components/SecaoEdicao';
 import Esfera from '../../components/Esfera';
 
+const atual = edicoes[0];
+const premiadasAtual = praticasOrdenadas(atual).filter((p) => p.premio);
 const totalPremiadas = edicoes.reduce((n, e) => n + e.praticas.filter((p) => p.premio).length, 0);
 
 const Vencedores = () => {
@@ -29,7 +31,12 @@ const Vencedores = () => {
             {totalPremiadas} boas práticas premiadas em {edicoes.length} edições, de prefeituras, tribunais, universidades e defensorias de todo o país.
           </Typography>
         </Box>
-        <Esfera ano={edicoes[0].ano} className={styles.esfera} />
+        <figure className={styles.figura}>
+          <Esfera ano={atual.ano} total={atual.inscricoes || atual.praticas.length} premiadas={premiadasAtual} interativa />
+          <figcaption className={styles.legenda}>
+            Cada linha é uma prática inscrita em {atual.ano}. As {premiadasAtual.length} acesas foram premiadas: aponte para uma delas.
+          </figcaption>
+        </figure>
       </Box>
 
       <nav className={styles.anos} aria-label="Edições">

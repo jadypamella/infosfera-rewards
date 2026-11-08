@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-surface-light);
+    background: var(--luz-nevoa);
     padding: 4rem 2rem;
 }
 
@@ -12,25 +12,29 @@
     max-width: 480px;
 }
 
-.code {
-    font-family: var(--font-heading) !important;
+.content .code {
+    font-family: var(--font-display) !important;
     font-size: 7rem !important;
     font-weight: 800 !important;
-    color: var(--color-primary-bg) !important;
+    background: linear-gradient(120deg, var(--luz-esfera), var(--luz-ceu));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
     line-height: 1 !important;
     letter-spacing: -0.04em !important;
 }
 
-.title {
-    font-family: var(--font-heading) !important;
+.content .title {
+    font-family: var(--font-display) !important;
     font-size: 1.75rem !important;
-    font-weight: 700 !important;
-    color: var(--color-text-dark) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    color: var(--luz-tinta) !important;
     margin: 0.5rem 0 1rem !important;
 }
 
 .text {
-    color: var(--color-text-muted) !important;
+    color: var(--luz-texto) !important;
     font-size: 1rem !important;
     line-height: 1.7 !important;
     margin-bottom: 2rem !important;
@@ -44,19 +48,29 @@
 }
 
 .btnPrimary {
-    background: var(--color-primary) !important;
-    color: #fff !important;
+    background: var(--luz-tinta) !important;
+    color: var(--luz-papel) !important;
     font-weight: 700 !important;
     text-transform: none !important;
-    border-radius: var(--radius-md) !important;
+    border-radius: 999px !important;
     padding: 0.7rem 1.5rem !important;
 }
 
+.btnPrimary:hover {
+    background: #16173a !important;
+}
+
 .btnOutline {
-    border: 2px solid var(--color-primary) !important;
-    color: var(--color-primary) !important;
+    border: 2px solid var(--luz-tinta) !important;
+    color: var(--luz-tinta) !important;
+    background: var(--luz-papel) !important;
     font-weight: 600 !important;
     text-transform: none !important;
-    border-radius: var(--radius-md) !important;
+    border-radius: 999px !important;
     padding: 0.7rem 1.5rem !important;
+}
+
+.btnOutline:hover {
+    border-color: var(--luz-esfera) !important;
+    color: var(--luz-esfera) !important;
 }

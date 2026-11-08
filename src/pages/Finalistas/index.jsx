@@ -62,7 +62,7 @@ const DownloadButtons = ({ onLight = false }) => (
     <Button variant="contained" size="large" href={PDF_URL} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary} startIcon={<DownloadOutlinedIcon />}>
       Baixar Orientações
     </Button>
-    <Button variant="outlined" size="large" href={TEMPLATE_URL} download className={styles.btnOutline} sx={onLight ? { color: '#2d2e82 !important', border: '2px solid #2d2e82 !important', '&:hover': { background: 'rgba(45,46,130,0.08) !important' } } : undefined} startIcon={<DownloadOutlinedIcon />}>
+    <Button variant="outlined" size="large" href={TEMPLATE_URL} download className={styles.btnOutline} sx={onLight ? { color: 'var(--luz-tinta) !important', border: '2px solid var(--luz-tinta) !important', '&:hover': { background: 'rgba(45,46,130,0.08) !important' } } : undefined} startIcon={<DownloadOutlinedIcon />}>
       Baixar Template
     </Button>
   </Box>
@@ -103,7 +103,7 @@ const Finalistas = () => (
             A Comissão Organizadora do Prêmio Infosfera 2026 parabeniza você e a sua organização pela seleção da boa prática como finalista desta edição, resultado de um criterioso processo de avaliação baseado nos critérios do Regulamento.
           </Typography>
           <Box className={styles.highlightBox}>
-            <InfoOutlinedIcon sx={{ color: '#2d2e82' }} />
+            <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)' }} />
             <Typography variant="body2">
               As apresentações das boas práticas finalistas e a cerimônia de premiação são <strong>exclusivamente presenciais</strong>, requisito regimental para a outorga do Prêmio.
             </Typography>
@@ -131,7 +131,7 @@ const Finalistas = () => (
           ))}
         </Box>
         <Typography className={styles.sectionSubtitle} sx={{ mt: 4, textAlign: 'center' }}>
-          O Prêmio acontece durante o EnAJUS. Veja a <a href={ENAJUS_URL} target="_blank" rel="noopener noreferrer" style={{ color: '#2d2e82', fontWeight: 700, textDecoration: 'underline' }}>programação completa do EnAJUS</a>.
+          O Prêmio acontece durante o EnAJUS. Veja a <a href={ENAJUS_URL} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--luz-tinta)', fontWeight: 700, textDecoration: 'underline' }}>programação completa do EnAJUS</a>.
         </Typography>
       </Box>
     </Box>
@@ -150,7 +150,7 @@ const Finalistas = () => (
             <strong>Identificação:</strong> na mesa de credenciamento, identifique-se como Representante de Boa Prática selecionada para o Prêmio Infosfera 2026. Isso agiliza a retirada do material e a orientação para a sala.
           </Typography>
           <Box className={styles.highlightBox}>
-            <InfoOutlinedIcon sx={{ color: '#2d2e82' }} />
+            <InfoOutlinedIcon sx={{ color: 'var(--luz-tinta)' }} />
             <Typography variant="body2">
               O Ecossistema Infosfera inclui o <strong>InfosferaCast</strong>. Os representantes de cada prática serão direcionados ao espaço do podcast para uma breve entrevista e apresentação sucinta da prática.
             </Typography>
@@ -184,7 +184,7 @@ const Finalistas = () => (
             <strong>Gravação:</strong> a sessão, aberta ao público, é gravada. O pitch, apoiado em apresentação PowerPoint, será disponibilizado nas mídias sociais e nos canais do Infosfera e do InfosferaCast, e todo o material será compartilhado com os representantes.
           </Typography>
           <Box className={styles.highlightBox}>
-            <MailOutlineIcon sx={{ color: '#2d2e82' }} />
+            <MailOutlineIcon sx={{ color: 'var(--luz-tinta)' }} />
             <Typography variant="body2">
               <strong>Envio da apresentação:</strong> nos moldes do template oficial, até <strong>4 de novembro de 2026</strong>, nos formatos PPTX e PDF, para <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
             </Typography>

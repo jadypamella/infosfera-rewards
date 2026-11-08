@@ -76,7 +76,7 @@ const SecaoEdicao = ({ edicao }) => {
               {grande && <Destaque p={grande} ano={ano} />}
               <Grid container spacing={3}>
                 {demais.map((p) => (
-                  <Grid key={`${p.entidade}-${p.titulo}`} size={{ xs: 12, sm: 6, md: 4 }}>
+                  <Grid key={`${p.entidade}-${p.titulo}`} size={{ xs: 12, sm: 6, md: 4 }} className="revelar">
                     <CardPratica p={p} ano={ano} mostrarPremio={resultadoDivulgado} />
                   </Grid>
                 ))}

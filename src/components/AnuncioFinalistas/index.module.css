@@ -35,7 +35,7 @@
   border-radius: 999px;
   background: var(--luz-papel);
   border: 1px solid var(--luz-linha);
-  color: var(--luz-esfera);
+  color: var(--luz-esfera-texto);
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 500;

@@ -181,7 +181,7 @@ const Home = () => {
   ];
 
   const awardCategories = [
-    { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: '#fff' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública em 2026.', highlight: true },
+    { icon: <EmojiEventsOutlinedIcon sx={{ fontSize: 44, color: 'var(--luz-tinta)' }} />, title: 'Grande Prêmio Infosfera', desc: 'A prática com maior pontuação global absoluta: o melhor da gestão da informação na esfera pública em 2026.', highlight: true },
     { icon: <PlaceOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Destaque Regional (Goiás)', desc: 'Maior pontuação técnica entre instituições sediadas no Estado de Goiás, anfitrião do evento.' },
     { icon: <LocationCityOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Destaque Municipal', desc: 'Distinção exclusiva para prefeituras, secretarias municipais e autarquias municipais.' },
     { icon: <WorkspacePremiumOutlinedIcon sx={{ fontSize: 44, color: '#2d2e82' }} />, title: 'Menções Honrosas', desc: 'Até 7 práticas finalistas de mérito excepcional: criatividade, baixo custo ou superação tecnológica.' },
@@ -190,14 +190,19 @@ const Home = () => {
   ];
 
 
-  const timeline = [
-    { period: '1 abr – 31 jul', label: inscricoesAbertas ? 'Inscrições abertas' : 'Inscrições encerradas', active: inscricoesAbertas },
-    { period: '1–15 ago', label: 'Análise de admissibilidade', active: !inscricoesAbertas },
-    { period: '1–30 ago', label: 'Avaliação de mérito', active: false },
-    { period: '10 set', label: 'Divulgação dos finalistas', active: false },
-    { period: '5–9 out', label: 'Aclamação Pública', active: false },
-    { period: '5 nov', label: 'Cerimônia · Goiânia/GO', active: false },
+  // Each step ends on its date; the current step is the first one not yet over, or the last one.
+  const etapas = [
+    { period: '1 abr – 31 jul', label: inscricoesAbertas ? 'Inscrições abertas' : 'Inscrições encerradas', fim: '2026-07-31' },
+    { period: '1–15 ago', label: 'Análise de admissibilidade', fim: '2026-08-15' },
+    { period: '1–30 ago', label: 'Avaliação de mérito', fim: '2026-08-30' },
+    { period: '10 set', label: 'Divulgação dos finalistas', fim: '2026-09-10' },
+    { period: '5–9 out', label: 'Aclamação Pública', fim: '2026-10-09' },
+    { period: '5 nov', label: 'Cerimônia · Goiânia/GO', fim: '2026-11-05' },
   ];
+  const hoje = new Date().toISOString().slice(0, 10);
+  const atual = Math.max(0, etapas.findIndex((e) => hoje <= e.fim));
+  const indiceAtual = etapas.every((e) => hoje > e.fim) ? etapas.length - 1 : atual;
+  const timeline = etapas.map((e, i) => ({ ...e, active: i === indiceAtual }));
 
   const cardIds = useRef({
     sobre1: 'card-sobre-1', sobre2: 'card-sobre-2',
@@ -443,13 +448,13 @@ const Home = () => {
               className={`${styles.highlightCard} ${visibleCards.has(cardIds.current.premiacao) ? styles.visible : ''}`}
             >
               <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', p: '2.5rem !important' }}>
-                <EmojiEventsOutlinedIcon sx={{ fontSize: 64, mb: 1.5, color: 'white' }} />
-                <Typography variant="h5" sx={{ fontWeight: 700, mb: 0.5, color: 'white' }}>A Cerimônia</Typography>
-                <Typography sx={{ color: 'rgba(255,255,255,0.75)', mb: 1 }}>
-                  Premiação durante o <strong style={{ color: 'white' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
+                <EmojiEventsOutlinedIcon sx={{ fontSize: 64, mb: 1.5, color: 'var(--luz-tinta)' }} />
+                <Typography variant="h5" sx={{ fontWeight: 700, mb: 0.5, color: 'var(--luz-tinta)' }}>A Cerimônia</Typography>
+                <Typography sx={{ color: 'var(--luz-tinta)', mb: 1 }}>
+                  Premiação durante o <strong style={{ color: 'var(--luz-tinta)' }}>EnAJUS, o Encontro de Administração da Justiça</strong>.
                 </Typography>
-                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'white' }}>5 de novembro de 2026 · Goiânia/GO</Typography>
-                <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'rgba(255,255,255,0.5)', color: 'white', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'white', bgcolor: 'rgba(255,255,255,0.1)' } }}>
+                <Typography sx={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--luz-tinta)' }}>5 de novembro de 2026 · Goiânia/GO</Typography>
+                <Button variant="outlined" href={PLATFORM_URL} target="_blank" rel="noopener noreferrer" endIcon={<ArrowForwardIcon />} sx={{ mt: 2.5, borderColor: 'var(--luz-tinta)', color: 'var(--luz-tinta)', textTransform: 'none', borderRadius: '50px', '&:hover': { borderColor: 'var(--luz-tinta)', bgcolor: 'rgba(255,255,255,0.35)' } }}>
                   Quero Participar
                 </Button>
               </CardContent>

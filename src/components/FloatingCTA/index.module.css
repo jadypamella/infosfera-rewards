@@ -16,22 +16,22 @@
 }
 
 .btn {
-  background: linear-gradient(135deg, #2d2e82 0%, #1abc9c 100%) !important;
-  color: #fff !important;
+  background: var(--luz-tinta) !important;
+  color: var(--luz-papel) !important;
   font-weight: 700 !important;
   font-size: 0.9rem !important;
   text-transform: none !important;
-  border-radius: 50px !important;
+  border-radius: 999px !important;
   padding: 0.7rem 1.5rem !important;
-  box-shadow: 0 4px 20px rgba(45,46,130,0.45), 0 0 0 3px rgba(45,46,130,0.15) !important;
+  box-shadow: 0 6px 20px rgba(35, 36, 79, 0.3), 0 0 0 3px rgba(18, 168, 138, 0.25) !important;
   transition: all 0.2s ease !important;
   white-space: nowrap;
 }
 
 .btn:hover {
-  background: linear-gradient(135deg, #1e1f6e 0%, #16a085 100%) !important;
+  background: #16173a !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 28px rgba(45,46,130,0.55) !important;
+  box-shadow: 0 8px 28px rgba(35, 36, 79, 0.35), 0 0 0 3px rgba(18, 168, 138, 0.4) !important;
 }
 
 @media (max-width: 480px) {

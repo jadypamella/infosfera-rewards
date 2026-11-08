@@ -18,7 +18,7 @@
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--luz-esfera);
+  color: var(--luz-esfera-texto);
 }
 
 .hero .titulo {
@@ -46,9 +46,20 @@
   color: var(--luz-texto) !important;
 }
 
-.esfera {
-  max-width: 440px;
+.figura {
+  margin: 0;
+  max-width: 460px;
+  width: 100%;
   justify-self: center;
+}
+
+.figura .legenda {
+  margin-top: 8px;
+  text-align: center;
+  font-family: var(--font-mono) !important;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--luz-texto);
 }
 
 .anos {
@@ -92,9 +103,14 @@
     padding-top: 96px;
     gap: 16px;
   }
-  .esfera {
-    max-width: 280px;
+  .figura {
+    max-width: 320px;
     order: -1;
   }
   .anos { top: 60px; }
+}
+
+@media (max-width: 480px) {
+  .hero .titulo { font-size: 2.1rem !important; }
+  .hero { padding-left: 16px; padding-right: 16px; }
 }

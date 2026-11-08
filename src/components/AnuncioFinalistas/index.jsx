@@ -4,7 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import PhotoLibraryOutlinedIcon from '@mui/icons-material/PhotoLibraryOutlined';
 
-import { edicaoAtual } from '../../data/edicoes';
+import { edicaoAtual, praticasOrdenadas } from '../../data/edicoes';
 import Esfera from '../Esfera';
 import styles from './index.module.css';
 
@@ -43,7 +43,7 @@ const AnuncioFinalistas = () => {
         </Box>
 
         <Box className={styles.palco}>
-          <Esfera className={styles.esferaFundo} />
+          <Esfera className={styles.esferaFundo} total={inscricoes || praticas.length} premiadas={resultadoDivulgado ? praticasOrdenadas(edicaoAtual).filter((p) => p.premio) : []} />
           <Box component={Link} to="/vencedores" className={styles.mosaico} aria-label={resultadoDivulgado ? 'Ver as premiadas' : 'Ver os finalistas'}>
             {pecas.map((src, i) => (
               <Box key={src} className={styles.peca}>

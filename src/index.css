@@ -27,6 +27,7 @@
   --luz-tinta:   #23244f;
   --luz-texto:   #4a5368;
   --luz-esfera:  #12a88a;
+  --luz-esfera-texto: #0b7a64;
   --luz-ceu:     #3bb7e8;
   --luz-ouro:    #d9a520;
   --luz-linha:   #d6e4e7;
@@ -258,3 +259,23 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-track { background: #f0f0f0; }
 ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* Display headings set on a Typography keep the display face, even though the body rule above
+   targets the same element. Matches the module classes by their local name. */
+[class*="_heroTitle"], [class*="_sectionTitle"], [class*="_cardTitle"] {
+  font-family: var(--font-display) !important;
+}
+
+/* Cards rise into place as they scroll into view, where the browser supports scroll-driven animation. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .revelar {
+      animation: revelar linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 22%;
+    }
+  }
+}
+@keyframes revelar {
+  from { opacity: 0; transform: translateY(28px); }
+}

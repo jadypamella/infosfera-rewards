@@ -15,7 +15,7 @@ const NoticiasMidia = ({ noticias, mostrarEdicao = false }) => (
             <Typography sx={{ fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', color: '#0e8a68', mb: 1 }}>
               {mostrarEdicao ? `${n.edicao} · ${n.veiculo}` : n.veiculo}
             </Typography>
-            <Typography sx={{ fontWeight: 700, color: '#2d2e82', lineHeight: 1.35, mb: 1.5 }}>{n.titulo}</Typography>
+            <Typography sx={{ fontWeight: 700, color: 'var(--luz-tinta)', lineHeight: 1.35, mb: 1.5 }}>{n.titulo}</Typography>
             <Box sx={{ color: '#4b4c6b', fontSize: 14, display: 'flex', alignItems: 'center', gap: 0.5 }}>
               Ler a notícia <OpenInNewIcon sx={{ fontSize: 16 }} />
             </Box>

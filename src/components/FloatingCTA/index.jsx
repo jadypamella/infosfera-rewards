@@ -23,9 +23,9 @@ const FloatingCTA = () => {
         rel="noopener noreferrer"
         endIcon={<ArrowForwardIcon />}
         className={styles.btn}
-        aria-label="Inscrever prática no Prêmio Infosfera"
+        aria-label="Cadastrar prática na Plataforma Infosfera"
       >
-        Inscrever Prática
+        Cadastre sua Prática
       </Button>
     </Box>
   );

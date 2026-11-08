@@ -1,5 +1,5 @@
 .section {
-    background: linear-gradient(135deg, #2d2e82 0%, #1abc9c 100%);
+    background: linear-gradient(120deg, var(--luz-esfera) 0%, var(--luz-ceu) 100%);
     padding: 5rem 0;
 }
 
@@ -21,51 +21,53 @@
 
 .icon {
     font-size: 52px !important;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--luz-tinta) !important;
     margin-bottom: 1.25rem !important;
 }
 
-.title {
-    font-family: var(--font-heading) !important;
+.block .title {
+    font-family: var(--font-display) !important;
     font-weight: 800 !important;
-    font-size: clamp(1.6rem, 4vw, 2rem) !important;
-    color: #ffffff !important;
-    line-height: 1.2 !important;
+    letter-spacing: -0.03em !important;
+    font-size: clamp(1.6rem, 4vw, 2.2rem) !important;
+    color: var(--luz-tinta) !important;
+    line-height: 1.15 !important;
     margin-bottom: 1rem !important;
 }
 
 .text {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--luz-tinta) !important;
     font-size: 1rem !important;
     line-height: 1.7 !important;
     margin-bottom: 0 !important;
 }
 
-.text strong { color: #ffffff; }
+.text strong { color: var(--luz-tinta); }
 
 .btn {
     margin-top: 2rem !important;
-    background: #ffffff !important;
-    color: #2d2e82 !important;
+    background: var(--luz-tinta) !important;
+    color: var(--luz-papel) !important;
     font-weight: 700 !important;
     font-size: 0.95rem !important;
     text-transform: none !important;
-    border-radius: 8px !important;
+    border-radius: 999px !important;
     padding: 0.8rem 2rem !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 6px 20px rgba(35, 36, 79, 0.25) !important;
     transition: all 0.2s ease !important;
     min-height: 48px;
 }
 
 .btn:hover {
-    background: #f0f1ff !important;
+    background: #16173a !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 8px 28px rgba(35, 36, 79, 0.3) !important;
 }
 
-.note {
-    color: rgba(255, 255, 255, 0.55) !important;
-    font-size: 0.8rem !important;
+.block .note {
+    font-family: var(--font-mono) !important;
+    color: var(--luz-tinta) !important;
+    font-size: 0.78rem !important;
     margin-top: 0.9rem !important;
 }
 

@@ -1,6 +1,7 @@
 .footer {
-    background: #0d0e3f;
-    color: white;
+    background: var(--luz-papel);
+    border-top: 1px solid var(--luz-linha);
+    color: var(--luz-texto);
     padding: 3rem 0 1.5rem;
     margin-top: 0;
 }
@@ -24,19 +25,21 @@
 }
 
 .footerLogo {
+    display: block;
     height: 44px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-    opacity: 0.92;
+    aspect-ratio: 2734 / 1000;
+    background: var(--luz-tinta);
+    -webkit-mask: var(--logo) center / contain no-repeat;
+    mask: var(--logo) center / contain no-repeat;
 }
 
-.footerTagline {
-    color: rgba(255, 255, 255, 0.5) !important;
-    font-size: 0.8rem !important;
+.footerBrand .footerTagline {
+    font-family: var(--font-mono) !important;
+    color: var(--luz-texto) !important;
+    font-size: 0.75rem !important;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    max-width: 240px;
+    max-width: 260px;
 }
 
 /* ── Links / Socials ── */
@@ -48,7 +51,7 @@
 }
 
 .footerLinksTitle {
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: var(--luz-tinta) !important;
     font-size: 0.7rem !important;
     font-weight: 600 !important;
     letter-spacing: 0.12em;
@@ -67,16 +70,17 @@
     gap: 0.3rem;
     padding: 0.5rem 0.75rem;
     border-radius: 12px;
+    color: var(--luz-tinta) !important;
     transition: background 0.2s ease;
     text-decoration: none !important;
 }
 
 .socialItem:hover {
-    background: rgba(255, 255, 255, 0.07);
+    background: var(--luz-nevoa);
 }
 
 .iconButton {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: var(--luz-tinta) !important;
     transition: color 0.2s ease, transform 0.2s ease !important;
     padding: 0 !important;
     min-width: 44px;
@@ -84,19 +88,20 @@
 }
 
 .socialItem:hover .iconButton {
-    color: #1abc9c !important;
+    color: var(--luz-esfera) !important;
     transform: translateY(-2px);
 }
 
-.socialLabel {
-    color: rgba(255, 255, 255, 0.4) !important;
+.socialItem .socialLabel {
+    font-family: var(--font-mono) !important;
+    color: var(--luz-texto) !important;
     font-size: 0.65rem !important;
     letter-spacing: 0.05em;
 }
 
 /* ── Divider ── */
 .footerDivider {
-    border-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--luz-linha) !important;
     margin-bottom: 1.5rem !important;
 }
 
@@ -110,12 +115,12 @@
 }
 
 .footerCopy {
-    color: rgba(255, 255, 255, 0.35) !important;
+    color: var(--luz-texto) !important;
     font-size: 0.72rem !important;
 }
 
 .footerCopyRight {
-    color: rgba(255, 255, 255, 0.25) !important;
+    color: var(--luz-texto) !important;
     font-size: 0.68rem !important;
 }
 

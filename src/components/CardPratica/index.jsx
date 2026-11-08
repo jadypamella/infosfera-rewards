@@ -5,7 +5,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { NIVEIS } from '../../data/edicoes';
 
 const Selo = ({ label, cor }) => (
-  <Box component="span" sx={{ bgcolor: cor || '#2d2e82', color: '#fff', fontSize: 12, fontWeight: 600, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
+  <Box component="span" sx={{ bgcolor: cor || 'var(--luz-tinta)', color: '#fff', fontSize: 12, fontWeight: 600, px: 1.5, py: 0.5, borderRadius: 999, lineHeight: 1.4 }}>
     {label}
   </Box>
 );
@@ -50,7 +50,7 @@ const CardPratica = ({ p, ano, mostrarPremio }) => {
             {p.status && <Selo label={p.status} cor={p.statusCor} />}
           </Box>
         )}
-        <Typography component="h3" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, fontSize: 17, lineHeight: 1.35, color: '#2d2e82' }}>
+        <Typography component="h3" sx={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 18, lineHeight: 1.35, color: 'var(--luz-tinta)' }}>
           {p.titulo}
         </Typography>
         <Typography sx={{ fontSize: 14, color: '#555', lineHeight: 1.5 }}>
@@ -62,7 +62,7 @@ const CardPratica = ({ p, ano, mostrarPremio }) => {
           </Typography>
         )}
         {p.categorias?.length > 0 && (
-          <Typography sx={{ fontSize: 13, color: '#2d2e82', lineHeight: 1.5 }}>
+          <Typography sx={{ fontSize: 13, color: 'var(--luz-tinta)', lineHeight: 1.5 }}>
             {p.categorias.join(' · ')}
           </Typography>
         )}

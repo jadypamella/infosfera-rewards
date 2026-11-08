@@ -6,22 +6,24 @@
   margin-top: 2rem;
 }
 
-.label {
-  color: rgba(255,255,255,0.7) !important;
+.wrapper .label {
+  font-family: var(--font-mono) !important;
+  color: var(--luz-texto) !important;
   font-size: 0.7rem !important;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .units {
   display: flex;
   align-items: stretch;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #2d2e82 0%, #1abc9c 100%);
+  background: var(--luz-tinta);
   border-radius: 14px;
   padding: 0.85rem 1.25rem;
-  box-shadow: 0 4px 20px rgba(45, 46, 130, 0.35);
+  border-bottom: 3px solid var(--luz-esfera);
+  box-shadow: 0 6px 20px rgba(35, 36, 79, 0.18);
 }
 
 .unitGroup {
@@ -37,17 +39,18 @@
   min-width: 48px;
 }
 
-.unitValue {
-  font-family: 'Montserrat', Arial, sans-serif !important;
+.unitBox .unitValue {
+  font-family: var(--font-display) !important;
   font-size: 1.75rem !important;
   font-weight: 800 !important;
-  color: #ffffff !important;
+  color: var(--luz-papel) !important;
   line-height: 1 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.03em !important;
 }
 
-.unitLabel {
-  color: rgba(255,255,255,0.45) !important;
+.unitBox .unitLabel {
+  font-family: var(--font-mono) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-size: 0.6rem !important;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -56,7 +59,7 @@
 }
 
 .sep {
-  color: rgba(255,255,255,0.2) !important;
+  color: var(--luz-esfera) !important;
   font-size: 1.5rem !important;
   font-weight: 300 !important;
   line-height: 1 !important;
@@ -68,7 +71,7 @@
   .wrapper { align-items: center; }
   .units { padding: 0.6rem 0.75rem; gap: 0.35rem; }
   .unitBox { min-width: 40px; }
-  .unitValue { font-size: 1.35rem !important; }
+  .unitBox .unitValue { font-size: 1.35rem !important; }
   .unitGroup { gap: 0.35rem; }
   .sep { font-size: 1.2rem !important; }
 }
