@@ -1,3 +1,13 @@
+# Every address answers over https, and a folder without its trailing slash is sent
+# straight to the https form, so Apache's own slash redirect never falls back to http.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.*[^/])$ https://%{HTTP_HOST}/$1/ [R=301,L]
+</IfModule>
+
 # Security headers for the static site. Guarded so a server without mod_headers keeps working.
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=31536000"
